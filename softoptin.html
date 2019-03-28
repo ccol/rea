@@ -1,0 +1,218 @@
+<div class="ol-modal ol-beh-fade">
+<style type="text/css">@import url('https://fonts.googleapis.com/css?family=Roboto:100,100i,300,300i,400,400i,500,500i,700,700i');
+    @import url('https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css');
+    @import url('https://fonts.googleapis.com/icon?family=Material+Icons');
+
+    @keyframes slideIn {
+      from {
+        opacity: 0;
+        transform: translateX(-100%);
+      }
+      to {
+        opacity: 1;
+        transform: translateX(0);
+        visibility: visible;
+      }
+    }
+
+    @keyframes slideUp {
+      from {
+        opacity: 0;
+        transform: translateY(100%);
+      }
+      to {
+        opacity: 1;
+        transform: translateX(0);
+      }
+    }
+
+    .ol-modal {
+      background-color: transparent !important;
+      pointer-events: none;
+    }
+
+    .notification-interstitial {
+      align-items: center;
+      animation-name: slideIn;
+      animation-duration: 750ms;
+      animation-iteration-count: 1;
+      animation-delay: 3s;
+      animation-fill-mode: forwards;
+      background-color: #ffffff;
+      border-radius: 8px;
+      top: 94px;
+      box-shadow: 0 0 20px -5px rgba(0, 0, 0, 0.35);
+      color: #2a2a2a;
+      display: grid;
+      font-family: 'Roboto', sans-serif;
+      grid-auto-flow: row;
+      grid-row-gap: 12px;
+      max-width: 640px;
+      overflow: hidden;
+      padding: 24px;
+      pointer-events: auto;
+      position: fixed;
+      left: 24px;
+      z-index: 9999999;
+      visibility: hidden;
+    }
+
+    @media screen and (min-width: 736px) {
+      .notification-interstitial {
+        animation-name: slideIn;
+      }
+    }
+
+    @media screen and (max-width: 736px) {
+      .notification-interstitial {
+        animation-name: slideUp;
+        left: 24px;
+      }
+    }
+
+    @media screen and (max-width: 640px) {
+      .notification-interstitial {
+        text-align: center;
+      }
+    }
+
+    .notification-interstitial-main {
+      align-items: center;
+      display: grid;
+    }
+
+    @media screen and (max-width: 640px) {
+      .notification-interstitial-main {
+        grid-row-gap: 24px;
+      }
+    }
+
+    @media screen and (min-width: 640px) {
+      .notification-interstitial-main {
+        grid-column-gap: 48px;
+        grid-template-columns: 1fr auto;
+      }
+    }
+
+    .notification-interstitial-main-actions {
+      align-items: center;
+      display: grid;
+      grid-auto-flow: column;
+      grid-column-gap: 4px;
+    }
+
+    @media screen and (max-width: 640px) {
+      .notification-interstitial-main-actions {
+        justify-content: center;
+      }
+    }
+
+    @media screen and (min-width: 640px) {
+      .notification-interstitial-main-actions {
+        justify-content: end;
+      }
+    }
+
+    .notification-interstitial-main-actions-action {
+      background-color: #e4002b;
+      border-color: #e4002b;
+      border-radius: 4px;
+      border-style: solid;
+      border-width: 2px;
+      color: #fff;
+      display: block;
+      cursor: pointer;
+      padding: 8px 16px;
+      text-decoration: none;
+      transition: filter 500ms ease;
+    }
+
+    .notification-interstitial-main-actions-action:focus,
+    .notification-interstitial-main-actions-action:hover {
+      background-color: #a30000;
+      border-color: #a30000;
+      outline: none;
+      text-decoration: none;
+    }
+
+    .notification-interstitial-main-actions-action-label-title {
+      display: block;
+      font-size: 14px;
+      font-weight: bold;
+    }
+
+    .notification-interstitial-main-content {
+      align-items: center;
+      display: grid;
+    }
+
+    @media screen and (min-width: 640px) {
+      .notification-interstitial-main-content {
+        grid-auto-flow: column;
+        grid-column-gap: 12px;
+      }
+    }
+
+    @media screen and (max-width: 640px) {
+      .notification-interstitial-main-content {
+        grid-auto-flow: row;
+        grid-row-gap: 24px;
+        justify-content: center;
+        justify-items: center;
+      }
+    }
+
+    .notification-interstitial-main-content-label {
+      display: grid;
+      grid-auto-flow: row;
+      grid-row-gap: 6px;
+    }
+
+    .notification-interstitial-main-content-label-description {
+      font-size: 14px;
+    }
+
+    .notification-interstitial-main-content-label-title {
+      display: block;
+      font-size: 20px;
+      line-height: 1em;
+    }
+
+    .notification-interstitial-main-content-media {
+      align-items: center;
+      background-color: #e0e0e0;
+      border-radius: 9999px;
+      display: flex;
+      justify-content: center;
+      height: 42px;
+      width: 42px;
+    }
+
+    .notification-interstitial-main-content-media-object {
+      direction: ltr;
+      display: inline-block;
+      font-family: 'Material Icons', sans-serif;
+      font-size: 24px;
+      font-style: normal;
+      font-weight: normal;
+      letter-spacing: normal;
+      line-height: 1;
+      text-transform: none;
+      white-space: nowrap;
+      word-wrap: normal;
+    }
+</style>
+<div class="notification-interstitial">
+<div class="notification-interstitial-main">
+<div class="notification-interstitial-main-content">
+<div class="notification-interstitial-main-content-media"><span class="notification-interstitial-main-content-media-object">add_alert</span></div>
+
+<div class="notification-interstitial-main-content-label"><span class="notification-interstitial-main-content-label-title">Want to keep an eye on Doncaster?</span> <span class="notification-interstitial-main-content-label-description">Allow notifications to receive property growth updates!</span></div>
+</div>
+
+<div class="notification-interstitial-main-actions">
+<div class="notification-interstitial-main-actions-action-label"><a class="notification-interstitial-main-actions-action" href="otherlevels://notification-prompt-yes"><span class="notification-interstitial-main-actions-action-label-title">Allow</span> </a></div>
+</div>
+</div>
+</div>
+</div>
