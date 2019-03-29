@@ -764,6 +764,8 @@
                     <div>
                       <!--h3 class="web-inbox-base__heading">Stay up to date with your property search</h3>
                       <p class="web-inbox-base__body">Get notifications for your saved searches and saved properties.</p-->
+                        <div id="ol-messages-header"></div>
+                        <div class="ol-message-spacer"></div>
                         <div id="ol-messages-section"></div>
                         <div id="ol-loading" class="ol-loader-section"><div class="ol-loader"></div></div>
                     </div>
@@ -771,6 +773,19 @@
                 </div>
               </div>
             </div>
+
+            <div role="dialog" aria-modal="true" class="web-inbox-overlay" id="ol-full-record-overlay">
+                  <div class="web-inbox-overlay__content-wrapper">
+                    <div class="web-inbox-overlay__content">
+                      <div class="web-inbox-base" style="padding: 0px; justify-content: unset;">
+                        <div>
+                            <div id="ol-fullrecord-section"></div>
+                            <div id="ol-loading" class="ol-loader-section-fullrecord"><div class="ol-loader"></div></div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
           </div>
         </div>
       </div>
@@ -928,24 +943,9 @@
     </div>
 </footer>
 <style type="text/css">
-  .ol-loader-section{
-    /* CC: Not required for using REA's spinner */
-    /*
-    background-color: white;
-    padding: 100px 100px;
-    */
-  }
   .ol-loader {
-      /*border: 16px solid #f3f3f3;
-      border-top: 16px solid #3498db; 
-      border-radius: 50%;
-      width: 120px;
-      height: 120px;
-      animation: olSpin 2s linear infinite;
-      padding: 16px;*/
-      
       /*CC: Use the REA loading animation*/
-      background: url(https://www.realestate.com.au/saved-searches/img/loading_scroll.gif) no-repeat 50% 50%;
+    background: url(https://www.realestate.com.au/saved-searches/img/loading_scroll.gif) no-repeat 50% 50%;
     width: 75px;
     height: 75px;
     border-radius: 50%;
@@ -966,7 +966,12 @@
     padding-top: 10px;
   }
   .ol-message-container{
-    min-height: 300px;
+    min-height: 100px;
+    padding: 10px 5px;
+  }
+  .ol-message-read{
+    font-weight: normal;
+    font-style: italic;
   }
   .ol-message-image{
     width: 25%;
@@ -978,41 +983,56 @@
     text-align: left;
     width: 70%;
     float: right;
+    font-size: 1rem;
+    line-height: 1.5rem;
+    font-weight: 900;
   }
   .ol-message-spacer{
     height: 25px;
     background-color: #fff;
+  }
+  .ol-expiry-date{
+    font-style: italic;
+    font-size: 0.75rem;
+    color: gray;
+    text-align: right;
+  }
+  #ol-full-record-overlay{
+    display: none;
+  }
+  .ol-full-message{
+    display: none;
+  }
+  .ol-fullrecord-header{
+    padding-bottom: 40px;
+    width: 100%;
+  }
+  .ol-fullrecord-header-back{
+    float: left;
+    width: 50%;
+    text-align: left;
+    padding-left: 10px;
+  }
+  .ol-fullrecord-header-buttons{
+    float: right;
+    text-align: right;
+    width: 30%;
+    padding-right: 10px;
   }
   </style>
 <script type="text/javascript">
   !function(o,t,h,e,r,l,v){!o[e]&&(o.OtherLevelsObject=e,l=o[e]=function(){l.q?l.q.push(arguments):l.apply(l,arguments)},l.q=[],v=t.createElement(h),v.async=!0,v.src=r,t=t.getElementsByTagName(h)[0],t.parentNode.insertBefore(v,t))}
   (window,document,"script","_ol","https://cdn.otherlevels.com/js-sdk/otherlevels.js?appKey=6b5676938cbc1a25d1cc15d51a11e5ce");
 
+  function deleteMessage(messageId) {
+    _ol('rims.markAsDeleted', messageId, function(m) {});
+    return false;
+  }
   document.addEventListener('DOMContentLoaded', function () {
     _ol('create', '6b5676938cbc1a25d1cc15d51a11e5ce', 
       {onError: function(e) {console.log(typeof e === 'string' ? e : e.message);}}, 
       function(ol) {
-        console.log('started OK');
-        _ol('getTrackingId', function(value) {
-          console.log('Tracking ID is', value);
-        });
-        /*_ol('push.isSubscribed', function(isSubscribed) {
-          if (!isSubscribed) {
-            _ol('askForPermission', 'notification', function(subscribed) {
-              if(subscribed == 'subscribed'){
-                _ol('registerEvent', 'softyes_hardallow', '', function() {});
-              }else if(subscribed == 'notsubscribed'){
-                _ol('registerEvent', 'softyes_hardblock', '', function() {});
-              }
-            });
-          }else{
-            _ol('push.subscribe', function(){}); //if they're already subscribed on this device, then resubscribe them to update the endpoint (useful if they've opted in to web push on multiple devices, this acts as a way to ensure they get web push on their most recently accessed device)
-          }
-        });*/
-
-        //_ol('rims.onMessagesUpdated', function(messages, newMessages, deletedMessages, updatedMessages, meta) {
         _ol('rims.getNewMessages', {limit: 10}, function(messages, meta){
-
           //display the unread count as a badge on the notification icon, only if there's unread messages
           if(meta.unread > 0){
             console.log('Unread rich messages: ' + meta.unread);
@@ -1025,71 +1045,68 @@
           }
 
           //turn off loading animation
-          if(meta.unread > 0){
+          if(messages.length > 0){
             document.getElementById('ol-loading').style.display = 'none';
           }
+          document.getElementById("ol-messages-header").innerHTML = meta.unread + ' unread / ' + meta.total + ' total';
 
-          // 2. Populate the list with messages  
-          var newRichDiv;
+          //Populate the list with messages  
+          var newRichDiv, messageExpiryDate, messageExpiryFormatted;
           messages.forEach(function(message) {
+            messageExpiryDate = new Date(0);
+            messageExpiryDate.setUTCSeconds(message.end);
+            messageExpiryFormatted = messageExpiryDate.getUTCDate() + '/' + (messageExpiryDate.getUTCMonth() + 1)+ '/' + messageExpiryDate.getUTCFullYear()
             newRichDiv = document.createElement("div");
             newRichDiv.className = "ol-message-container";
-            newRichDiv.innerHTML = '<div class="ol-message-image">' + 
-              '<img src="' + message.card_url + '" width="462" alt="">' + 
-              '</div>' + 
-              '<div class="ol-message-text">' + 
-                  '<h2>' + message.sline + '</h2>' + 
-              '</div>' +
-              '<div style="padding-top: 80px;">' +
-                  '<p>' + message.content + '</p>' + 
-              '</div>' + 
-                '<div class="buttons clearfix">' + 
-                    '<a ng-if="::blog.button_a_text" ng-href="' + message.burl + '" class="common-button cms-button large" target="_self" href="' + message.burl + '">' + message.blbl + ' </a>' + 
+            newRichDiv.innerHTML = '<div>' + 
+                '<div class="ol-message-image">' + 
+                  '<img src="' + message.card_url + '" width="462" alt="">' + 
+                '</div>' + 
+                (message.read > 0 ? '<div class="ol-message-text ol-message-read">' : '<div class="ol-message-text">') +
+                  message.sline + 
+                  '<p>&nbsp;</p>' + 
+                  '<p class="ol-expiry-date">Expires: ' + messageExpiryFormatted + '</p>' + 
                 '</div>' + 
               '</div>';
+            newRichDiv.id = 'ol-' + message.id;
+            newRichDiv.onclick = function(){
+              _ol('rims.markAsRead', message.id, function(m) {
+                document.getElementById("ol-full-record-overlay").style.display = 'block';
+                var fullMessageDiv = document.createElement("div");
+                fullMessageDiv.className = "ol-message-container";
+                fullMessageDiv.id = "ol-fullmessage-" + message.id;
+                fullMessageDiv.innerHTML = '<div class="ol-fullrecord-header">' + 
+                    '<div class="ol-fullrecord-header-back"><a href="notifs.html">Back</a></div>' + 
+                    '<div class="ol-fullrecord-header-buttons">' + 
+                      '<a onclick="deleteMessage(\'' + message.id + '\')"><img src="https://cdn-image.otherlevels.com/12211/4b88d612-a555-447f-97da-a775226046d5.png" style="width: 22px;"/></a>' +
+                    '</div>' + 
+                  '</div>' + 
+                  '<div class="ol-message-image">' + 
+                    '<img src="' + message.card_url + '" width="462" alt="">' + 
+                  '</div>' + 
+                  '<div class="ol-message-text">' +
+                    message.sline + 
+                    '<p>&nbsp;</p>' + 
+                    message.content + 
+                    '<p>&nbsp;</p>' + 
+                    '<a href="' + message.burl + '">' + message.blbl + '</a>' +
+                    '<p>&nbsp;</p>' + 
+                    '<p class="ol-expiry-date">Expires: ' + messageExpiryFormatted + '</p>' + 
+                  '</div>';
+            
+                document.getElementById('ol-fullrecord-section').appendChild(fullMessageDiv);
+                document.getElementsByClassName('ol-loader-section-fullrecord')[0].style.display = 'none';
+                _ol('rims.onMessagesUpdated', function(){});
+              });
+              
+            };
             document.getElementById('ol-messages-section').appendChild(newRichDiv);
+            
             var olMessageSeparator = document.createElement("div");
             olMessageSeparator.className = "ol-message-spacer";
             document.getElementById('ol-messages-section').appendChild(olMessageSeparator);
+
           });
-          /*
-          // this is the full rich inbox message example, to be used on the notifs page
-          if (messages.length > 0 && newMessages.length > 0 &&
-            newMessages[0].id !== messages[0].id) {
-
-            // 1. append older messages to the bottom of the list
-            newMessages.forEach(function(message) {
-              $('.messages').append(
-                '<div class="message message-' + message.id + '">' + message.sline +
-                '</div>'
-              );
-            });
-          } else {
-
-            // 1. prepend newer messages to the top of the list with newer first
-            newMessages.slice().reverse().forEach(function(message) {
-              $('.messages').prepend(
-                '<div class="message message-' + message.id + '">' + message.sline +
-                '</div>'
-              );
-            });
-          }
-
-          // 2. remove deleted and expired messages
-          deletedMessages.forEach(function(message) {
-            $('.messages .message-' + message.id).remove();
-          });
-
-          // 3. update messages
-          updatedMessages.forEach(function(message) {
-            if (message.read) {
-              $('.messages .message-' + message.id).addClass('read');
-            }
-          });
-
-          // 4. display the number of unread messages
-          $('.unread-messages-count').text(meta.unread);
-          */
         });
       }
     );

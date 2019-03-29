@@ -919,21 +919,7 @@
         _ol('getTrackingId', function(value) {
           console.log('Tracking ID is', value);
         });
-        /*_ol('push.isSubscribed', function(isSubscribed) {
-          if (!isSubscribed) {
-            _ol('askForPermission', 'notification', function(subscribed) {
-              if(subscribed == 'subscribed'){
-                _ol('registerEvent', 'softyes_hardallow', '', function() {});
-              }else if(subscribed == 'notsubscribed'){
-                _ol('registerEvent', 'softyes_hardblock', '', function() {});
-              }
-            });
-          }else{
-            _ol('push.subscribe', function(){}); //if they're already subscribed on this device, then resubscribe them to update the endpoint (useful if they've opted in to web push on multiple devices, this acts as a way to ensure they get web push on their most recently accessed device)
-          }
-        });*/
 
-        //_ol('rims.onMessagesUpdated', function(messages, newMessages, deletedMessages, updatedMessages, meta) {
         _ol('rims.getNewMessages', {limit: 10}, function(messages, meta){
 
           //display the unread count as a badge on the notification icon, only if there's unread messages
@@ -946,44 +932,6 @@
               document.getElementById("webInboxIconSlot").appendChild(olBadge);
             }
           }
-          /*
-          // this is the full rich inbox message example, to be used on the notifs page
-          if (messages.length > 0 && newMessages.length > 0 &&
-            newMessages[0].id !== messages[0].id) {
-
-            // 1. append older messages to the bottom of the list
-            newMessages.forEach(function(message) {
-              $('.messages').append(
-                '<div class="message message-' + message.id + '">' + message.sline +
-                '</div>'
-              );
-            });
-          } else {
-
-            // 1. prepend newer messages to the top of the list with newer first
-            newMessages.slice().reverse().forEach(function(message) {
-              $('.messages').prepend(
-                '<div class="message message-' + message.id + '">' + message.sline +
-                '</div>'
-              );
-            });
-          }
-
-          // 2. remove deleted and expired messages
-          deletedMessages.forEach(function(message) {
-            $('.messages .message-' + message.id).remove();
-          });
-
-          // 3. update messages
-          updatedMessages.forEach(function(message) {
-            if (message.read) {
-              $('.messages .message-' + message.id).addClass('read');
-            }
-          });
-
-          // 4. display the number of unread messages
-          $('.unread-messages-count').text(meta.unread);
-          */
         });
       }
     );
