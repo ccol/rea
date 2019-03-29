@@ -307,7 +307,7 @@
               _ol('askForPermission', 'notification', function(subscribed) {
                 if(subscribed == 'subscribed'){
                   _ol('registerEvent', 'softyes_hardallow', '', function() {});
-                  setTimeout(sendWelcomePush, 3000);
+                  setTimeout(sendWelcomePush, 1000);
                 }else if(subscribed == 'notsubscribed'){
                   _ol('registerEvent', 'softyes_hardblock', '', function() {});
                 }
