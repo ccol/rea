@@ -1,0 +1,30 @@
+
+<!-- saved from url=(0028)https://m.realestate.com.au/ -->
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"><meta name="referrer" content="no-referrer"></head><body style="margin:0;"><div id="adblockdiv" style="visibility:hidden;width:0px;height:0px;"><iframe src="./saved_resource(2).html" id="adblockframe" name="adblockframe" width="0" height="0" frameborder="0" scrolling="no" marginwidth="0" marginheight="0" allowtransparency="true" style="display: block;"></iframe></div>
+<script>
+	(function(){
+		// Div that iframe will be added to, iframe added to body if omited (not recomended as you can't guarantee where it will sit on page)
+		var divDest = document.getElementById("adblockdiv"),
+			iframe = document.createElement("iframe"),
+			ifrCont;
+
+		iframe.src = "about:blank";
+		iframe.id = "adblockframe";
+		iframe.name = iframe.id;
+		iframe.width = 0;
+		iframe.height = 0;
+		iframe.style.display = "block";
+		iframe.setAttribute("frameborder", 0);
+		iframe.setAttribute("scrolling", "no");
+		iframe.setAttribute("marginwidth", 0);
+		iframe.setAttribute("marginheight", 0);
+		iframe.setAttribute("allowTransparency", "true");
+		// iFrame added to page before the content can be amended
+		if(divDest){
+			divDest.appendChild(iframe);
+			ifrCont = iframe.contentWindow;
+			ifrCont.content = "<!DOCTYPE HTML><html><head></head><body><div id='reads' style='text-align:center;'><scr"+"ipt>var REA_Ads_Blocked = true; </scr"+"ipt><scr"+"ipt src='https://sasinator.realestate.com.au/rea/hserver/FCID=466330/size=300x250/pos=1'></scr"+"ipt><scr"+"ipt>if(REA_Ads_Blocked){if(typeof(console)=='object'){console.log('ABE'); }(new Image()).src = 'https://goo.gl/w5r35B'; }else{if(typeof(console)=='object'){console.log('ABD'); }(new Image()).src = 'https://goo.gl/9x8iAw'; }</scr"+"ipt></div></body></html>";
+			ifrCont.location.replace("javascript:window.content;");
+		}
+	})();
+</script></body></html>

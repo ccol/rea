@@ -915,13 +915,7 @@
     _ol('create', '7f81ca264bb84afa8b00aa69cc319590', 
       {onError: function(e) {console.log(typeof e === 'string' ? e : e.message);}}, 
       function(ol) {
-        console.log('started OK');
-        _ol('getTrackingId', function(value) {
-          console.log('Tracking ID is', value);
-        });
-
         _ol('rims.getNewMessages', {limit: 10}, function(messages, meta){
-
           //display the unread count as a badge on the notification icon, only if there's unread messages
           if(meta.unread > 0){
             console.log('Unread rich messages: ' + meta.unread);

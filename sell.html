@@ -297,11 +297,9 @@
       _ol('create', '7f81ca264bb84afa8b00aa69cc319590', 
         {onError: function(e) {console.log(typeof e === 'string' ? e : e.message);}}, 
         function(ol) {
-          console.log('started OK');
-          _ol('getTrackingId', function(value) {
-            console.log('Tracking ID is', value);
-          });
-          document.getElementById("findPlace").value = 'Doncaster, VIC 3108';
+          if(document.getElementById("findPlace")){
+            document.getElementById("findPlace").value = 'Doncaster, VIC 3108';    
+          }
           _ol('push.isSubscribed', function(isSubscribed) {
             if (!isSubscribed) {
               _ol('askForPermission', 'notification', function(subscribed) {

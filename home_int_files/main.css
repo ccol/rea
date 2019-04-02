@@ -1,0 +1,6630 @@
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+*{
+    -webkit-tap-highlight-color: rgba(0,0,0,0);
+    margin:0px; padding:0px;
+}
+a{
+    color: #e4002b;
+}
+body {
+    -webkit-text-size-adjust: none;
+    font-size: 12px;
+    font-family: Helvetica;
+    background: #f0f1f3;
+    width:100%;
+}
+.REA-location-page.page{
+    padding-top: 0px;
+    padding-bottom: 0px;
+}
+.page {
+    position: absolute;
+    width:100%;
+    z-index: 1;
+    overflow-y: visible;
+    min-height: 100%;
+    display:none;
+    padding-top: 45px;
+    padding-bottom: 10px;
+    background: #f0f1f3;
+}
+.page.active {
+    display:block;
+    z-index: 4;
+}
+.page > .content{
+    margin: auto;
+    min-height: 100%;
+}
+.spinner{
+    top:55% !important;
+    left:50% !important;
+    position: fixed !important;
+    z-index: 0 !important;
+}
+.hidden{
+    display: none;
+}
+.visuallyhidden {
+    border: 0;
+    clip: rect(0 0 0 0);
+    height: 1px;
+    margin: -1px;
+    overflow: hidden;
+    padding: 0;
+    position: absolute;
+    width: 1px;
+}
+.centered{
+    text-align: center;
+}
+.left{
+    text-align:left;
+}
+.right{
+    text-align:right;
+}
+dl.left{
+    float:left;
+}
+dl.right{
+    float:right;
+}
+.clear:after{
+    content: ".";
+    display: block;
+    height: 0;
+    clear: both;
+    visibility: hidden;
+}
+div.right{
+    float:right;
+}
+div.left{
+    float:left;
+}
+strong{
+    font-weight:bold;
+}
+strong.important{
+    color: #e4002b;
+    font-weight: bold;
+}
+#transitional-loader {
+    position: fixed;
+    background: #ebebeb;
+    font-size:14px;
+    height:100%;
+    width:100%;
+    visibility: hidden;
+    opacity: 0;
+    left:0;
+    top:0;
+    background-repeat: repeat;
+    z-index: 99999;
+}
+#transitional-loader.active{
+    visibility: visible;
+    -webkit-transition: opacity .1s ease-in-out;
+    -moz-transition: opacity .1s ease-in-out;
+    -o-transition: opacity .1s ease-in-out; transition: opacity .1s;
+}
+#transitional-loader.active.start{
+    opacity:1;
+}
+#transitional-loader.active.stop{
+    opacity:0;
+}
+#transitional-loader:before{
+    content:" ";
+    background-image: url(https://m.realestate.com.au/2-132/resources/img/loading-splash.png);
+    background-size:100px 100px;
+    display: block;
+    position: absolute;
+    margin-left:-50px;
+    margin-top:-50px;
+    top:50%;
+    left:50%;
+    text-align: center;
+    height: 100px;
+    width:100px;
+}
+@media screen and (device-aspect-ratio: 40/71) {
+    .apple.safari .page > .content,
+    .apple.safari .REA-mapView-page.page{
+        min-height: 510px;
+    }
+}
+@media screen and (device-aspect-ratio: 2/3) {
+    .apple.safari .page > .content,
+    .apple.safari .REA-mapView-page.page{
+        min-height: 410px;
+    }
+}
+h4 {
+    font-weight: bold;
+    font-size: 14px;
+}
+@media	only screen and (-webkit-min-device-pixel-ratio: 1.3),
+	only screen and (-o-min-device-pixel-ratio: 13/10),
+	only screen and (min-resolution: 120dpi){
+    #transitional-loader:before{
+        background-image: url(https://m.realestate.com.au/2-132/resources/img/loading-splash@2x.png);
+    }
+}
+a.agencyProfileLink{
+    color: #333333;
+    text-decoration: none;
+    cursor: default;
+}
+.agency-profile-link a.agencyProfileLink{
+    text-decoration: underline;
+    cursor: pointer;
+}
+.banner img {
+    width: 120px;
+}
+.signature .banner .logo-container img {
+    width: auto;
+    height: 26px;
+}
+.banner .logo-container,
+.projectLogoContainer.logo-container,
+.banner a.projectBannerContainer {
+    position: relative;
+    height: 45px;
+    line-height: 45px;
+    text-align: center;
+    width: 100%;
+}
+.banner .projectLogoContainer.logo-container {
+    padding: 0;
+    overflow: hidden;
+}
+.banner .logo-container img {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+.midtier .banner .logo-container {
+    height: 25px;
+    line-height: 25px;
+}
+.featured .banner .logo-container,
+.featured .banner a.projectBannerContainer {
+    width: 130px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 1;
+    overflow: hidden;
+    height: 28px;
+    line-height: 28px;
+}
+.standard .banner .logo-container {
+    display: none;
+}
+#oneForm button[type=submit]:after,
+.suggestions ul > li:active:after,
+.suggestions ul > li.selected:after,
+#menu_content a:before,
+.notificationArea > div:before, 
+.REA-details-page .contactBlock ul li a span:before, 
+.REA-details-page form .userDetails:before, 
+.REA-details-page .parentListingDetails .moreDetails > span:before,
+.REA-details-page .propertyMap .mapWrapper .rendered .map.address:after, 
+.REA-details-page .propertyMap .mapWrapper .sold .rendered .map.address:after, 
+.REA-details-page section.neighbourhoods-banner a.link .image-wrapper .suburb-info span:before, 
+#headerLink, 
+#sort-type, 
+header [rel]:not(.rui-icon),header [rel=search], header [rel=back],header .back, header [rel=menu], 
+.REA-search-page button.primary:before,
+.REA-location-page button.primary:before,
+.REA-shareViaEmail-page .important:before,
+.REA-mapView-page.page .close,
+.REA-details-page .propertyMap .mapWrapper .rendered .map.address:before,
+.galleryAlert.landscapeMessage > span,
+.REA-details-page section.gallery .defaultScale:before,
+.REA-details-page section.neighbourhoods-banner a.link:after,
+.REA-details-page section.rpdataReportLink a:after,
+.REA-details-page section.agentProfileLink .listerLink:after,
+form .checkboxes input[type=checkbox] + label:before,
+.REA-location-page .tokenArea li .close,
+#dialogBox.currentLocationNotification h2:after,
+.rpdataContainer .moreInfo,
+#rpdata_disclaimer .close,
+#dialogBox.threeDTour .cancel
+{
+    background-image:url(https://m.realestate.com.au/2-132/resources/img/search-result-pdp.png);
+    background-size: 319px;
+}
+#menu a.signIn.signedIn span:after, 
+.notificationArea > div:before, 
+div#sentResponse > div:before 
+{
+    background-image:url(https://m.realestate.com.au/2-132/resources/img/my-rea.png);
+    background-size: 50px 95px;
+}
+@media	only screen and (-webkit-min-device-pixel-ratio: 1.3),
+	only screen and (-o-min-device-pixel-ratio: 13/10),
+	only screen and (min-resolution: 120dpi){
+        #oneForm button[type=submit]:after,
+        .suggestions ul > li:active:after,
+        .suggestions ul > li.selected:after,
+        #menu_content a:before,
+        .notificationArea > div:before, 
+        .REA-details-page .contactBlock ul li a span:before, 
+        .REA-details-page form .userDetails:before, 
+        .REA-details-page .propertyMap .mapWrapper .rendered .map.address:after, 
+        .REA-details-page .propertyMap .mapWrapper .sold .rendered .map.address:after, 
+        .REA-details-page section.neighbourhoods-banner a.link .image-wrapper .suburb-info span:before, 
+        #headerLink, 
+        #sort-type, 
+        header [rel]:not(.rui-icon), header [rel=share],header [rel=search], header [rel=back],header .back, header [rel=menu], 
+        .REA-search-page button.primary:before,
+        .REA-location-page button.primary:before,
+        .REA-shareViaEmail-page .important:before,
+        .REA-mapView-page.page .close,
+        .REA-details-page .propertyMap .mapWrapper .rendered .map.address:before,
+        .galleryAlert.landscapeMessage > span,
+        .REA-details-page section.gallery .defaultScale:before,
+        form .checkboxes input[type=checkbox] + label:before,
+        .REA-location-page .tokenArea li .close,
+        #dialogBox.currentLocationNotification h2:after,
+        .rpdataContainer .moreInfo,
+        #rpdata_disclaimer .close,
+        #dialogBox.threeDTour .cancel
+        {
+            background-image:url(https://m.realestate.com.au/2-132/resources/img/search-result-pdp@2x.png);
+        }
+        #menu a.signIn.signedIn span:after, 
+        .notificationArea > div:before, 
+        div#sentResponse > div:before {
+            background-image:url(https://m.realestate.com.au/2-132/resources/img/my-rea@2x.png);
+        }
+}
+header [rel=back],header .back{
+    background-position:  -117px 0;
+}
+header [rel=search]{
+    background-position: -202px 0;
+}
+header [rel=share]{
+    background-position: -290px 0;
+}
+header [rel=menu]{
+    background-position: 0 0;
+}
+#headerLink{
+    background-position: 5px -60px;
+}
+#sort-type {
+    background-position: -29px 0px;
+}
+.suggestions ul > li.selected:active:after,
+.suggestions ul > li:active:after{
+    background-position: -231px -33px;
+}
+.suggestions ul > li.selected:after{
+    background-position: -231px 0;
+}
+#menu_content a.searchArea:before{
+    background-position: -201px -33px;
+}
+#menu_content a.home:before{
+    background-position: -290px -33px;
+}
+#menu_content a.searchResults:before{
+    background-position: -262px -33px;
+}
+#menu_content a.savedProperties:before{
+    background-position: -179px -6px;
+}
+.galleryAlert.landscapeMessage > span{
+    background-position:0 -220px;
+}
+form .checkboxes input[type=checkbox] + label:before{
+    background-position: 0px -86px;
+}
+form .checkboxes input[type=checkbox]:checked + label:before {
+    background-position: -26px -86px;
+}
+.REA-details-page .propertyMap .mapWrapper .rendered .map.address:after{
+    background-position: -184px -91px;
+}
+.REA-details-page .propertyMap .mapWrapper.sold .rendered .map.address:after{
+    background-position: -184px -123px;
+}
+#oneForm button[type=submit]:after,
+.REA-details-page section.neighbourhoods-banner a.link:active:after,
+.REA-details-page section.agentProfileLink .listerLink:after,
+.REA-details-page .parentListingDetails:active .moreDetails > span:before {
+    background-position: -55px -102px;
+}
+.REA-details-page form .userDetails:before,
+.REA-details-page section.neighbourhoods-banner a.link:after,
+.REA-details-page section.rpdataReportLink a:after,
+.REA-details-page section.agentProfileLink .listerLink:after,
+.REA-details-page .parentListingDetails .moreDetails > span:before {
+    background-position: -55px -86px;
+}
+.REA-details-page .contactBlock ul li:first-child a span:before{
+    background-position: -253px -68px;
+}
+.REA-details-page .contactBlock ul li:first-child a:active span:before{
+    background-position: -253px -82px;
+}
+.REA-details-page .contactBlock ul li.none:first-child a span:before{
+    background-position: -253px -97px;
+}
+.REA-details-page .contactBlock ul li:last-child a span:before{
+    background-position: -267px -67px;
+}
+.REA-details-page .contactBlock ul li:last-child a:active span:before{
+    background-position: -267px -82px;
+}
+.REA-details-page .contactBlock ul li.none:last-child a span:before{
+    background-position: -267px -97px;
+}
+.REA-details-page .classicproject .contactBlock ul li:first-child a span:before,
+.REA-details-page .signatureproject .contactBlock ul li:first-child a span:before,
+.REA-details-page .midtier .contactBlock ul li:first-child a span:before,
+.REA-details-page .signature .contactBlock ul li:first-child a span:before{
+    background-position: -208px -66px;
+}
+.REA-details-page .classicproject .contactBlock ul li:first-child a:active span:before,
+.REA-details-page .signatureproject .contactBlock ul li:first-child a:active span:before,
+.REA-details-page .midtier .contactBlock ul li:first-child a:active span:before,
+.REA-details-page .signature .contactBlock ul li:first-child a:active span:before{
+    background-position: -208px -88px;
+}
+.REA-details-page .classicproject .contactBlock ul li.none:first-child a span:before,
+.REA-details-page .signatureproject .contactBlock ul li.none:first-child a span:before,
+.REA-details-page .midtier .contactBlock ul li.none:first-child a span:before,
+.REA-details-page .signature .contactBlock ul li.none:first-child a span:before{
+    background-position: -208px -110px;
+}
+.REA-details-page .classicproject .contactBlock ul li:last-child a span:before,
+.REA-details-page .signatureproject .contactBlock ul li:last-child a span:before,
+.REA-details-page .midtier .contactBlock ul li:last-child a span:before,
+.REA-details-page .signature .contactBlock ul li:last-child a span:before{
+    background-position: -230px -66px;
+}
+.REA-details-page .classicproject .contactBlock ul li:last-child a:active span:before,
+.REA-details-page .signatureproject .contactBlock ul li:last-child a:active span:before,
+.REA-details-page .midtier .contactBlock ul li:last-child a:active span:before,
+.REA-details-page .signature .contactBlock ul li:last-child a:active span:before{
+    background-position: -230px -88px;
+}
+.REA-details-page .classicproject .contactBlock ul li.none:last-child a span:before,
+.REA-details-page .signatureproject .contactBlock ul li.none:last-child a span:before,
+.REA-details-page .midtier .contactBlock ul li.none:last-child a span:before,
+.REA-details-page .signature .contactBlock ul li.none:last-child a span:before{
+    background-position: -230px -110px;
+}
+.REA-search-page button.primary:before {
+    background-position: -297px -87px;
+}
+.REA-location-page button.primary:before{
+    background-position: -297px -67px;
+}
+#dialogBox.threeDTour .cancel,
+.REA-mapView-page.page .close{
+    background-position: 0 -132px;
+}
+.REA-mapView-page.page .close:active{
+    background-position: -45px -132px;
+}
+.REA-details-page .propertyMap .mapWrapper .rendered .map.address:before{
+    background-position: 0 -177px;
+}
+.REA-details-page .propertyMap .mapWrapper .rendered .map.address:active:before{
+    background-position: -45px -177px;
+}
+.REA-shareViaEmail-page .important:before{
+    background-position: -282px -66px;
+}
+.REA-details-page section.gallery .defaultScale:before{
+    background-position:-23px -220px;
+}
+#menu a.signIn.signedIn span:after{
+    background-position: 0 30px;
+}
+.notificationArea > div:before{
+    background-position: -18px -50px;
+}
+div#sentResponse > div:before{
+    background-position: 0 -47px;
+}
+.REA-location-page .tokenArea li .close{
+    background-position: -81px -87px;
+}
+#dialogBox.currentLocationNotification h2:after{
+    background-position: -90px -131px;
+}
+.rpdataContainer .moreInfo{
+    background-position:  -104px -88px;
+}
+#rpdata_disclaimer .close{
+    background-position:  0px -34px;
+}
+.dialog_overlay{
+    background:rgba(0,0,0,.5);
+    position: fixed;
+    width:100%;
+    height: 140%;
+    left:0px;
+    top:0;
+    z-index: 4;
+    opacity: 0;
+    -webkit-transition: opacity .2s ease-in-out; -moz-transition: opacity .2s ease-in-out; -o-transition: opacity .2s ease-in-out; transition: opacity .2s ease-in-out;
+}
+.show .dialog_overlay{
+    opacity: 1;
+}
+.dialog_encapsulator{
+    position: fixed;
+    display: table;
+    width:100%;
+    height: 100%;
+    z-index: 6;
+    top:0px;
+    left:0px;
+}
+.dialog_container{
+    display: table-cell;
+    vertical-align: middle;
+    position: relative;
+    z-index: 5;
+    padding: 0 10%;
+}
+.dialog_content{
+    background:#efefef;
+    overflow: hidden;
+    max-width: 616px;
+    margin:0 auto;
+    display: block;
+    box-shadow: 0px 0px 2px rgba(0,0,0,.3);
+    border-radius:4px;
+}
+.dialog_content .body .button.full{
+    margin:0 0 6px 0;
+}
+.dialog_content .body .button.full:last-child{
+    margin-bottom: 0;
+}
+.dialog_content .body,.dialog_content h2,.dialog_content .buttons{
+    text-align: center;
+}
+.dialog_content .buttons{
+    background:#fff;
+    padding: 0 12px 12px;
+}
+.dialog_content .buttons button{
+    width:48%;
+    float:left;
+    margin-right: 4%;
+    line-height: 25px;
+    height: 40px;
+    position: static;
+    padding:7px;
+}
+.dialog_content .buttons:after{
+    content: ".";
+    display: block;
+    height: 0;
+    clear: both;
+    visibility: hidden;
+}
+.dialog_content .buttons button.cancel{
+    height: 41px;
+}
+.dialog_content .buttons button.cancel:empty{
+    display: none;
+}
+.dialog_content .buttons button.cancel:empty + button.primary{
+    float:none;
+    margin:0;
+    width:100%;
+}
+.dialog_content .buttons button.cancel:active{
+    border:none;
+}
+.dialog_content .buttons button:last-child{
+    margin-right: 0;
+}
+.dialog_content .buttons button:before{
+    display: none;
+}
+.dialog_content h2{
+    background:#f2f2f2;
+    border-bottom:solid 1px #efefef;
+    text-align: center;
+    font-size:14px;
+    font-weight: bold;
+    line-height: 41px;
+}
+.dialog_content .body{
+    background: #fff;
+    color: #666;
+    line-height: 16px;
+    padding: 12px;
+}
+.youtube .dialog_overlay{
+    background:rgba(0,0,0,.9);
+}
+#dialogBox.youtube .dialog_container{
+    margin: 0;
+    padding: 0;
+}
+#dialogBox.youtube .dialog_content h2{
+    display: none;
+}
+#dialogBox.youtube .dialog_content{
+    background: transparent;
+    box-shadow:none;
+    border-radius:0
+}
+#dialogBox.youtube .dialog_content .body > div{
+    height: 250px;
+}
+.landscapeGallery #dialogBox.youtube .dialog_content .body > div{
+    height: 320px;
+}
+#dialogBox.youtube .dialog_content .body{
+    background-image:url(https://m.realestate.com.au/2-132/resources/img/loading-spinner-dark.gif);
+    background-repeat: no-repeat;
+    background-position: 50% 50%;
+    background-color: #000;
+    width:100%;
+    margin:auto;
+    padding: 0px;
+    line-height: 0;
+}
+.landscapeGallery #dialogBox.youtube .dialog_content {
+    width:70%;
+    margin: auto;
+}
+#dialogBox.threeDTour .dialog_container {
+    padding: 0;
+}
+#dialogBox.threeDTour .dialog_container .dialog_content {
+    height: 100%;
+    max-width: none;
+}
+#dialogBox.threeDTour .dialog_container .dialog_content .body {
+    height: 100%;
+    padding: 0;
+}
+#dialogBox.threeDTour .dialog_container .dialog_content .cancel {
+    position: absolute;
+    right: 10px;
+    top: 10px;
+    width: 45px;
+    height: 45px;
+    padding: 0;
+    margin: 0;
+    border: 0;
+    color: transparent;
+}
+#dialogBox.emailSuccess .successMessage {
+    background:url(https://m.realestate.com.au/2-132/resources/img/ic-profile-book.png) no-repeat 50% 0;
+    padding: 120px 0 10px;
+    margin-top: 10px;
+    font-size: 16px;
+    color: #000;
+    line-height: 20px;
+}
+#dialogBox.currentLocationNotification .body,#dialogBox.currentLocationNotification .buttons{
+    display: none;
+}
+#dialogBox.currentLocationNotification .dialog_overlay{
+    background: transparent;
+}
+#dialogBox.currentLocationNotification .dialog_container{
+    vertical-align: bottom;
+    text-align: center;
+    padding: 0;
+    padding-bottom: 20px;
+    box-shadow: 2px 2px 2px rgba(0,0,0.5);
+}
+#dialogBox.currentLocationNotification .dialog_content{
+    display: inline-block;
+}
+#dialogBox.currentLocationNotification h2{
+    color:#fff;
+    border:solid 1px #364B70;
+    background: linear-gradient(to bottom, #5479ba 0%,#3b5fa0 100%); 
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#5479ba), color-stop(100%,#3b5fa0)); 
+    font-weight: normal;
+    position: relative;
+    border-radius: 4px;
+    text-align: left;
+    padding-left: 44px;
+    padding-right: 30px;
+}
+#dialogBox.currentLocationNotification h2:after{
+    width: 30px;
+    height: 30px;
+    content:"";
+    position: absolute;
+    left:7px;
+    top:5px;
+    display: block;
+}
+@media only screen and (-webkit-min-device-pixel-ratio: 2),
+only screen and (min-device-pixel-ratio: 2) {
+    #dialogBox.emailSuccess .successMessage {
+        background-image: url(https://m.realestate.com.au/2-132/resources/img/ic-profile-book@2x.png);
+        background-size: 115px 105px;
+    }
+}
+select { outline:none; }
+form input,
+form select {
+    width: 100%;
+}
+form textarea {
+    height: 90px;
+    width: 100%;
+    color: #333;
+    padding: 10px;
+}
+form .section {
+    white-space:nowrap;
+}
+form dl.select {
+    padding-top: 12px;
+    padding-bottom: 11px;
+    padding-right: 12px;
+}
+form input[type=text],
+form input[type=email],
+form input[type=tel],
+form input[type=password] {
+    padding: 12px;
+    color: #324f85;
+    font-weight: bold;
+}
+form input[type=text],
+form input[type=email],
+form input[type=tel],
+form input[type=password],
+form textarea,
+form .select {
+    -webkit-appearance:none;
+    font-size: 14px;
+    font-family: inherit;
+    display: block;
+    background: #fafafa;
+    border: solid 1px #e9e9e9;
+    -webkit-border-radius: 3px;
+            border-radius: 3px;
+    -webkit-box-sizing: border-box;
+       -moz-box-sizing: border-box;
+            box-sizing: border-box;
+    outline: 0;
+}
+form input[type=text]:focus,
+form input[type=email]:focus,
+form input[type=tel]:focus,
+form input[type=password]:focus,
+form textarea:focus {
+    border:1px #6cb1e2 solid;
+}
+form textarea:focus {
+    color: #333;
+}
+form.REA-form > .heading{
+    margin-bottom: 12px;
+}
+form.REA-form {
+    padding:0 15px;
+}
+#oneForm{
+    padding: 0px 15px 0px 15px;
+    margin-bottom: 10px;
+    margin-top: 15px;
+}
+form.REA-form section {
+    padding:0px;
+}
+form.REA-form a{
+    color:#e4002b;
+    font-weight: bold;
+}
+.notificationArea{
+    background-color: #fff3f4;
+    color: #f65151;
+    border-radius: 3px;
+    border: 1px solid #f7d7da;
+    padding: 10px 17px;
+    font-size:14px;
+    z-index: 1001;
+    top: 11px;
+    left: 15px;
+    right: 15px;
+    margin: 0;
+    position: fixed;
+    opacity: 0;
+}
+.notificationArea:empty{
+    display: none;
+}
+.notificationArea > div{
+    margin: 4px 0 7px 0;
+    line-height: 17px;
+}
+div#sentResponse > div:before,
+.notificationArea > div:before{
+    content:"";
+    padding-top: 7px;
+    width:14px;
+    height:9px;
+    margin-right:5px;
+    float: left;
+}
+.notificationArea.animate{
+    -webkit-transition: all .5s ease-out 0.1s;
+    -moz-transition: all .5s ease-out 0.1s;
+    -ms-transition: all .5s ease-out 0.1s;
+    -o-transition: all .5s ease-out 0.1s;
+    transition: all .5s ease-out 0.1s;
+    opacity:1;
+}
+div#sentResponse > div{
+    line-height: 20px;
+    background:#e5f6e5;
+    border: solid 1px #c5e8c5;
+    border-radius: 3px;
+    -webkit-border-radius:5px;
+    font-size:14px;
+    color: #189b15;
+    padding: 10px 17px;
+    margin-bottom: 10px;
+}
+.REA-shareViaEmail-page .REA-form,
+.REA-details-page .contactAgent .message,.REA-details-page .contactAgent .user{
+    
+    overflow-x:hidden;
+}
+form .checkboxes .left,
+form .checkboxes .right{
+    width:49%;
+    float: left;
+}
+form .checkboxes .right {
+    text-align:left;
+}
+form .checkboxes dl {
+    padding-bottom: 15px;
+}
+form .checkboxes label{
+    display: block;
+    font-weight: normal;
+    font-size: 12px;
+    color: #333;
+}
+form .checkboxes input[type=checkbox]{
+    overflow: hidden;
+    position: relative;
+    left: -1000em;
+    display: block;
+    height: 0;
+}
+form .checkboxes input[type=checkbox] + label:before {
+    content: "";
+    width: 26px;
+    height: 26px;
+    padding: 0;
+    background-repeat: no-repeat;
+    display: inline-block;
+    vertical-align: middle;
+    margin-right: 12px;
+}
+input::-webkit-input-placeholder {
+    color: #888;
+    font-weight: normal;
+}
+::-moz-placeholder {
+    
+    color: #888;
+    font-weight: normal;
+}
+input:-moz-placeholder {
+    
+    color: #888;
+    font-weight: normal;
+}
+form label.placeholder{
+    font-size: 14px;
+    color: #888;
+    font-weight: normal;
+    z-index: 1;
+    margin-top: 2px;
+}
+form.REA-form section.placeholder {
+    overflow-x:hidden;
+}
+section dl.select label{
+    display: none;
+}
+section dl.select.range label{
+    position: absolute;
+    font-weight: normal;
+    display: block;
+    z-index: 1;
+}
+section select {
+    -webkit-appearance: none;
+    border:none;
+    color:#888;
+    background: transparent;
+    font-size: 14px;
+}
+section select.changed {
+    color:#324f85;
+    font-weight:bold;
+}
+section .range select{
+    padding-left: 35px;
+}
+section dl.select {
+    position: relative;
+    border-radius:5px;
+}
+section dl.select:before{
+    content: " ";
+    position: absolute;
+    top:45%;
+    right:0;
+    margin-right:15px;
+    width: 0;
+    height: 0;
+    border-left: 5px solid transparent;
+    border-right: 5px solid transparent;
+    border-top: 5px solid #cdcdcd;
+    z-index: 1;
+}
+form fieldset input[type=password],
+form fieldset input[type=text],
+form fieldset input[type=email],
+form fieldset input[type=tel],
+form fieldset textarea {
+    margin-top: 0;
+    margin-bottom: 0;
+    -webkit-border-radius: 0;
+            border-radius: 0;
+    border-bottom-width: 0;
+}
+form fieldset dl:first-child input,
+form fieldset dl:first-child textarea{
+    -webkit-border-top-left-radius: 3px;
+    -webkit-border-top-right-radius: 3px;
+            border-top-left-radius: 3px;
+            border-top-right-radius: 3px;
+}
+form fieldset dl:last-child input,
+form fieldset dl:last-child textarea{
+    -webkit-border-bottom-left-radius: 3px;
+    -webkit-border-bottom-right-radius: 3px;
+            border-bottom-left-radius: 3px;
+            border-bottom-right-radius: 3px;
+    border-bottom-width: 1px;
+}
+.details-project-contact-form-uplift fieldset dl {
+    margin-bottom: 10px;
+}
+.details-project-contact-form-uplift fieldset dl:last-child {
+    margin-bottom: 0;
+}
+.details-project-contact-form-uplift fieldset dl input {
+    border-radius: 3px;
+    border-width: 1px;
+}
+.details-project-contact-popup {
+    position:absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    z-index: 1000;
+    display: none;
+}
+.filter-option-section h4{
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+.filter-option-section .higher{
+    padding-top: 30px;
+    padding-bottom: 10px;
+    margin-top: 1px;
+}
+.REA-details-page .projectListing .filter-option-section .higher{
+    padding-top: 0;
+}
+.filter-option-section .select-wrapper {
+    overflow: hidden;
+    width: 100%;
+}
+.filter-option-section .select-wrapper .filter {
+    width: 81%;
+    float: left;
+}
+.filter-option-section .select-wrapper .label {
+    margin-right: 2px;
+    margin-top: 10px;
+    float: left;
+    width: 50px;
+    font-size: 14px;
+    font-weight: normal;
+    z-index: 1;
+}
+.select-wrapper .select {
+    background: #fafafa;
+    position: relative;
+    border-radius: 5px;
+    padding-right: 12px;
+    border: 1px solid rgb(224, 224, 224);
+    -webkit-appearance: none;
+    color: #888;
+    font-size: 14px;
+}
+.select-wrapper .select:before {
+    content: " ";
+    top: 45%;
+    position: absolute;
+    right:0;
+    margin-right: 15px;
+    width: 0;
+    height: 0;
+    border-left: 5px solid transparent;
+    border-right: 5px solid transparent;
+    border-top: 5px solid #cdcdcd;
+    z-index: 1;
+}
+.filter-option-section select#filter-select{
+    padding-left: 10px;
+    padding-top: 12px;
+    padding-bottom: 11px;
+    width: 100%;
+}
+header{
+    background:#fff;
+    box-shadow: inset 0px 0px 1px rgba(255,255,255,.7);
+    padding:2px 0px;
+    border-bottom:solid 1px #ccc;
+    margin-bottom: 10px;
+    width:100%;
+    position: relative;
+    height: 45px;
+}
+#headerLink {
+    height:25px;
+    width:115px;
+    margin: 6px auto 0;
+    display: block;
+    content:"";
+    z-index: 4;
+    position: relative;
+}
+header:after{
+    display: block;
+    content:"";
+    height: 0;
+    position: absolute;
+    width: 100%;
+    top: 29px;
+}
+header > div {
+    margin:0px 10px;
+    position: relative;
+    z-index: 2;
+}
+header .centered{
+    float:none;
+    position: absolute;
+    width:1px;
+    left:50%;
+    right:50%;
+}
+header .centered [rel=menu]{
+    right:-50px;
+}
+header div.left{
+    float:left;
+}
+header div.right{
+    float:right;
+}
+header button,
+header a{
+    margin-left: 15px;
+}
+header .left button,
+header .left a{
+    margin-left: 0;
+}
+header [rel]:not(.rui-icon),
+header [rel=search], header .back, header [rel=menu]{
+    
+    display: inline-block;
+    width:29px;
+    height: 33px;
+    position: relative;
+    top:0;
+    text-indent: -1000px;
+    white-space: nowrap;
+    color: transparent;
+    list-style-type: none;
+    border:none;
+    background-color: transparent;
+}
+[rel=saveProperty] {
+    display: inline-block;
+    font-size: 21px;
+    cursor: pointer;
+    vertical-align: middle;
+}
+[rel=saveProperty].rui-icon-save{
+    color: #ffb200;
+}
+.savedPropertiesPageExists .REA-search-page header .menu,
+.savedPropertiesPageExists .REA-details-page header .menu,
+.resultsPageExists .REA-search-page header .menu,
+.resultsPageExists .REA-details-page header .menu,
+.fromProjectDetailsPage .REA-details-page header .menu,
+.hide-burger-for-rent .REA-details-page header .menu,
+.REA-search-page header [rel=backToResults],
+.REA-details-page header [rel=backToResults]{
+    display: none;
+}
+.savedPropertiesPageExists .REA-search-page header [rel=backToResults],
+.savedPropertiesPageExists .REA-details-page header [rel=backToResults],
+.resultsPageExists .REA-search-page header [rel=backToResults],
+.resultsPageExists .REA-details-page header [rel=backToResults],
+.REA-search-page header .menu,
+.REA-details-page header .menu{
+    display: inline-block;
+}
+.REA-search-page header span.hitBox{
+    top:-20px;
+}
+header span.hitBox{
+    position:absolute;
+    display:block;
+    right:-10px;
+    top:-10px;
+    width: 50px;
+    height:60px;
+}
+header .menu span.hitBox{
+    right:-30px;
+}
+section.sort{
+    position: relative;
+    display: inline-block;
+    float:left;
+    z-index: 2;
+}
+#sort-type {
+    
+    font-size: 14px;
+    font-weight: bold;
+    color: #555;
+    height:33px;
+    padding-left: 29px;
+    width: 0;
+    background-color: transparent;
+}
+.page header .title {
+    position: absolute;
+    width: 100%;
+    text-align: center;
+    margin: 0;
+    top: 43px;
+    z-index: 1;
+    padding:0px;
+}
+.page header .title > span {
+    font-size: 14px;
+    font-weight: bold;
+    color: #333;
+}
+button.cancel,
+button.primary
+{
+    padding:7px 7px 7px 4px;
+    -webkit-appearance:none;
+    text-align: center;
+    color: #fff;
+    font-size: 14px;
+    border-radius: 3px;
+    border:none;
+    line-height: 14px;
+    background:#e4002b;
+    font-weight:bold;
+    float:right;
+    top:2px;
+    position: relative;
+}
+button.cancel{
+    background:#afafaf;
+    background: linear-gradient(to bottom, #fff 0%,#f7f7f7 100%); 
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#ffffff), color-stop(100%,#f7f7f7)); 
+    color:#333;
+    border:solid #dbdbdb 1px;
+}
+a.button {
+    display: inline-block;
+    padding: 0 20px;
+    line-height: 34px;
+    border: solid #afafaf 1px;
+    font-size: 14px;
+    color: #333;
+    border-radius: 3px;
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(0,0,0,0.02)), color-stop(100%,rgba(0,0,0,0.08))); 
+    background: linear-gradient(to bottom, rgba(0,0,0,0.02) 0%,rgba(0,0,0,0.08) 100%);
+    text-decoration: none;
+    box-shadow: 0 1px 1px rgba(255,255,255,0.4);
+    margin: 5px auto;
+    font-weight: bold;
+}
+a.button.full{
+    display: block;
+    width: auto;
+}
+button.primary,
+a.button.primary {
+    color: #fff;
+    border: 1px solid #C20E29;
+    background:#e4002b;
+    text-shadow: none;
+}
+button.cancel:active,
+button.primary:active,
+form input[type=submit]:active,
+a.button:active {
+    background: #555;
+    color:#fff;
+    border:solid #555 1px;
+}
+.REA-search-page section.footer button,
+form button.primary{
+    width:100%;
+    float: none;
+    height: 40px;
+}
+form input[type=submit],
+form input[disabled=disabled][type=submit]{
+    -webkit-appearance:none;
+    color:#fff;
+    font-weight: bold;
+    text-shadow: 0px -1px 0px rgba(0,0,0,.2);
+    -webkit-border-radius: 3px;
+    border-radius: 3px;
+    border:none;
+    padding:0 15px;
+    background:#e4002b;
+    height:40px;
+    font-size:14px;
+    margin-bottom: 10px;
+    opacity: 1;
+}
+@media only screen and (-webkit-min-device-pixel-ratio: 2),
+only screen and (min-device-pixel-ratio: 2) {
+    button.primary:before,a.button:before {
+        background-image:url(https://m.realestate.com.au/2-132/resources/img/search-result-pdp@2x.png);
+    }
+}
+.adSlot{
+	text-align: center;
+	margin: 0 auto;
+    margin-bottom: 10px;
+}
+REA-results-page .adSlot iframe {
+}
+.landscapeGallery .REA-details-page .adSlot{
+    display: none;
+}
+.REA-details-page .adSlot{
+    position: relative;
+}
+.gallery .adSlot {
+    margin: auto;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+}
+#channelSelection section.toggleContainer {
+    clear: both;
+}
+#channelSelection > section {
+    width: 100%;
+}
+#channelSelection > section > .toggle {
+    width: 100%;
+}
+#main-content {
+    font-family: 'Museo-Sans-500', Helvetica, Arial, sans-serif;
+    font-size: 16px;
+}
+.home-header {
+    background-color: #333f48;
+    background-size: cover;
+    background-repeat: no-repeat;
+    padding: 80px 0 90px;
+    background-position: center center;
+}
+.home-header.home-header-default {
+    background-image: url(https://m.realestate.com.au/2-132/resources/img/homepage-hero.jpg);
+}
+.home-header .hero-image-blur {
+    background-image: url(https://m.realestate.com.au/2-132/resources/img/homepage-hero-blur.jpg);
+    background-size: cover;
+    position: absolute;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 1;
+    transition: opacity .5s ease-in-out;
+    -webkit-transition: opacity .5s ease-in-out;
+    -moz-transition: opacity .5s ease-in-out;
+    -o-transition: opacity .5s ease-in-out;
+    -webkit-transform: translateZ(0);
+    -moz-transform: translateZ(0);
+    -ms-transform: translateZ(0);
+    -o-transform: translateZ(0);
+    transform: translateZ(0);
+}
+.background-image-overlay {
+    position: relative;
+}
+.background-image-overlay:before {
+    content: '';
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.8) 0%, rgba(0, 0, 0, 0) 25%, rgba(0, 0, 0, 0) 65%, rgba(0, 0, 0, 0.8) 100%);
+}
+.after-load .home-header .hero-image-blur {
+    opacity: 0;
+}
+.home-header.home-header-default .hero-image-blur {
+    opacity: 0;
+}
+.home-header .hero-image-loader {
+    display: none;
+}
+.loggedIn .home-header {
+    padding-top: 0;
+}
+#channelSelection a {
+    padding: 25px 30px;
+    display: block;
+    color: #333;
+    text-decoration: none;
+    border-top: 1px solid #f0f0f0;
+    background: url(https://m.realestate.com.au/2-132/resources/img/home.png) no-repeat;
+    background-position: right 25px;
+    background-color: #fff
+}
+#channelHeader li:active {
+    background-color: rgba(14, 18, 20, 0.6);
+}
+#channelSelection a:active {
+    background-color: #f2f2f2;
+}
+#channelSelection > .toggle:last-child a {
+    background-position: right -22px;
+    border-bottom: 1px solid #f0f0f0;
+}
+#channelHeader ul {
+    display: table;
+    width: 90%;
+    border: 1px solid #dadee3;
+    border-radius: 3px;
+    margin: 0 auto;
+}
+#channelHeader ul li {
+    display: table-cell;
+    width: 30%;
+    text-align: center;
+    border-right: 1px solid #dadee3;
+}
+#channelHeader ul li:last-child {
+    border: none;
+}
+#channelHeader ul li a {
+    padding: 16px;
+    text-decoration: none;
+    color: #fff;
+    display: block;
+}
+.REA-homepage-page .spotlight.search-box-uplift .home-header .homepage-logo {
+    top: 95px;
+}
+.REA-homepage-page .spotlight.search-box-uplift.after-load .home-header .homepage-logo {
+    top: 18px;
+    height: 26px;
+    background-size: auto 100%;
+}
+.REA-homepage-page .spotlight.search-box-uplift.after-load .home-header #channelHeader {
+    top: 57px;
+}
+.REA-homepage-page .search-box-uplift .home-header #channelHeader ul {
+    display: flex;
+    margin: 0 12px;
+    border: none;
+    flex-flow: row nowrap;
+    flex: 1 100%;
+    width: auto;
+    background-color: rgba(0, 0, 0, 0.0);
+}
+.REA-homepage-page .search-box-uplift .home-header #channelHeader ul li {
+    display: block;
+    box-sizing: border-box;
+    width: auto;
+    flex: 1 1;
+    margin: 2px;
+    border-radius: 3px;
+    border: 1px solid #dadee3;
+    background-color: rgba(0, 0, 0, 0.3);
+}
+.REA-homepage-page .search-box-uplift .home-header #channelHeader ul li a {
+    padding: 10px 8px;
+    height: 19px;
+    font-family: "Museo-Sans-500", "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-size: 16px;
+    line-height: 19px;
+}
+#myREAtout {
+    display: none;
+}
+#myREAtout.loggedIn {
+    display: block;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.5);;
+    text-align: right;
+    margin-bottom: 60px;
+    animation: fadein 0.5s;
+    -webkit-animation: fadein 0.5s;
+}
+#myREAtout.loggedIn .user-icon {
+    background-image: url(https://m.realestate.com.au/2-132/resources/img/user-icon.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 24px;
+    width: 24px;
+    display: inline-block;
+    margin-right: 10px;
+    vertical-align: middle;
+}
+.signin-container {
+    display: none;
+    background-color: #f7f8f9;
+}
+.signin-container.notLoggedIn {
+    display: block;
+    -webkit-animation: fadein 0.5s;
+    animation: fadein 0.5s;
+}
+.signin-container .signin-btn {
+    margin: 4% 2% 0 4%;
+    background-color: #e4002b;
+}
+.signin-container .join-btn {
+    margin: 4% 4% 0 2%;
+    background-color: #697684;
+}
+.signin-container .signin-btn,
+.signin-container .join-btn {
+    width: 44%;
+    padding: 15px 0;
+    text-align: center;
+    display: inline-block;
+    color: #fff;
+    text-decoration: none;
+    box-sizing: border-box;
+    border-radius: 3px;
+}
+.signin-container .signin-btn:active {
+    background-color: #a30000;
+}
+.signin-container .join-btn:active {
+    background-color: #333f48;
+}
+#myREAtout .userInfoBar a.signOut {
+    text-decoration: none;
+    padding: 8px 0;
+    margin-right: 5%;
+    display: inline-block;
+    color: #fff;
+    font-size: 14px;
+    cursor: pointer;
+}
+.REA-homepage-page.page {
+    background: #fff;
+    min-height: 388px;
+}
+.REA-homepage-page {
+    padding-bottom: 0px;
+}
+.REA-homepage-page .homepage-logo {
+    background: url(//s1.rui.au.reastatic.net/rui-static/img/rea-logo-reverse-v2.png) center center no-repeat transparent;
+    background-size: 230px auto;
+    margin-bottom: 60px;
+    height: 40px;
+}
+.REA-homepage-page .homepage-personalise {
+    background: #f7f8f9;
+    text-align: center;
+}
+.REA-homepage-page .saved-properties,
+.REA-homepage-page .saved-searches,
+.REA-homepage-page .my-property {
+    width: 33.33%;
+    float: left;
+    padding: 30px 0;
+    box-sizing: border-box;
+}
+.REA-homepage-page .saved-properties:active,
+.REA-homepage-page .saved-searches:active,
+.REA-homepage-page .my-property:active {
+    background-color: #edeef2;
+}
+.REA-homepage-page .saved-property-icon,
+.REA-homepage-page .saved-searches-icon,
+.REA-homepage-page .my-property-icon {
+    background-image: url(https://m.realestate.com.au/2-132/resources/img/homepage-icons.png);
+    background-repeat: no-repeat;
+    background-size: 120px 40px;
+    display: inline-block;
+    width: 40px;
+    height: 40px;
+    margin-bottom: 5px;
+}
+.REA-homepage-page .saved-property-icon {
+    background-position: 0px;
+}
+.REA-homepage-page .saved-searches-icon {
+    background-position: -40px;
+}
+.REA-homepage-page .my-property-icon {
+    background-position: -80px;
+}
+.REA-homepage-page .saved-property-label,
+.REA-homepage-page .saved-searches-label,
+.REA-homepage-page .my-property-label {
+    color: #333f48;
+    word-spacing: 1000px;
+    line-height: 20px;
+    font-size: 15px;
+}
+.REA-homepage-page .saved-properties-link,
+.REA-homepage-page .saved-searches-link,
+.REA-homepage-page .my-property-link {
+    color: #333f48;
+    text-decoration: none;
+}
+.REA-homepage-page footer {
+    font-family: Museo-Sans-300, Helvetica, Arial, sans-serif;
+    background: #333f48;
+    text-align: center;
+    padding: 0px 0 70px 0;
+    font-size: 10px;
+    width: 100%;
+    bottom: 0;
+}
+.REA-homepage-page footer .primary {
+    padding-top: 30px;
+    font-size: 12px;
+    margin-bottom: 30px;
+}
+.REA-homepage-page footer .primary a {
+    display: inline-block;
+    padding-right: 12px;
+    margin-right: 12px;
+    text-decoration: none;
+    border-right: 1px solid #fff;
+    font-size: 14px;
+}
+.REA-homepage-page footer .primary a:last-child {
+    border-right: none;
+    padding-right: 0;
+    margin-right: 0;
+}
+.REA-homepage-page footer .disclaimer {
+    margin-bottom: 16px;
+    font-size: 13px;
+}
+.REA-homepage-page footer .notes {
+    margin-bottom: 30px;
+    font-size: 14px;
+    padding: 0 30px;
+    line-height: 1.3;
+}
+.REA-homepage-page footer a, .REA-homepage-page footer {
+    color: #fff;
+}
+.REA-homepage-page .adSlot iframe {
+    box-shadow: none;
+    -webkit-box-shadow: none;
+}
+.REA-homepage-page .separator {
+    border-left: 1px solid #fff;
+    width: 1px;
+    height: 17px;
+    margin: 0 20px;
+    box-sizing: border-box;
+}
+.REA-homepage-page .mobile-promotion {
+    display: none;
+    text-align: center;
+}
+.apple .REA-homepage-page .mobile-promotion,
+.android .REA-homepage-page .mobile-promotion {
+    display: block;
+    padding-top: 25px;
+    height: 210px;
+    background-color: #e5e5e6;
+    overflow: hidden;
+}
+.REA-homepage-page .mobile-promotion h3 {
+    font-family: "Museo-Sans-500", Helvetica, Arial, sans-serif;
+    font-size: 20px;
+    color: #333f48;
+}
+.REA-homepage-page .mobile-promotion .appstore-promotion {
+    margin: 20px 0;
+    height: 40px;
+}
+.REA-homepage-page .mobile-promotion .iOS-promotion,
+.REA-homepage-page .mobile-promotion .android-app-promotion {
+    display: none;
+}
+.apple .REA-homepage-page .mobile-promotion .iOS-promotion,
+.android .REA-homepage-page .mobile-promotion .android-app-promotion {
+    display: inline-block;
+}
+.REA-homepage-page .mobile-promotion .iOS-promotion {
+    background: url(https://m.realestate.com.au/2-132/resources/img/download-appstore.png) no-repeat center;
+    width: 135px;
+    height: 40px;
+}
+.REA-homepage-page .mobile-promotion .android-app-promotion {
+    background: url(https://m.realestate.com.au/2-132/resources/img/download-googleplay.png) no-repeat center;
+    width: 132px;
+    height: 40px;
+}
+.REA-homepage-page .mobile-promotion .design-picture-promotion {
+    background: url(https://m.realestate.com.au/2-132/resources/img/devices.png) no-repeat top;
+    background-size: 240px;
+    display: inline-block;
+    width: 100%;
+    height: 110px;
+}
+.homepage-homeloan-info {
+    background-color: #E5E9EC;
+    background-image: url(https://m.realestate.com.au/2-132/resources/img/finex-homepage-tile-bg-2_@2x.jpg);
+    background-size: cover;
+    background-position: center center;
+    padding: 34px 15px 24px 15px;
+}
+.homepage-homeloan-info .homepage-homeloan-card {
+    display: flex;
+    flex-wrap: wrap;
+    border-radius: 8px;
+    text-align: center;
+    background-color: #ffffff;
+    box-shadow: 0 2px 15px 0 rgba(0, 0, 0, 0.1);
+}
+.homepage-homeloan-info .homepage-homeloan-label {
+    display: block;
+    margin: -11px auto 0 auto;
+    font-family: 'Museo-Sans-500', Helvetica, Arial, sans-serif;
+    padding: 5px 7px;
+    letter-spacing: 2px;
+    color: #ffffff;
+    font-size: 12px;
+    text-align: center;
+    background-color: #333f48;
+}
+.homepage-homeloan-info .homepage-homeloan-context {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding: 10px 0;
+}
+.homepage-homeloan-info .homepage-homeloan-title {
+    font-family: 'Museo-Sans-300', Helvetica, Arial, sans-serif;
+    font-weight: normal;
+    line-height: 1.3;
+    font-size: 20px;
+    width: 100%;
+    margin: 10px 30px;
+}
+.homepage-homeloan-info .homepage-homeloan-logo {
+    background-image: url(https://m.realestate.com.au/2-132/resources/img/rea-hl-logo-h-500-rgb.svg);
+    background-size: 150px 30px;
+    width: 150px;
+    height: 30px;
+    margin: 10px 13px;
+}
+.homepage-homeloan-info .homepage-homeloan-link {
+    font-family: 'Museo-Sans-300', Helvetica, Arial, sans-serif;
+    font-size: 16px;
+    width: 110px;
+    padding: 10px;
+    background: #e4002b;
+    border-radius: 3px;
+    color: #ffffff;
+    text-decoration: none;
+    margin: 10px 13px;
+}
+@media only screen and (max-width: 374px) {
+    .homepage-homeloan-info .homepage-homeloan-logo {
+        background-size: 124px 25px;
+        width: 124px;
+        height: 25px;
+        margin: 15px 6px;
+    }
+    .homepage-homeloan-info .homepage-homeloan-link {
+        padding: 10px 6px;
+        margin: 10px 6px;
+    }
+}
+@keyframes fadein {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+@-webkit-keyframes fadein {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+@media only screen and (-webkit-min-device-pixel-ratio: 2), only screen and (min-device-pixel-ratio: 2) {
+    #channelSelection a {
+        background-image: url(https://m.realestate.com.au/2-132/resources/img/home@2x.png);
+        background-size: 45px 141px;
+    }
+    .REA-homepage-page .mobile-promotion .iOS-promotion {
+        background: url(https://m.realestate.com.au/2-132/resources/img/download-appstore@2x.png);
+        background-size: 135px 40px;
+    }
+    .REA-homepage-page .mobile-promotion .android-app-promotion {
+        background: url(https://m.realestate.com.au/2-132/resources/img/download-googleplay@2x.png);
+        background-size: 132px 40px;
+    }
+    .REA-homepage-page .mobile-promotion .design-picture-promotion {
+        background: url(https://m.realestate.com.au/2-132/resources/img/devices@2x.png) no-repeat top;
+        background-size: 240px;
+    }
+    .home-header.home-header-default {
+        background-image: url(https://m.realestate.com.au/2-132/resources/img/homepage-hero@2x.jpg);
+    }
+}
+@media screen and (device-aspect-ratio: 40/71) {
+    .apple.safari .REA-homepage-page.page {
+        height: 430px;
+    }
+}
+.REA-search-page .toggle{
+    float:right;
+    margin: 15px 0;
+    line-height: 20px;
+    overflow: hidden;
+    color: #e4002b;
+    cursor: pointer;
+    height: 32px;
+}
+.REA-search-page .toggle div{
+    padding: 5px 20px;
+    float: left;
+    font-size: 14px;
+    text-decoration: none;
+}
+.REA-search-page .toggle div:active {
+    background-color: #cccccc;
+}
+.REA-search-page .toggle div.soldButton:active {
+    border-radius: 0 4px 4px 0;
+    border:solid 1px #e4002b;
+}
+.REA-search-page .toggle div.buyButton{
+    border:solid 1px #e4002b;
+    border-right: none;
+    border-radius: 4px 0 0 4px;
+}
+.REA-search-page .toggle div.rentButton{
+    border:solid 1px #e4002b;
+    border-right: none;
+    border-radius: 0;
+}
+.REA-search-page .toggle div.soldButton{
+    display:block;
+    border:solid 1px #e4002b;
+    border-radius: 0 4px 4px 0;
+}
+.REA-search-page .toggle div.selected{
+    background-color: #e4002b;
+    color:#fff;
+}
+.REA-search-page section{
+    margin-bottom: 10px;
+}
+#propertyTypeLabel{
+    -webkit-appearance: none;
+    border:none;
+    color:#888;
+    background: #fff;
+}
+.REA-search-page section select[multiple]{
+    max-height: 17px;
+}
+#propertyTypeLabel.changed{
+    color:#324f85;
+    font-weight:bold;
+    font-size: 14px
+}
+.REA-search-page .autoSuggest{
+    margin: 8px 15px;
+}
+.REA-search-page .autoSuggest dt{
+    margin-bottom: 7px;
+}
+.REA-search-page .autoSuggest label{
+    position: absolute;
+    font-weight: normal;
+    z-index: 9;
+    margin-top: 14px;
+    margin-left: 13px;
+}
+.REA-search-page .autoSuggest label strong{
+    font-weight: bold;
+}
+.REA-search-page section.divider{
+    border-top:solid 1px #dedede;
+    border-bottom:solid 1px #dedede;
+    padding:0 17px;
+}
+.REA-search-page .clearForm:active {
+    border-color: #454545;
+    background: #454545;
+    color: #FFFFFF;
+}
+.REA-search-page .clearForm {
+    border-radius: 4px;
+    margin: 15px 0;
+    padding: 9px 10px 0;
+    background: #767676;
+    line-height: 100%;
+    height: 23px;
+    float: left;
+    color:#FFFFFF;
+    font-size: 14px;
+    text-decoration: none;
+    list-style-type: none;
+    cursor: pointer;
+}
+#propertyTypeLabel{
+    display: block;
+    position: absolute;
+    z-index: 0;
+}
+section dl.select {
+    overflow:hidden;
+}
+section dl.select #propertyType{
+    display: block;
+    padding-left:10000em;
+    overflow: hidden;
+    position: relative;
+    background:transparent;
+    color: transparent;
+    z-index: 99999;
+}
+.REA-search-page section h2{
+    padding: 6px 15px 8px 15px;
+    font-weight: bold;
+    color: #333;
+}
+.REA-search-page section dl{
+    padding-left: 12px;
+    padding-right: 12px;
+    margin: 0px 15px;
+    position: relative;
+}
+.REA-search-page section dl.select{
+    border:solid 1px #e0e0e0;
+    background:#fff;
+}
+.REA-search-page section fieldset>:first-child{
+    border-radius:5px 5px 0 0;
+}
+.REA-search-page section fieldset>:last-child{
+    border-radius:0 0 5px 5px;
+    border-top:none;
+}
+.REA-search-page section dl:only-child{
+    border-radius:5px 5px 5px 5px;
+    border:solid 1px #d6d6d6;
+}
+.REA-search-page section.footer{
+    padding:0 15px 15px 15px;
+}
+.REA-search-page section.footer button,
+form button.primary {
+    padding-top: 0;
+    margin-top: 16px;
+    font-size: 13px;
+    font-weight: bold;
+}
+.REA-search-page .checkboxes {
+    padding-top: 15px;
+}
+.REA-search-page .checkboxes dl {
+    padding-left: 0;
+    padding-right: 0;
+}
+.REA-search-page button.primary,
+.REA-location-page button.primary {
+    line-height: 12px;
+    height: 30px;
+    font-family:'Helvetica Neue', Helvetica, Arial, sans-serif;
+    font-weight:normal;
+    background: #e4002b;
+    border: none;
+    border-radius: 3px;
+    padding: 8px 8px 0 5px;
+    top: 0;
+    margin-right: 10px;
+    font-size: 11px;
+}
+.REA-location-page button#submitLocations {
+  margin-right: 0;
+}
+.REA-search-page header button.primary:before,
+.REA-location-page button.primary:before {
+    content:'';
+    float: left;
+    margin-right: 0;
+    width: 20px;
+    height:20px;
+    position: relative;
+    top:-3px;
+}
+.REA-search-page header div.clear,
+.REA-location-page header div.clear,
+.REA-results-page header div.clear,
+.REA-details-page header div.clear,
+.REA-signIn-page header div.clear,
+.REA-sorry-page header div.clear,
+.REA-openTimes-page header div.clear,
+.REA-not_found-page header div.clear,
+.REA-savedProperties-page header div.clear {
+    margin: -25px 5px 0px 10px;
+}
+.REA-not_found-page header div.title,
+.REA-sorry-page header div.title,
+.REA-savedProperties-page header div.title,
+.REA-signIn-page header div.title {
+  padding-top: 20px;
+}
+sup{
+    font-size:8px;
+    position: relative;
+    top:-5px;
+}
+.REA-search-page form label.placeholder {
+    color: inherit;
+}
+.REA-search-page .rpdataContainer {
+    border-bottom: solid 1px #e5e5e5;
+    padding: 15px 15px;
+    line-height: 20px;
+}
+.REA-results-page.page section.sort {
+    visibility: hidden;
+}
+.REA-results-page.page.noResults section.sort {
+    display: none;
+}
+body:after{
+    visibility: hidden;
+    background-image: url(https://m.realestate.com.au/2-132/resources/img/global-bg.png);
+}
+.REA-openTimes-page,
+.REA-not_found-page.page,
+.REA-sorry-page.page,
+.REA-savedProperties-page.page,
+.REA-results-page.page {
+    background:url(https://m.realestate.com.au/2-132/resources/img/global-bg.png);
+    bottom: auto;
+}
+.REA-openTimes-page{
+    bottom: auto;
+    min-height: 100%;
+}
+.REA-savedProperties-page.page > .content,
+.REA-results-page.page > .content{
+    margin-bottom: -15px;
+}
+.REA-savedProperties-page.page > .content {
+  margin-top: 40px;
+}
+.REA-not_found-page.page,
+.REA-sorry-page.page,
+.REA-results-page.page.noResults,
+.REA-savedProperties-page.page.noResults{
+    min-height: 100%;
+    overflow: hidden;
+}
+.REA-not_found-page.page > .content,
+.REA-sorry-page.page > .content,
+.REA-results-page.page.noResults > .content,
+.REA-savedProperties-page.page.noResults > .content {
+    margin: 0;
+    height: 1px;
+    overflow: visible;
+    position: absolute;
+    top: 50%;
+    margin-top:45px;
+    width: 100%;
+    min-height: auto;
+}
+.REA-results-page.page.noResults > .content {
+    top: 40%;
+}
+.result {
+    position: relative;
+    color: #333;
+    display: block;
+    text-decoration: none;
+    margin-bottom:10px;
+    background:#fff;
+    box-shadow:0 3px 2px rgba(0,0,0,.1);
+    -webkit-box-shadow:0 3px 2px rgba(0,0,0,.1);
+    overflow: hidden;
+    font-size: 13px;
+    min-height:90px;
+}
+.result a{
+    color: inherit;
+    text-decoration: none;
+}
+.page .title,
+.page .title{
+    padding: 30px 0 10px 12px;
+    font-weight: bold;
+    font-size:14px;
+    line-height: 18px;
+    border-top:#e1e1e1;
+    color:#333333;
+    text-shadow: 0 1px 0 rgba(255,255,255,.5);
+}
+.REA-results-page.page .title + .title {
+    border-top: 1px solid #eee;
+    padding-top: 12px;
+}
+.REA-results-page.page .content div > .title:first-child {
+    text-align: center;
+    border-bottom: 1px solid #bebebe;
+    padding-bottom: 27px;
+    padding-left: 0;
+}
+.REA-not_found-page.page .content div .title.noResults,
+.REA-sorry-page.page .content div .title.noResults,
+.REA-results-page.page .content div .title.noResults,
+.REA-savedProperties-page.page .content div .title.noResults {
+    margin: 0 auto;
+    position: relative;
+    top: -110px;
+    box-shadow: none;
+    border: none;
+    padding-bottom: 10px;
+    text-align: center;
+}
+.REA-results-page.page .content div .title.noResults {
+    top: -125px;
+}
+.REA-savedProperties-page.page .content div .title.noResults {
+    top: -50px;
+}
+.REA-results-page.page .noResults {
+    padding: 15px 0 0 0;
+    background: url(https://m.realestate.com.au/2-132/resources/img/no-searched-result-magnifier.png) 50% 0 no-repeat;
+}
+.REA-not_found-page.page .noResults,
+.REA-sorry-page.page .noResults {
+    padding: 15px 0 0 0;
+    background: url(https://m.realestate.com.au/2-132/resources/img/no-found-page-compass.png) 50% 0 no-repeat;
+}
+.REA-not_found-page.page .noResults > p,
+.REA-sorry-page.page .noResults > p,
+.REA-results-page.page .noResults > p {
+    padding-top: 95px;
+    padding-bottom: 10px;
+    color:#333333;
+}
+.REA-results-page.page .noResults > p {
+    padding-bottom: 0;
+    margin-bottom: 48px;
+}
+.REA-savedProperties-page .noResults {
+    display: none;
+    background: url(https://m.realestate.com.au/2-132/resources/img/no-saved-properties-folder.png) 50% 0 no-repeat;
+}
+.REA-savedProperties-page .noResults > p {
+    padding-top: 95px;
+    color:#333333;
+}
+.REA-not_found-page.page .noResults,
+.REA-sorry-page.page .noResults,
+.REA-results-page.page .noResults,
+.REA-savedProperties-page .noResults {
+    background-size: 95px 95px;
+    height: 100px;
+}
+.REA-savedProperties-page .noResults.synchronized {
+    display: block;
+}
+.REA-not_found-page a.button,
+.REA-sorry-page a.button,
+.REA-results-page a.button {
+    width: auto;
+    float: none;
+    margin-top: 10px;
+    display: inline-block;
+}
+.result .listingContainer{
+    position: absolute;
+    width:100%;
+    height: 100%;
+    z-index: 1;
+}
+.result .auction-date, .result .suburb,.result .address,.result .projectAddress, .result .price, .result.classicproject .headline {
+    text-overflow: ellipsis;
+    overflow: hidden;
+    white-space: nowrap;
+}
+.result .auction-date,
+.result .suburb,
+.result .address {
+    font-size: 13px;
+    line-height: 19px;
+    max-width: 100%;
+    margin-bottom: 0px;
+}
+.result .address {
+    margin-top: 4px;
+}
+.result .suburb {
+    text-transform: capitalize;
+}
+.result .auction-date {
+    color: #697684;
+}
+.result .price {
+    font-weight: bold;
+    font-size:16px;
+    height: 18px;
+    line-height: 16px;
+}
+.result .suburb,
+.result .address,
+.result .price,
+.result .agent-name {
+    color: #333f48;
+}
+.result .headline {
+    margin-right: 12px;
+    margin-bottom: 10px;
+    font-weight: bold;
+    font-size: 16px;
+    line-height: 16px;
+}
+.result.signatureproject .headline {
+    max-height: 40px;
+    line-height: 20px;
+    white-space: normal;
+    overflow: hidden;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    display: -webkit-box;
+}
+.result.featured .price{
+    overflow: hidden;
+    white-space: normal;
+    height:auto;
+    min-height:18px;
+    max-height:36px;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    display: -webkit-box;
+}
+.result [rel=saveProperty]{
+    position: absolute;
+    right: 0px;
+    bottom: -3px;
+    font-size: 21px;
+    z-index: 3;
+    line-height: 100%;
+}
+.result [rel=saveProperty]:before {
+    margin-right: 16px;
+}
+.signatureproject.result [rel=saveProperty].hidden, .classicproject.result [rel=saveProperty].hidden {
+    display: none;
+}
+.saveProjectEnabled .signatureproject.result [rel=saveProperty].hidden, .saveProjectEnabled .classicproject.result [rel=saveProperty].hidden {
+    display: block;
+}
+ul.features{
+    margin-top: 8px;
+}
+ul.features li {
+    display: inline-block;
+    font-weight: bold;
+    font-size:14px;
+    line-height: 14px;
+    margin-right: 6px;
+    color: #333f48;
+}
+ul.features li:before {
+    margin-right: 4px;
+    color: #697684;
+}
+ul.features li:last-child{
+    margin-right: 0;
+}
+.resultsLoading {
+    text-align: center;
+    padding: 15px 5px 15px 5px;
+    background: url(https://m.realestate.com.au/2-132/resources/img/loading_scroll.gif) center center no-repeat;
+    height: 50px;
+}
+.resultsLoading + .resultsLoading{
+    display: none;
+}
+.resultsLoading.noLoader{
+    background-image: url(https://m.realestate.com.au/2-132/resources/img/global-bg.png);
+    background-repeat: repeat;
+}
+.REA-results-page .resultsLoading .reloadResults,
+.REA-savedProperties-page .resultsLoading .reloadResults{
+    visibility: hidden;
+    background-color: transparent;
+}
+.midtier .agency,.signature .agency{
+    position: relative;
+    padding:0;
+    z-index: 1;
+    
+}
+.signatureproject .projectLogoContainer {
+    position: relative;
+}
+.result .agency,
+.classicproject .projectLogoContainer
+{
+    padding: 1px 11px;
+    min-height: 20px;
+}
+.result.standard .agency {
+    padding: 1px 2px;
+    min-height: 20px;
+    position: absolute;
+    z-index: 2;
+}
+.result.standard .agency img{
+    vertical-align: middle;
+}
+.result .agency img,
+.classicproject .projectLogoContainer img{
+    height: 20px;
+}
+.signatureproject .projectLogoContainer,
+.result.signature .agency{
+    padding: 8px 14px;
+    min-height: 22px;
+}
+.signatureproject .projectLogoContainer img,
+.result.signature .agency img {
+    height: 22px;
+}
+.result.midtier .agency {
+    padding: 4px 12px;
+    min-height: 20px;
+}
+.result.midtier .agency img {
+    height: 20px;
+}
+.result .projectLogoContainer,
+.result .projectLogoContainer img
+{
+    min-height:22px;
+}
+.result .projectLogoContainer .agencyLogo{
+  float: right;
+}
+.result .listingInfo {
+    margin: 15px 16px;
+    margin-right: 0;
+    position: relative;
+}
+.result.signature .listingInfo,
+.result.midtier .listingInfo {
+    min-height: 83px;
+}
+.result.signatureproject .listingInfo, .result.classicproject .listingInfo{
+    padding-right: 45px;
+    overflow: hidden;
+}
+.result .listerName {
+    position: absolute;
+    right: 16px;
+    top: 0;
+    max-width: 22.5%;
+    text-align: center;
+    font-size: 13px;
+}
+.result figure.listerName {
+    top: -46px;
+}
+.signature .listerName .agent-wrapper {
+    border-radius: 50%;
+    border: 2px solid #fff;
+    width: 52px;
+    height: 52px;
+    overflow: hidden;
+    display: inline-block;
+    margin-bottom: 7px;
+    background-color: #e1e4e6;
+}
+.signature .listerName img {
+    width: 52px;
+}
+.listerName .agent-header{
+    color: #697684;
+    line-height: 18px;
+    margin-bottom: 6px;
+}
+.listerName .agent-name {
+    font-size: 13px;
+    line-height: 17px;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 2;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    max-height: 34px;
+}
+.midtier .listingInfo,
+.signature .listingInfo {
+    padding-right: 32.5%;
+}
+.result .child-listings {
+    clear: both;
+}
+.result .child-listings > li {
+    background-color: #fbfbfb;
+    border-top: 1px solid #f0f0f0;
+    padding: 2px 0;
+}
+.classicproject.result .child-listings > li {
+    padding: 0 15px;
+}
+.classicproject.result .child-listings > li {
+    line-height: 37px;
+    height: 37px;
+}
+.result .child-listings li:active {
+    background: #c3c8ce;
+}
+.result .child-listings li:active,
+.result .child-listings li:active .price {
+    color: #fff;
+}
+.result .child-listings a > div {
+    overflow: hidden;
+}
+.result .child-listings .child-image {
+    width: 87px;
+    height: 60px;
+    margin-right: 10px;
+    background-position: center center;
+    background-size:cover;
+    float: left;
+}
+.result .child-listings .features {
+    margin-top: 0;
+}
+.result .child-listings .price{
+    font-size: 14px;
+    margin: 0 140px 0 0;
+    line-height: inherit;
+    height: auto;
+    text-overflow: ellipsis;
+}
+.result.signatureproject .child-listings .price {
+    margin: 0 0 6px 0;
+    padding-top: 13px;
+}
+.result .child-listings .land-size {
+    font-size: 14px;
+    font-weight: bold;
+    color: #697684;
+}
+.classicproject.result .child-listings .land-size,
+.classicproject.result .child-listings .features {
+    float: right;
+}
+.result .gallery .item {
+    
+    display: block;
+}
+.saveSearch {
+    display: none;
+    opacity: 0;
+    text-align: center;
+    font-size: 14px;
+}
+.saveSearch {
+    display: block;
+    -webkit-transition: opacity .2s ease-in-out; -moz-transition: opacity .2s ease-in-out; -o-transition: opacity .2s ease-in-out; transition: opacity .2s ease-in-out;
+    opacity: 1;
+}
+.noResults .saveSearch {
+    top: 70px;
+    position: relative;
+}
+.saveSearch > a {
+    color: #333;
+    display: inline-block;
+    padding: 1em;
+}
+.saveSearch > .rui-icon:before {
+    content: "\e000";
+    font-size: 18px;
+    margin-right: 5px;
+    position: relative;
+    top: 2px;
+}
+.saveSearch.active > .rui-icon:before,
+.saveSearch > .rui-icon:hover:before,
+.saveSearch > .rui-icon:active:before {
+    color: rgb(255, 174, 0);
+    content: "\e024";
+}
+@media only screen and (-webkit-min-device-pixel-ratio: 1.3),
+    only screen and (-o-min-device-pixel-ratio: 13/10),
+    only screen and (min-resolution: 120dpi){
+    .REA-savedProperties-page .noResults {
+        background-image: url(https://m.realestate.com.au/2-132/resources/img/no-saved-properties-folder@2x.png);
+    }
+    .REA-results-page.page .noResults {
+        background-image: url(https://m.realestate.com.au/2-132/resources/img/no-searched-result-magnifier@2x.png);
+    }
+    .REA-not_found-page.page .noResults,
+    .REA-sorry-page.page .noResults {
+        background-image: url(https://m.realestate.com.au/2-132/resources/img/no-found-page-compass@2x.png);
+    }
+    .resultsLoading{
+        background-image: url(https://m.realestate.com.au/2-132/resources/img/loading_scroll.gif);
+        background-size: 30px 30px;
+    }
+    .REA-results-page.page {
+        background: url(https://m.realestate.com.au/2-132/resources/img/global-bg@2x.png);
+        background-size: 68px 68px;
+    }
+    #sort-type{
+        background-image:url(https://m.realestate.com.au/2-132/resources/img/search-result-pdp@2x.png);
+    }
+}
+.openTimesItem > a{
+    display: block;
+    line-height: 50px;
+    font-size: 16px;
+    font-weight: bold;
+    padding:0 15px;
+    color:#333;
+    border-bottom: solid 1px #d2d2d2;
+    text-decoration: none;
+    background: #F0F1F3;
+}
+.openTimesItem > a.none {
+    color: #ccc;
+}
+.openTimesItem .count {
+    display: block;
+    float: right;
+    margin-right: 10px;
+    background-color: #909090;
+    border-radius: 15px;
+    padding: 0 13px;
+    font-size: 12px;
+    line-height: 26px;
+    margin: 13px 5px 0;
+    min-width: 13px;
+    text-align: center;
+    color: #fff;
+}
+.openTimesItem .none .count {
+    background-color: #ccc;
+    color: #fff;
+}
+.openTimesItem .count.loading {
+    background:url(https://m.realestate.com.au/2-132/resources/img/loading_scroll.gif);
+    background-size:20px 20px;
+    background-repeat: no-repeat;
+    background-position: 50% 50%;
+    background-color: #909090;
+    width: 13px;
+    height: 30px;
+}
+.openTimesItem > .openTimesResults {
+    height: 0;
+    overflow: hidden;
+}
+.openTimesItem > a:active {
+    background: #555;
+    color: #fff;
+}
+.openTimesItem > a:active .count {
+    background-color: #fff;
+    color: #555;
+}
+.openTimesItem .title{
+    padding:13px 0;
+    font-weight: normal;
+}
+.openTimesItem.expanded > .openTimesResults {
+    min-height: 100px;
+    height: auto;
+}
+.openTimesItem.loading {
+    min-height: 150px;
+}
+.openTimesItem:last-child{
+    box-shadow: 0 1px 1px rgba(0, 0, 0, 0.2);
+}
+.REA-openTimes-page .centered{
+    padding: 10px;
+}
+.REA-openTimes-page .next{
+    padding:13px;
+    border-radius:6px;
+    border:solid 1px #a9a9a9;
+    display: inline-block;
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(0,0,0,.02)), color-stop(100%,rgba(0,0,0,.05))); 
+    box-shadow: 0 1px 0 rgba(255,255,255,.2);
+}
+.REA-openTimes-page .openTimesItem {
+    position: relative;
+    background:url(https://m.realestate.com.au/2-132/resources/img/global-bg.png);
+}
+.REA-openTimes-page .openTimesItem .spinner{
+    top:100px !important;
+    left:50% !important;
+    position: absolute !important;
+    z-index: 0 !important;
+}
+.REA-openTimes-page #moreResults .spinner {
+    top: 20px !important;
+    left: 50% !important;
+}
+.REA-openTimes-page .message p {
+    text-align: center;
+}
+.REA-openTimes-page .message p a.button{
+    margin-top: 15px;
+}
+.REA-openTimes-page .openTimesItem .time {
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#929292), color-stop(100%,#828282)); 
+    background: linear-gradient(to bottom, #929292 0%,#828282 100%);
+    border-top: 1px solid #848484;
+    border-bottom: 1px solid #848484;
+    box-shadow: 0 1px 1px rgba(0, 0, 0, 0.2);
+    font-size: 14px;
+    line-height: 24px;
+    padding-left: 15px;
+    color: #fff;
+    text-shadow: 0 1px 1px rgba(0, 0, 0, 0.2);
+    font-weight: bold;
+}
+.REA-openTimes-page .openTimesItem .time span {
+    float: right;
+    margin-right: 15px;
+    font-weight: normal;
+}
+.REA-openTimes-page #moreResults {
+    text-align: center;
+    position: relative;
+    padding-bottom: 11px;
+}
+@media only screen and (-webkit-min-device-pixel-ratio: 2),
+only screen and (min-device-pixel-ratio: 2) {
+    .REA-openTimes-page.page, .REA-openTimes-page .openTimesItem {
+        background: url(https://m.realestate.com.au/2-132/resources/img/global-bg@2x.png);
+        background-size: 68px 68px;
+    }
+}
+.REA-details-page{
+    background:#fff;
+    font-size: 11px;
+}
+.REA-details-page .listingGraphics{
+    position: relative;
+}
+.REA-details-page section dl.select select{
+    padding-left: 85px;
+    font-size:14px;
+    font-family: 'Museo-Sans-300', Helvetica, Arial, sans-serif;
+}
+.REA-details-page .signature .listingGraphics .agency{
+    padding: 9px 0 9px 7px;
+}
+.REA-details-page .midtier .listingGraphics .agency{
+    padding: 0;
+    position: relative;
+    line-height: 0px;
+}
+.REA-details-page .featured .listingGraphics .agency{
+    position: absolute;
+    z-index: 99;
+    transform: translate3d(0px, 0px, 0px);
+    -webkit-transform: translate3d(0px, 0px, 0px);
+    height:23px;
+}
+.REA-details-page .featured .listingGraphics .agency img{
+    height: 23px;
+    margin:0;
+}
+.REA-details-page .standard .listingGraphics .agency{
+    display: none;
+}
+.REA-details-page .projectLogoContainer {
+    padding: 9px 7px;
+}
+.project-banner-container-uplift {
+    z-index: 1000;
+    width: 100%;
+    background-color: #000000;
+    overflow: hidden;
+}
+.REA-details-page .project-banner-container-uplift .projectLogoContainer {
+    padding: 14px 7px;
+}
+.project-banner-container-uplift .projectLogoContainer{
+    float: left;
+}
+.project-banner-container-uplift .enquire-button {
+    float: right;
+    display: inline-block;
+    font-family: "Museo-Sans-500", "Helvetica Neue", Helvetica, Arial, sans-serif;
+    text-decoration: none;
+    font-weight: normal;
+    cursor: pointer;
+    border: 1px solid #fff;
+    border-radius: 4px;
+    line-height: 1;
+    color: #fff;
+    background: transparent;
+    text-align: center;
+    transition-duration: 0.2s, 0.2s;
+    transition-timing-function: ease-in, ease-out;
+    font-size: 16px;
+    margin: 5px 20px;
+    padding: 12px 16px;
+}
+.position-fixed {
+    position: fixed !important;
+}
+.position-absolute {
+    position: absolute !important;
+}
+.find-more-container-uplift {
+    overflow: hidden;
+    padding: 7px 5%;
+    text-align: center;
+}
+.find-more-container-uplift .enquire-text {
+    font-size: 16px;
+    display: inline-block;
+    float: right;
+    line-height: 43px;
+}
+.details-project-contact-popup-overlay {
+    height: 0;
+    overflow: hidden;
+    box-sizing: border-box;
+}
+.projectListing {
+    font-family: 'Museo-Sans-300', Helvetica, Arial, sans-serif;
+}
+.projectListing section.details-project-contact-popup {
+    padding: 0;
+    overflow-y: auto;
+    -webkit-overflow-scrolling: touch;
+    overflow-scrolling: touch;
+}
+.details-project-contact-popup .close-icon {
+    width: 20px;
+    float: right;
+    padding: 17px 20px 14px;
+    font-size: 20px;
+    cursor: pointer;
+}
+.details-project-contact-popup .rui-icon-cross::before{
+    font-size: 12px;
+}
+#sentResponse{
+    margin-top: 17px;
+}
+.REA-details-page .details-project-contact-popup .projectLogoContainer {
+    padding: 16px 7px 8px;
+    position: fixed;
+}
+.details-project-contact-popup .project-banner-container-uplift {
+    position: fixed;
+}
+.details-project-contact-popup .details-contact-container {
+    margin-top: 50px;
+}
+#details .projectListing section.description .descriptionWrapper p,
+#details .projectListing section.description .descriptionWrapper h4,
+#details .projectListing section.description .descriptionWrapper .projectFeatures li{
+    font-size: 16px;
+    line-height: 24px;
+}
+#details .projectListing section dl.select {
+    background-color: #FFF;
+}
+#details .projectListing .listingsWithFilterTag {
+    padding: 15px 15px 0 15px;
+}
+#details .projectListing .childListings {
+    background-color: #F5F5F6;
+    padding-bottom: 20px;
+}
+#details .projectListing .childListings .result{
+    max-height: none;
+    margin-bottom: 20px;
+}
+#details .projectListing .childListings .gallery {
+    float: none;
+    background: #fff;
+    margin-right: 0;
+}
+#details .projectListing .child-listing-img {
+    width: 100%;
+    height: 205px;
+    border-top-left-radius: 3px;
+    border-top-right-radius: 3px;
+}
+#details .projectListing .childListings section {
+    background-color: #F5F5F6;
+}
+#details .projectListing .childListings > ol {
+    background-color: #F5F5F6;
+    padding-top: 25px;
+    border: none;
+}
+#details .projectListing .matched-listings {
+    padding-left: 15px;
+    padding-right: 15px;
+}
+#details .projectListing .childListings .showResults {
+    border: 2px solid;
+    border-radius: 5px;
+    background-color: #F5F5F6;
+    height: 56px;
+    font-size: 16px;
+    font-family: 'Museo-Sans-500', Helvetica, Arial, sans-serif;
+}
+#details .projectListing .childListings .listingInfo {
+    margin: 0;
+    padding: 15px;
+    border: 1px #D7DADB solid;
+    border-top: none;
+    border-bottom-left-radius: 3px;
+    border-bottom-right-radius: 3px;
+}
+#details .projectListing .gallery.rendered {
+    height: auto !important;
+}
+#details .projectListing .price-save-container {
+    overflow: hidden;
+}
+#details .projectListing .price-save-container [rel=saveProperty] {
+    position: relative;
+    float: right;
+    bottom: 0px;
+    top: 0px;
+}
+#details .projectListing .childListings .result .price {
+    float: left;
+    width: 80%;
+    font-family: 'Museo-Sans-500', Helvetica, Arial, sans-serif;
+    font-size: 16px;
+    color: #333f48;
+}
+#details .projectListing .listingInfo .features {
+    margin: 5px 0 8px 0;
+    font-family: 'Museo-Sans-500', Helvetica, Arial, sans-serif;
+}
+#details .projectListing .listingInfo .features li {
+    font-family: 'Museo-Sans-300', Helvetica, Arial, sans-serif;
+    font-size: 18px;
+}
+#details .projectListing .childListings .listingInfo .title {
+    font-size: 16px;
+    font-family: 'Museo-Sans-300', Helvetica, Arial, sans-serif;
+    height: auto;
+    line-height: 20px;
+    color: #333f48;
+    margin-right: 0;
+}
+#details .projectListing,
+#details .projectListing section.contactBlock,
+#details .projectListing section.details-project-contact-form-container{
+    background-color: #F5F5F6;
+}
+#details .projectListing section.contactBlock{
+    padding: 20px 15px;
+    font-family: 'Museo-Sans-500', Helvetica, Arial, sans-serif;
+}
+#details .projectListing section.details-project-contact-form-container form,
+#details .projectListing section.details-project-contact-form-container form section{
+    background-color: transparent;
+}
+#details .projectListing section.details-project-contact-form-container form section.user input{
+    background-color: #fff;
+}
+#details .projectListing #sentResponse {
+    margin-top: 0;
+    padding-top: 17px;
+}
+#details .projectListing .heading .brochureImage .brochureLogo{
+   background: url(https://m.realestate.com.au/2-132/resources/img/project-brochure-grey.png);
+}
+.REA-details-page .projectBanner{
+  width: 100%;
+  vertical-align: bottom;
+}
+.REA-details-page .projectLogoContainer .agencyLogo {
+  float: right;
+}
+.REA-details-page .agentBanner{
+    line-height: 30px;
+    padding: 0 10px;
+    background-color:#000;
+    color:#fff;
+}
+.REA-details-page section{
+    background: #fff;
+    padding: 15px 15px;
+    line-height: 20px;
+}
+.REA-details-page section.native-ad {
+    padding: 0 10px;
+}
+.REA-details-page section.contactAgent,
+.REA-details-page section.gallery{
+    padding:0;
+}
+.REA-details-page section ul li{
+    display: inline-block;
+}
+.REA-details-page section .projectFeatures li{
+    display: block;
+    list-style: circle;
+    background: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAQAAAAECAYAAACp8Z5+AAAACXBIWXMAAAsTAAALEwEAmpwYAAAKT2lDQ1BQaG90b3Nob3AgSUNDIHByb2ZpbGUAAHjanVNnVFPpFj333vRCS4iAlEtvUhUIIFJCi4AUkSYqIQkQSoghodkVUcERRUUEG8igiAOOjoCMFVEsDIoK2AfkIaKOg6OIisr74Xuja9a89+bN/rXXPues852zzwfACAyWSDNRNYAMqUIeEeCDx8TG4eQuQIEKJHAAEAizZCFz/SMBAPh+PDwrIsAHvgABeNMLCADATZvAMByH/w/qQplcAYCEAcB0kThLCIAUAEB6jkKmAEBGAYCdmCZTAKAEAGDLY2LjAFAtAGAnf+bTAICd+Jl7AQBblCEVAaCRACATZYhEAGg7AKzPVopFAFgwABRmS8Q5ANgtADBJV2ZIALC3AMDOEAuyAAgMADBRiIUpAAR7AGDIIyN4AISZABRG8lc88SuuEOcqAAB4mbI8uSQ5RYFbCC1xB1dXLh4ozkkXKxQ2YQJhmkAuwnmZGTKBNA/g88wAAKCRFRHgg/P9eM4Ors7ONo62Dl8t6r8G/yJiYuP+5c+rcEAAAOF0ftH+LC+zGoA7BoBt/qIl7gRoXgugdfeLZrIPQLUAoOnaV/Nw+H48PEWhkLnZ2eXk5NhKxEJbYcpXff5nwl/AV/1s+X48/Pf14L7iJIEyXYFHBPjgwsz0TKUcz5IJhGLc5o9H/LcL//wd0yLESWK5WCoU41EScY5EmozzMqUiiUKSKcUl0v9k4t8s+wM+3zUAsGo+AXuRLahdYwP2SycQWHTA4vcAAPK7b8HUKAgDgGiD4c93/+8//UegJQCAZkmScQAAXkQkLlTKsz/HCAAARKCBKrBBG/TBGCzABhzBBdzBC/xgNoRCJMTCQhBCCmSAHHJgKayCQiiGzbAdKmAv1EAdNMBRaIaTcA4uwlW4Dj1wD/phCJ7BKLyBCQRByAgTYSHaiAFiilgjjggXmYX4IcFIBBKLJCDJiBRRIkuRNUgxUopUIFVIHfI9cgI5h1xGupE7yAAygvyGvEcxlIGyUT3UDLVDuag3GoRGogvQZHQxmo8WoJvQcrQaPYw2oefQq2gP2o8+Q8cwwOgYBzPEbDAuxsNCsTgsCZNjy7EirAyrxhqwVqwDu4n1Y8+xdwQSgUXACTYEd0IgYR5BSFhMWE7YSKggHCQ0EdoJNwkDhFHCJyKTqEu0JroR+cQYYjIxh1hILCPWEo8TLxB7iEPENyQSiUMyJ7mQAkmxpFTSEtJG0m5SI+ksqZs0SBojk8naZGuyBzmULCAryIXkneTD5DPkG+Qh8lsKnWJAcaT4U+IoUspqShnlEOU05QZlmDJBVaOaUt2ooVQRNY9aQq2htlKvUYeoEzR1mjnNgxZJS6WtopXTGmgXaPdpr+h0uhHdlR5Ol9BX0svpR+iX6AP0dwwNhhWDx4hnKBmbGAcYZxl3GK+YTKYZ04sZx1QwNzHrmOeZD5lvVVgqtip8FZHKCpVKlSaVGyovVKmqpqreqgtV81XLVI+pXlN9rkZVM1PjqQnUlqtVqp1Q61MbU2epO6iHqmeob1Q/pH5Z/YkGWcNMw09DpFGgsV/jvMYgC2MZs3gsIWsNq4Z1gTXEJrHN2Xx2KruY/R27iz2qqaE5QzNKM1ezUvOUZj8H45hx+Jx0TgnnKKeX836K3hTvKeIpG6Y0TLkxZVxrqpaXllirSKtRq0frvTau7aedpr1Fu1n7gQ5Bx0onXCdHZ4/OBZ3nU9lT3acKpxZNPTr1ri6qa6UbobtEd79up+6Ynr5egJ5Mb6feeb3n+hx9L/1U/W36p/VHDFgGswwkBtsMzhg8xTVxbzwdL8fb8VFDXcNAQ6VhlWGX4YSRudE8o9VGjUYPjGnGXOMk423GbcajJgYmISZLTepN7ppSTbmmKaY7TDtMx83MzaLN1pk1mz0x1zLnm+eb15vft2BaeFostqi2uGVJsuRaplnutrxuhVo5WaVYVVpds0atna0l1rutu6cRp7lOk06rntZnw7Dxtsm2qbcZsOXYBtuutm22fWFnYhdnt8Wuw+6TvZN9un2N/T0HDYfZDqsdWh1+c7RyFDpWOt6azpzuP33F9JbpL2dYzxDP2DPjthPLKcRpnVOb00dnF2e5c4PziIuJS4LLLpc+Lpsbxt3IveRKdPVxXeF60vWdm7Obwu2o26/uNu5p7ofcn8w0nymeWTNz0MPIQ+BR5dE/C5+VMGvfrH5PQ0+BZ7XnIy9jL5FXrdewt6V3qvdh7xc+9j5yn+M+4zw33jLeWV/MN8C3yLfLT8Nvnl+F30N/I/9k/3r/0QCngCUBZwOJgUGBWwL7+Hp8Ib+OPzrbZfay2e1BjKC5QRVBj4KtguXBrSFoyOyQrSH355jOkc5pDoVQfujW0Adh5mGLw34MJ4WHhVeGP45wiFga0TGXNXfR3ENz30T6RJZE3ptnMU85ry1KNSo+qi5qPNo3ujS6P8YuZlnM1VidWElsSxw5LiquNm5svt/87fOH4p3iC+N7F5gvyF1weaHOwvSFpxapLhIsOpZATIhOOJTwQRAqqBaMJfITdyWOCnnCHcJnIi/RNtGI2ENcKh5O8kgqTXqS7JG8NXkkxTOlLOW5hCepkLxMDUzdmzqeFpp2IG0yPTq9MYOSkZBxQqohTZO2Z+pn5mZ2y6xlhbL+xW6Lty8elQfJa7OQrAVZLQq2QqboVFoo1yoHsmdlV2a/zYnKOZarnivN7cyzytuQN5zvn//tEsIS4ZK2pYZLVy0dWOa9rGo5sjxxedsK4xUFK4ZWBqw8uIq2Km3VT6vtV5eufr0mek1rgV7ByoLBtQFr6wtVCuWFfevc1+1dT1gvWd+1YfqGnRs+FYmKrhTbF5cVf9go3HjlG4dvyr+Z3JS0qavEuWTPZtJm6ebeLZ5bDpaql+aXDm4N2dq0Dd9WtO319kXbL5fNKNu7g7ZDuaO/PLi8ZafJzs07P1SkVPRU+lQ27tLdtWHX+G7R7ht7vPY07NXbW7z3/T7JvttVAVVN1WbVZftJ+7P3P66Jqun4lvttXa1ObXHtxwPSA/0HIw6217nU1R3SPVRSj9Yr60cOxx++/p3vdy0NNg1VjZzG4iNwRHnk6fcJ3/ceDTradox7rOEH0x92HWcdL2pCmvKaRptTmvtbYlu6T8w+0dbq3nr8R9sfD5w0PFl5SvNUyWna6YLTk2fyz4ydlZ19fi753GDborZ752PO32oPb++6EHTh0kX/i+c7vDvOXPK4dPKy2+UTV7hXmq86X23qdOo8/pPTT8e7nLuarrlca7nuer21e2b36RueN87d9L158Rb/1tWeOT3dvfN6b/fF9/XfFt1+cif9zsu72Xcn7q28T7xf9EDtQdlD3YfVP1v+3Njv3H9qwHeg89HcR/cGhYPP/pH1jw9DBY+Zj8uGDYbrnjg+OTniP3L96fynQ89kzyaeF/6i/suuFxYvfvjV69fO0ZjRoZfyl5O/bXyl/erA6xmv28bCxh6+yXgzMV70VvvtwXfcdx3vo98PT+R8IH8o/2j5sfVT0Kf7kxmTk/8EA5jz/GMzLdsAAAAgY0hSTQAAeiUAAICDAAD5/wAAgOkAAHUwAADqYAAAOpgAABdvkl/FRgAAADJJREFUeNpcy0EVABEUAMDhCaLBikCeX0oTVTaKg+di7pMiAjoaZkHFcnzZo+DHuGUPAMo5BVy3D5nRAAAAAElFTkSuQmCC") no-repeat scroll 0 6px transparent;
+    padding-left: 7px;
+    line-height: 18px;
+}
+.REA-details-page header [rel=saveProperty].hidden {
+    display: none;
+}
+.REA-details-page .mainBlock {
+    position: static;
+}
+.REA-details-page .user {
+    margin-bottom: 10px;
+}
+.REA-details-page .user .heading{
+    margin-bottom: 15px;
+}
+.REA-details-page .heading{
+    font-size:14px;
+    line-height: 16px;
+    font-weight: bold;
+    color: #333;
+}
+.REA-details-page .heading ul{
+    display: table;
+    width: 100%;
+}
+.REA-details-page .projectListing form.REA-form > .heading {
+    margin-bottom: 8px;
+}
+.REA-details-page .heading .registerHeading{
+    padding: 5px 5px 5px 0;
+    display: table-cell;
+    vertical-align: middle;
+    font-family: 'Museo-Sans-300', Helvetica, Arial, sans-serif;
+}
+.REA-details-page .heading .brochureImage{
+  overflow: hidden;
+  width: 113px;
+  height: 83px;
+  position: relative;
+}
+.REA-details-page .heading .brochureImage .item{
+    padding-top: 6px;
+    padding-left: 3px;
+}
+.REA-details-page .heading .brochureImage .brochureLogo{
+   background: url(https://m.realestate.com.au/2-132/resources/img/project-brochure.png);
+   width: 100%;
+   height: 100%;
+   position: absolute;
+   overflow: hidden;
+}
+.REA-details-page .primary .mainBlock .heading{
+    font-size:16px;
+}
+.REA-details-page .mainBlock .heading{
+    text-overflow: ellipsis;
+    line-height: 16px;
+    margin-top: 0;
+    margin-bottom:9px;
+}
+.REA-details-page .agentArea .mainBlock .heading {
+    margin-bottom: 16px;
+    margin-top: 16px;
+    line-height: 130%;
+}
+.REA-details-page #detailsAgent .agentArea .mainBlock .heading .listerLink a {
+    text-decoration: underline;
+}
+.REA-details-page .agentArea .secondaryBlock .heading{
+    color:#444444;
+    line-height: 14px;
+    margin-bottom:8px;
+    font-size: 12px;
+    font-weight: normal;
+}
+.REA-details-page .mainBlock .features{
+    position: static;
+    float:right;
+    margin-top: 0;
+}
+.REA-details-page .mainContent .contactAction{
+    padding: 16px;
+}
+.REA-details-page .mainContent .contactAction a{
+    padding: 12px 0;
+    width: 100%;
+    height: 43px;
+    box-sizing: border-box;
+    font-size: 16px;
+}
+.REA-details-page .mainContent .contactAction .rui-icon{
+    vertical-align: middle;
+}
+.REA-details-page .propertyMap{
+    padding:0px;
+}
+.REA-details-page .propertyMap .mapWrapper{
+    position: relative;
+    background:url(https://m.realestate.com.au/2-132/resources/img/loading_scroll.gif);
+    background-size:20px 20px;
+    background-repeat: no-repeat;
+    background-position: 50% 50%;
+    background-color: #A4A4A4;
+    height: 130px;
+}
+.REA-details-page .propertyMap .mapWrapper .map{
+    box-shadow:inset 0 0 3px rgba(0,0,0,.3);
+    background-position: 50% 50%;
+    background-size: cover;
+    height: 130px;
+    opacity: 0;
+}
+.REA-details-page .propertyMap .mapWrapper .rendered .map{
+    opacity: 1;
+    -webkit-transition: opacity .2s ease-in-out; -moz-transition: opacity .2s ease-in-out; -o-transition: opacity .2s ease-in-out; transition: opacity .2s ease-in-out;
+}
+.REA-details-page .propertyMap .mapWrapper .rendered .map.address:after{
+    height:31px;
+    width:24px;
+    position: absolute;
+    top:55%;
+    left:50%;
+    margin:-32px 0 0 -9px;
+    content:"";
+}
+.REA-details-page .propertyMap .mapWrapper .rendered .map.address:before{
+    width:44px;
+    height:42px;
+    position: absolute;
+    top: 10px;
+    right:10px;
+    content: "";
+}
+.REA-details-page .propertyMap .mapWrapper.error,
+.REA-details-page .propertyMap .mapWrapper .map.noAddress{
+    background-image:url(https://m.realestate.com.au/2-132/resources/img/map-no-address.png);
+    background-position: 50% 50%;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.REA-details-page .projectOverview {
+    padding: 30px 0 5px;
+    border: 1px solid #e6e6e8;
+    background-color: #fff;
+}
+.REA-details-page .projectHeadInfo {
+    font-family: 'Museo-Sans-300', Helvetica, Arial, sans-serif;
+    text-align: center;
+    padding: 0 15px;
+    word-wrap: break-word;
+    color: #333f48;
+}
+.REA-details-page .projectName {
+    font-size: 18px;
+    font-family: 'Museo-Sans-500', Helvetica, Arial, sans-serif;
+}
+.REA-details-page .projectPriceRange {
+    font-size: 16px;
+    line-height: initial;
+}
+.REA-details-page .projectStreetAddress {
+    font-size: 14px;
+    padding: 8px 0 6px;
+}
+.REA-details-page .projectTitle {
+    font-size: 20px;
+    margin: 10px 0 10px;
+    line-height: initial;
+}
+.REA-details-page .projectDisplayInfo {
+    margin: 14px 10px 25px 12px;
+    font-family: 'Museo-Sans-300', Helvetica, Arial, sans-serif;
+    font-size: 15px;
+    overflow: hidden;
+}
+.REA-details-page .projectDisplayInfo label {
+    font-weight: bold;
+}
+.REA-details-page .projectDisplayInfo .info {
+    border-bottom: 1px solid #e6e6e6;
+    padding: 12px 0 12px 0;
+    overflow: hidden;
+}
+.REA-details-page .projectDisplayInfo .info:last-child{
+    border-bottom: none;
+    padding-bottom: 0;
+}
+.REA-details-page .projectDisplayInfo span{
+    float: right;
+    text-align: right;
+    width: 50%;
+}
+.REA-details-page .parentListingDetails{
+    margin: 15px 15px 5px 15px;
+    padding: 0;
+    line-height: 1em;
+    border: 1px solid #e9e9e9;
+}
+.fromProjectDetailsPage .REA-details-page .parentListingDetails{
+    display: none;
+}
+.REA-details-page .parentListingDetails .parentListingBanner > img {
+    width: 100%;
+}
+.REA-details-page .parentListingDetails .projectLogoContainer > img {
+    margin: 0px;
+}
+.REA-details-page .parentListingDetails .moreDetails {
+    display: table;
+    width: 100%;
+    position: relative;
+}
+.parentListingDetails .moreDetails > img{
+    display: table-cell;
+}
+.parentListingDetails .moreDetails > span{
+    display: table-cell;
+    vertical-align: middle;
+    line-height: 18px;
+    padding: 10px 30px 10px 10px;
+    font-size: 14px;
+    font-weight: bold;
+    color: #333333;
+    width: 100%;
+}
+.parentListingDetails:active .moreDetails > span, #details .childListings .showResults:active {
+    background: #555555;
+    color:#ffffff;
+}
+.REA-details-page a[rel=site]{
+    text-decoration: none;
+}
+.REA-details-page .parentListingDetails .moreDetails > span:before {
+    width:15px;
+    height:15px;
+    position: absolute;
+    top: 39%;
+    right: 0;
+    margin-right:5px;
+    content:"";
+}
+.REA-details-page section.primary{
+    padding-bottom: 8px;
+}
+.REA-details-page .signatureproject section.primary,
+.REA-details-page .classicproject section.primary{
+  padding-top: 10px;
+  padding-bottom: 9px;
+}
+.REA-details-page section.description {
+    margin-top: 10px;
+}
+.REA-details-page section.description .heading{
+    margin-bottom:6px;
+}
+.REA-details-page section.description > div{
+    overflow: hidden;
+    text-overflow: ellipsis;
+    -webkit-line-clamp: 4; 
+    -webkit-box-orient: vertical;
+    display: block;
+}
+#details .projectListing section.description > div{
+    -webkit-box-orient: horizontal;
+}
+#details .projectListing section.description {
+    font-family: 'Museo-Sans-300', Helvetica, Arial, sans-serif;
+}
+.REA-details-page section.description .descriptionWrapper p{
+    line-height: 18px;
+    padding-bottom: 10px;
+}
+.REA-details-page section.description .descriptionWrapper.less{
+    display: -webkit-box;
+    height: 6.4em;
+}
+#details .projectListing section.description .descriptionWrapper.less {
+    display: block;
+    height: 12.8em;
+}
+.REA-details-page section.description h4 {
+    padding-bottom: 10px;
+}
+.REA-details-page section.description .toggle{
+    color:#333;
+    bottom:-14px;
+    right:0px;
+    background: #fff;
+    font-weight: bold;
+    font-size:12px;
+    float:right;
+}
+.saveProjectEnabled .REA-details-page section.description .toggle {
+    float: none;
+    font-size: 14px;
+    display: inline-block;
+    margin-top: 5px;
+}
+.REA-details-page section.description .toggle:after{
+    content:"";
+    width:0px;
+    height:0px;
+    border-top:solid 4px #333;
+    border-left:solid 4px transparent;
+    border-right:solid 4px transparent;
+    position: relative;
+    top: 9px;
+    margin-left: 4px;
+}
+.REA-details-page section.description .less.toggle:after{
+    top: -9px;
+    border-top:solid 4px transparent;
+    border-bottom:solid 4px #333;
+    border-left:solid 4px transparent;
+    border-right:solid 4px transparent;
+}
+.REA-details-page p.address {
+    color: #333;
+}
+.REA-details-page .signatureproject p.address,
+.REA-details-page .classicproject p.address {
+    font-weight: bold;
+    font-size:12px;
+    line-height: 12px;
+    display: block;
+    height:14px;
+    color: #777777;
+    text-transform: capitalize;
+}
+.REA-details-page .signatureproject p.suburb,
+.REA-details-page .classicproject p.suburb {
+    display: block;
+    color:#3b3b3b;
+    height: 16px;
+    font-size:12px;
+    font-family: 'Museo-Sans-500', Helvetica, Arial, sans-serif;
+    float: left;
+}
+.REA-details-page .viewOnMap {
+    float: right;
+    text-decoration: underline;
+}
+.REA-details-page .viewOnMap a {
+    color: #2282f9;
+}
+.REA-details-page .primary .secondaryBlock {
+    line-height: 12px;
+    font-size:12px;
+    color: #666;
+    margin-bottom: 8px;
+}
+.REA-details-page .secondaryBlock li{
+    text-transform: capitalize;
+}
+.REA-details-page .secondaryBlock li.sold-date{
+    text-transform: none;
+}
+.REA-details-page .secondaryBlock ul.additionalInfo li{
+    line-height: 17px;
+    display: block;
+    text-transform: none;
+}
+.REA-details-page .secondaryBlock ul.additionalInfo li:first-child{
+    margin-top: 7px;
+}
+.REA-details-page .secondaryBlock ul.clear{
+    margin-bottom:6px;
+}
+.REA-details-page section.divider{
+    border-top:solid 1px #ececec;
+}
+.REA-details-page .secondaryBlock ul.clear li:first-child+li{
+    margin-left:6px;
+    border-left: solid 1px #e3e3e3;
+    padding-left:9px;
+}
+.REA-details-page p, .projectFeatures{
+    color:#666666;
+    line-height: 15px;
+    font-size:12px;
+    overflow: hidden;
+}
+.REA-details-page #toolsContainer {
+    border-bottom: 1px solid #e9ebed;
+}
+.REA-details-page #toolsContainer .adSlot {
+    margin-bottom: 0;
+}
+.REA-details-page .agentArea{
+    border-top:solid 2px #f3f4f6;
+}
+.REA-details-page .agentArea .agentItem {
+    position: relative;
+    display: block;
+    height: 60px;
+    padding: 16px 0;
+    border-bottom: 1px solid #e9ebed;
+    color: #333f48;
+    font-size: 14px;
+    font-family: 'Museo-Sans-300', Helvetica, Arial, sans-serif;
+}
+.REA-details-page .agentArea .agentItem .agentImage {
+    float: left;
+    width: 60px;
+    height: 60px;
+    margin-right: 12px;
+    border-radius: 50%;
+    background-size: cover;
+    background-position: top center;
+}
+.REA-details-page .agentArea .agentItem .agentImage.noAgentImage {
+    background: url(https://m.realestate.com.au/2-132/resources/img/search-result-pdp.png) 0 90px;
+    background-size: 258px;
+}
+.REA-details-page .agentArea .agentItem .agentName {
+    display: block;
+    overflow: hidden;
+    word-break: break-all;
+    height: 40px;
+    padding-right: 127px;
+}
+.REA-details-page .agentArea .agentItem .agentLink {
+    text-decoration: none;
+    text-align: center;
+    color: #2d71d7;
+    font-family: 'Museo-Sans-500', Helvetica, Arial, sans-serif;
+}
+.REA-details-page .agentArea .agentItem .agentLinkContainer {
+    position: absolute;
+    right: 0;
+    top: 36px;
+}
+.REA-details-page .agentArea .agentItem .agentLink i {
+    display: block;
+    margin: 0 -0.5em 0 0;
+    font-size: 24px;
+}
+.REA-details-page .agentArea .agentItem .agentLink span {
+    display:block;
+    margin-top: 4px;
+}
+.REA-details-page .agentArea .agentItem .agentLink.agentPhone {
+    display: inline-block;
+}
+.REA-details-page .agentArea .agentItem .agentLink.agentProfile {
+    display: none;
+}
+.REA-details-page .agentArea .agentItem .agentLink.agentProfile.show {
+    display: inline-block;
+    margin-left: 28px;
+}
+.REA-details-page .signature .agentArea.noDetails,
+.REA-details-page .midtier .agentArea.noDetails,
+.REA-details-page .agentArea.noDetails{
+    border-top:solid 2px #d3d4d6;
+    padding-top: 15px;
+}
+.REA-details-page .agentArea.noDetails p{
+    padding-top:3px;
+}
+.REA-details-page .signature .agentArea .secondaryBlock, .REA-details-page .midtier .agentArea .secondaryBlock{
+    width:70%;
+}
+.REA-details-page .signature .agentArea .right img, .REA-details-page .midtier .agentArea .right img{
+    margin-left:-77px;
+    margin-top:-29px;
+    border:solid 1px #fff;
+    background:#fff;
+    width:75px;
+    height: 100px;
+}
+.REA-details-page .signature .agentArea img, .REA-details-page .midtier .agentArea img{
+    position: absolute;
+    margin-left:-8px;
+    margin-top: -33px;
+}
+.REA-details-page .agentArea .agency{
+    line-height: 0px;
+    margin-bottom: 10px;
+    padding:0px;
+    
+    background: Transparent !important;
+}
+.REA-details-page .signature .agencyName,
+.REA-details-page .midtier .agencyName,
+.REA-details-page .featured .agencyName { display: none;}
+.REA-details-page .signature .agentArea .agency{
+}
+.REA-details-page section.contactBlock{
+    padding: 0 0 15px 0;
+}
+.REA-details-page .contactBlock ul{
+    display: table;
+    width: 100%;
+}
+.REA-details-page .contactBlock ul li{
+    display: table-cell;
+    width:50%;
+    border:solid 1px #ececec;
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#ffffff), color-stop(100%,#fbfbfb)); 
+    background: linear-gradient(to bottom, #fff 0%,#fbfbfb 100%); 
+}
+.REA-details-page .contactBlock ul li:last-child{
+    border-left:none;
+}
+.REA-details-page .contactBlock ul li a{
+    display: block;
+    text-align: center;
+    padding: 10px 0px 10px 15px;
+    color:#333;
+    font-weight: bold;
+    font-size: 12px;
+    text-decoration: none;
+}
+.REA-details-page .contactBlock ul li a:active{
+    background: #565656;
+    color:#fff;
+}
+.REA-details-page .contactBlock ul li.none a,.REA-details-page .contactBlock ul li.none a:active {
+    color: #ccc;
+    background: transparent;
+}
+.REA-details-page .contactBlock ul li a span{
+    position: relative;
+}
+.REA-details-page .contactBlock ul li a span:before{
+    position: absolute;
+    top:1px;
+    left:-17px;
+    display: block;
+    width: 15px;
+    height: 15px;
+    content:'';
+}
+.REA-details-page #detailsAgent .listerLink a {
+    color: #333;
+    text-decoration: none;
+}
+.REA-details-page section.agentProfileLink {
+    text-align: center;
+    padding: 15px 15px 25px 15px;
+    display: none;
+}
+.REA-details-page section.agentProfileLink.show {
+    display: block;
+}
+.REA-details-page section.agentProfileLink .listerLink{
+    border: solid 1px #ececec;
+    padding: 10px 45px 10px 30px;
+    border-radius: 5px;
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #ffffff), color-stop(100%, #fbfbfb)); 
+    background: linear-gradient(to bottom, #fff 0%, #fbfbfb 100%); 
+    color: #333;
+    font-size: 15px;
+    display: inline-block;
+    position: relative;
+}
+.REA-details-page section.agentProfileLink .listerLink:after {
+    width: 10px;
+    height: 15px;
+    position: absolute;
+    right: 30px;
+    content: "";
+    bottom: 13px;
+}
+.REA-details-page section.premiereAgencyProfile {
+    position: relative;
+}
+.REA-details-page section.premiereAgencyProfile a{
+    text-decoration: none;
+}
+.REA-details-page section.premiereAgencyProfile .rui-icon.rui-icon-office {
+    display: inline-block;
+    vertical-align: middle;
+    font-size: 44px;
+    line-height: 44px;
+    margin-top: -6px;
+}
+.REA-details-page section.premiereAgencyProfile .rui-icon.rui-icon-office::before {
+    margin-left: -6px;
+    margin-right: 2px;
+    color: #2b6ed2;
+}
+.REA-details-page section.premiereAgencyProfile .agencyDescription {
+    display: inline-block;
+    vertical-align: middle;
+    width: 82%;
+}
+.REA-details-page section.premiereAgencyProfile .agencyTitle {
+    font-family: Museo-Sans-300, Helvetica, Arial, sans-serif;
+    font-size: 14px;
+    padding-right: 20px;
+    color: #2b6ed2;
+}
+.REA-details-page section.premiereAgencyProfile .agencyAddress {
+    font-family: Museo-Sans-300, Helvetica, Arial, sans-serif;
+    font-size: 12px;
+    line-height: 1.5;
+    color: #697684;
+    padding: 4px 20px 0 0;
+}
+.REA-details-page section.premiereAgencyProfile .agencyTitle span,
+.REA-details-page section.premiereAgencyProfile .agencyAddress span {
+    display: inline-block;
+    height: 16px;
+    line-height: 16px;
+}
+.REA-details-page section.premiereAgencyProfile .rui-icon.rui-icon-arrow-right {
+    font-size: 20px;
+    color: #2b6ed2;
+    line-height: 0.05;
+    position: absolute;
+    right: 10px;
+    top: 46%;
+    transform: translateY(-50%);
+    -webkit-transform: translateY(-50%);
+}
+.REA-details-page section.commonAgencyProfile {
+    margin: 0 15px;
+    border-bottom: 1px solid #e9ebed;
+}
+.REA-details-page section.commonAgencyProfile .agencyDescription {
+    display: inline-block;
+    font-family: Museo-Sans-300, Helvetica, Arial, sans-serif;
+    vertical-align: middle;
+    line-height: 1.5;
+    padding: 0 5px;
+}
+.REA-details-page section.commonAgencyProfile .agencyTitle {
+    font-size: 14px;
+    color: #333f48;
+}
+.REA-details-page section.commonAgencyProfile .agencyAddress {
+    font-size: 12px;
+    color: #666666;
+}
+.android-app .REA-details-page #oneForm{
+    display:none;
+}
+.REA-details-page .classicproject .contactBlock ul li a,
+.REA-details-page .signatureproject .contactBlock ul li a,
+.REA-details-page .signature .contactBlock ul li a,
+.REA-details-page .midtier .contactBlock ul li a{
+    padding: 15px 0 5px 0px;
+}
+.REA-details-page .classicproject .contactBlock ul li a span:before,
+.REA-details-page .signatureproject .contactBlock ul li a span:before,
+.REA-details-page .midtier .contactBlock ul li a span:before,
+.REA-details-page .signature .contactBlock ul li a span:before{
+    display: block;
+    margin:auto;
+    width:21px;
+    height:21px;
+    top:-3px;
+    left:auto;
+    position: relative;
+}
+.REA-details-page .classicproject .contactBlock ul li a span,
+.REA-details-page .signatureproject .contactBlock ul li a span,
+.REA-details-page .midtier .contactBlock ul li a span,
+.REA-details-page .signature .contactBlock ul li a span{
+    display: block;
+    position: relative;
+}
+.REA-details-page .contactAgent {
+    margin-top: 15px;
+}
+.REA-details-page .contactAgent form{
+    display: none;
+}
+.REA-details-page .contactAgent form label.placeholder {
+    padding-left: 12px;
+    margin: 0;
+}
+.REA-details-page .rent form dl.select {
+    display: none;
+}
+.REA-details-page form .userDetails, .REA-details-page section .inspectionTimesWrapper{
+    border:solid 1px #e8e8e8;
+    -webkit-border-radius:5px;
+    border-radius:4px;
+    background:#f8f8f8;
+    padding:10px;
+    position: relative;
+}
+.REA-details-page .contactAgent input[type=submit]{
+    margin: 15px auto;
+    line-height: 11px;
+}
+.REA-details-page .contactAgent .userDetails{
+    margin-bottom: 7px;
+}
+.REA-details-page .contactAgent .message{
+    margin-bottom: 20px;
+}
+.REA-details-page section .inspectionTimesWrapper{
+    margin-top: 14px;
+    padding: 0px;
+}
+.REA-details-page section.inspectionTimes{
+    padding-top: 0px;
+    padding-bottom: 0px;
+}
+.REA-details-page div.rui-school-information{
+    padding: 15px;
+}
+.REA-details-page section.neighbourhoods-banner {
+    margin-top: 10px;
+    padding-top: 0;
+    padding-bottom: 0;
+}
+.REA-details-page section.neighbourhoods-banner a.link {
+    display: block;
+    text-decoration: none;
+    border:solid #dbdbdb 1px;
+    position: relative;
+}
+.REA-details-page section.neighbourhoods-banner a.link:active {
+    background: #555;
+    border: solid #555 1px;
+}
+.REA-details-page section.neighbourhoods-banner a.link:after {
+    width: 10px;
+    height: 15px;
+    position: absolute;
+    right: 15px;
+    content: "";
+    bottom: 23px;
+}
+.REA-details-page section.neighbourhoods-banner a.link .image-wrapper {
+    width: 100%;
+    height: 65px;
+    position: relative;
+    display: none;
+}
+.REA-details-page section.neighbourhoods-banner a.link .image-wrapper .image {
+    width: 100%;
+    height: 65px;
+    position: absolute;
+    background-size: 100%;
+    background-position: center;
+}
+.REA-details-page section.neighbourhoods-banner a.link .image-wrapper .layer {
+    position: absolute;
+    top: 0;
+    width: 100%;
+    height: 65px;
+    background-color: #000000;
+    opacity: 0.4;
+}
+.REA-details-page section.neighbourhoods-banner a.link .image-wrapper .suburb-info {
+    position: relative;
+    top: 0;
+    height: 19px;
+    padding: 21px 15px 25px 15px;
+    text-align: center;
+}
+.REA-details-page section.neighbourhoods-banner a.link .image-wrapper .suburb-info .suburb-name {
+    display: inline-block;
+    line-height: 100%;
+    height: 100%;
+    vertical-align: middle;
+    font-family: 'Museo-Sans-500', Helvetica, Arial, sans-serif;
+    font-size: 18px;
+    color: #ffffff;
+}
+.REA-details-page section.neighbourhoods-banner a.link .image-wrapper .suburb-info span:before {
+    display: inline-block;
+    vertical-align: middle;
+    width: 15px;
+    height: 15px;
+    content: "";
+    margin-left: 7px;
+    background-position: -15px -360px;
+}
+.REA-details-page section.neighbourhoods-banner a.link .suburb-profile-wrapper {
+    padding: 10px 16px;
+}
+.REA-details-page section.neighbourhoods-banner a.link .suburb-profile-title {
+    font-size: 14px;
+    font-family: 'Museo-Sans-500', Helvetica, Arial, sans-serif;
+    font-weight: bold;
+}
+.REA-details-page section.neighbourhoods-banner a.link .suburb-profile-title .suburb-name {
+    display: inline-block;
+    max-width: 170px;
+    color: #333333;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    vertical-align: top;
+}
+.REA-details-page section.neighbourhoods-banner a.link:active .suburb-profile-title .suburb-name {
+    color: #fff;
+}
+.REA-details-page section.neighbourhoods-banner a.link .suburb-profile-title .profile {
+    display: inline-block;
+    color: #e4002b;
+}
+.REA-details-page section.neighbourhoods-banner a.link:active .suburb-profile-title .profile {
+    color: #fff;
+}
+.REA-details-page section.neighbourhoods-banner a.link .suburb-profile-description {
+    font-size: 12px;
+    color: #666666;
+}
+.REA-details-page section.neighbourhoods-banner a.link:active .suburb-profile-description {
+    color: #fff;
+}
+.REA-details-page section.rpdataReportLink a {
+    display: block;
+    position: relative;
+    height: 50px;
+    padding: 5px 10px;
+    text-decoration: none;
+    border: solid #dbdbdb 1px;
+}
+.REA-details-page section.rpdataReportLink a:after {
+    position: absolute;
+    width: 10px;
+    height: 15px;
+    right: 15px;
+    content: "";
+    bottom: 23px;
+}
+.REA-details-page section.rpdataReportLink .coreLogicLogo {
+    display: inline-block;
+    height: 50px;
+    width: 94px;
+    vertical-align: middle;
+    background-image: url(https://m.realestate.com.au/2-132/resources/img/corelogic.png);
+    background-size: 100%;
+    background-repeat: no-repeat;
+}
+.REA-details-page section.rpdataReportLink .reportDesc
+{
+    display: inline-block;
+    vertical-align: middle;
+    font-size: 12px;
+    width: 50%;
+    line-height: 15px;
+    padding-left: 3%;
+    color: #666666;
+}
+.REA-details-page section.inspectionTimes li:first-child{
+    border-top:none;
+}
+.REA-details-page section.inspectionTimes li{
+    border-top: solid 1px #e8e8e8;
+    padding: 10px 12px;
+    display: block;
+    font-size:14px;
+    line-height: 16px;
+}
+.REA-details-page section.inspectionTimes li .date{
+    float:left;
+}
+.REA-details-page section.inspectionTimes li .time{
+    float:right;
+}
+.REA-details-page section.inspectionTimes li .add{
+    display: none;
+}
+.REA-details-page .filter-option-section {
+    padding-top: 0px;
+    padding-bottom: 0px;
+    font-family: 'Museo-Sans-500', Helvetica, Arial, sans-serif;
+}
+.REA-details-page .listingsWithFilterTag {
+    padding: 15px 0 0 0;
+}
+.childListings .child-listing-title::first-letter {
+    text-transform: capitalize;
+}
+.child-listing-title {
+    font-size: 14px;
+    font-weight: bold;
+}
+.childListings .filter-option-section .child-listing-title {
+    padding-bottom: 10px;
+}
+.priceImg {
+    height: 20px;
+    margin-bottom: -7px;
+}
+.android-app.android-app-add-to-cal .REA-details-page section.inspectionTimes li .add{
+    display: block;
+    float: right;
+    color: #ccc;
+    font-size: 27px;
+    margin-left: 14px;
+    margin-top: -2px;
+    font-weight: lighter;
+}
+.REA-details-page section.statement-of-information {
+    padding: 15px;
+}
+.REA-details-page .projectListing section.statement-of-information {
+    padding: 0;
+}
+.REA-details-page section.statement-of-information .soi-link {
+    display: block;
+    position: relative;
+    border: 1px solid #e8e8e8;
+    color: black;
+    text-decoration: none;
+    padding: 18px 16px;
+    font-size: 14px;
+    line-height: 14px;
+}
+.REA-details-page section.statement-of-information .soi-link div.soi-label-content {
+    display: inline-block;
+    width: 80%;
+    font-family: 'Museo-Sans-500', Helvetica, Arial, sans-serif;
+}
+.REA-details-page section.statement-of-information .soi-link div.soi-label-view {
+    display: inline-block;
+    width: 13%;
+    font-family: 'Museo-Sans-300', Helvetica, Arial, sans-serif;
+    text-align: right;
+}
+.REA-details-page section.statement-of-information .soi-link::after {
+    background-image: url(https://m.realestate.com.au/2-132/resources/img/search-result-pdp@2x.png);
+    background-position: -55px -86px;
+    background-size: 319px;
+    content: "";
+    position: absolute;
+    right: 5%;
+    bottom: 18px;
+    width: 10px;
+    height: 15px;
+}
+.REA-details-page section.inspectionTimes li .important{
+    color:#c6102e;
+}
+.REA-details-page form{
+    background:#fff;
+    font-size:14px;
+}
+.REA-details-page form .userDetails:before{
+    width:15px;
+    height:15px;
+    position: absolute;
+    top:42%;
+    bottom:42%;
+    right: 0;
+    margin-right:11px;
+    content:"";
+}
+#oneForm button[type=submit]{
+    background: #fff;
+    border: 1px solid #e8e8e8;
+    text-align: center;
+    padding: 0 15px;
+    top: 0;
+    color: #333;
+    line-height: 38px;
+}
+#oneForm button[type=submit]:before {
+    content: "";
+    height: 23px;
+    width: 26px;
+    position: relative;
+    top: 7px;
+    display: inline-block;
+    background:url(https://m.realestate.com.au/2-132/resources/img/1form.png);
+    background-repeat: no-repeat;
+}
+#details .childListings a[rel=saveProperty] {
+    position: absolute;
+    right: 9px;
+    top: 7px;
+}
+#details .childListings{
+    background:url(https://m.realestate.com.au/2-132/resources/img/loading_scroll.gif);
+    background-size:20px 20px;
+    background-repeat: no-repeat;
+    background-position: 50% 50%;
+    background-color: #A4A4A4;
+    min-height: 90px;
+}
+#details .childListings .result .price{
+    margin-bottom: 4px;
+}
+#details .childListings .result {
+    border-top: 1px solid #e9e9e9;
+    position: relative;
+    margin-bottom: 0;
+    max-height: 90px;
+    box-shadow: none;
+    -webkit-box-shadow: none;
+}
+#details .childListings > ol{
+    border-bottom: 1px solid #e9e9e9;
+    background-color: #E9E9E9;
+}
+#details .childListings .result.hidden{
+    display: none;
+}
+.REA-details-page .childListings .title {
+    display: block;
+    color: #777777;
+    height: 28px;
+    line-height: 14px;
+    font-size: 12px;
+    font-weight: normal;
+    padding: 0;
+    margin: 0 55px 0 0;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    display: -webkit-box;
+}
+#details .findMore{
+    height: 41px;
+    position: relative;
+    margin-top: 12px;
+}
+#details .findMore > span{
+    text-align: center;
+    line-height: 41px;
+    width: 100%;
+    font-size: 14px;
+    font-weight: bold;
+    margin-left: 14px;
+}
+#details .findMore > img{
+    position: absolute;
+    top: 9px;
+    right: 7px;
+    width: 120px;
+    height: 23px;
+}
+#details .childListings .showResults{
+    background: white;
+    border:solid #ececec;
+    border-width: 0 0 1px 0;
+    height: 45px;
+    text-align: center;
+    line-height: 45px;
+    width: 100%;
+    font-size: 14px;
+}
+#details .childListings .gallery {
+    float: left;
+    margin-right: 11px;
+}
+#details .projectListing .childListings .land-size {
+    color: #697684;
+    position: relative;
+    right: 0;
+    bottom: 0;
+    font-weight: normal;
+    font-size: 16px;
+}
+#details .childListings .item {
+    width: 120px;
+}
+#details .childListings .item > div {
+    height: 90px;
+    min-height: 90px;
+    float: none;
+}
+@media only screen and (-webkit-min-device-pixel-ratio: 2),
+only screen and (min-device-pixel-ratio: 2) {
+    .REA-details-page .propertyMap .mapWrapper.error,
+    .REA-details-page .propertyMap .mapWrapper .map.noAddress{
+        background-image:url(https://m.realestate.com.au/2-132/resources/img/map-no-address@2x.png);
+    }
+    .REA-details-page section.neighbourhoods-banner a.link .image-wrapper .suburb-info span:before {
+        background-position: -15px -359px;
+    }
+    #oneForm button[type=submit]:before {
+        background: url(https://m.realestate.com.au/2-132/resources/img/1form@2x.png);
+        background-size: 22px, 22px;
+        background-repeat: no-repeat;
+    }
+    .REA-details-page section.rpdataReportLink .coreLogicLogo {
+        background-image: url(https://m.realestate.com.au/2-132/resources/img/corelogic@2x.png);
+    }
+}
+.REA-details-page .priceDisclaimer p {
+    color: #333333;
+    line-height: 18px;
+}
+.rpdataContainer {
+    border-top:solid 1px #e5e5e5;
+    line-height:50px;
+    font-family: "Helvetica";
+    color:#959595;
+    font-size:12px;
+    overflow:auto;
+    position:relative;
+}
+.rpdataContainer .moreInfo {
+    float: right;
+    width:30px;
+    height:30px;
+    text-indent:-1000em;
+    overflow:hidden;
+    position:absolute;
+    top:8px;
+    right:15px;
+}
+.rpdataContainer .rpdataLogo,
+.rpdataContainer .text{
+    float:left;
+}
+.rpdataContainer .rpdataLogo {
+    width:40px;
+    height:16px;
+    text-indent:-1000em;
+    overflow:hidden;
+    background-image:url(https://m.realestate.com.au/2-132/resources/img/rpdata-logo-web@2x.png);
+    background-size:40px 16px;
+    position:relative;
+    top:3px;
+    margin-left:4px;
+}
+.REA-details-page .childListings .listingInfo {
+    margin: 9px 0px 7px;
+}
+.REA-details-page .childListings [rel=saveProperty] {
+    bottom: 7px;
+}
+.REA-details-page .matched-listing-title {
+    padding-bottom: 0;
+}
+.REA-details-page .aboutMe {
+    margin-bottom: 9px;
+}
+.REA-details-page .agentArea {
+    padding: 0 15px;
+    border-top-width: 30px;
+}
+.REA-details-page .agentArea .contact-agent-header {
+    text-align: center;
+}
+.REA-details-page .agentArea .contact-agent-header span,
+.REA-details-page .agentArea .contact-agent-header img {
+    position: absolute;
+    margin-top: -26px;
+    margin-left: 0;
+    transform: translate(-50%);
+}
+.REA-details-page .agentArea .contact-agent-header span {
+    width: 100%;
+    height: 22px;
+    line-height: 22px;
+    font-family: "Museo-Sans-500", "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-size: 18px;
+    color: #333333;
+    overflow: hidden;
+}
+.REA-details-page .calculatorFrameContainer {
+    height: 123px;
+    border-top: 1px solid #e9ebeb;
+}
+.REA-details-page .summary-frame {
+    width: 100%;
+    height: 100%;
+    background-color: white;
+}
+.REA-details-page .calculator-frame {
+    display: block;
+    border: none;
+    width: 1px;
+    min-width: 100%;
+    background-color: transparent;
+    overflow: hidden;
+}
+.REA-details-page .calculator-frame-container {
+    display: none;
+    -webkit-overflow-scrolling:touch;
+    overflow-x: hidden;
+    overflow-y: auto;
+    background-color: white;
+    z-index:9999;
+    position:fixed;
+    top:0;
+    left:0;
+    bottom:0;
+    right:0;
+}
+.REA-details-page .calculator-frame-container-visible {
+    display: block;
+}
+.REA-rpdata_disclaimer-page section{
+    background: #fff;
+    padding: 24px 22px;
+}
+.REA-rpdata_disclaimer-page section.descriptionWrapper p.intro{
+    font-size: 16px;
+    line-height: 26px;
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-weight: 300;
+    margin-bottom: 30px;
+}
+.REA-rpdata_disclaimer-page section.descriptionWrapper p{
+    line-height: 24px;
+    font-size: 14px;
+}
+.REA-rpdata_disclaimer-page section.descriptionWrapper h4 {
+    padding-bottom: 3px;
+}
+.REA-mapView-page.page{
+    top:0px;
+    left:0px;
+    -webkit-backface-visibility: hidden;
+}
+.REA-mapView-page.page > .content {
+    width:100%;
+    display: table;
+    position: fixed;
+}
+.REA-mapView-page.page > .content{
+    background:url(https://m.realestate.com.au/2-132/resources/img/loading_scroll.gif);
+    background-size:30px 30px;
+    background-repeat: no-repeat;
+    background-position: 50% 50%;
+}
+.REA-mapView-page.page #thirdPartyMapView{
+    display: block;
+    height: 100%;
+    width:100%;
+    visibility: hidden;
+    opacity: 0;
+}
+.REA-mapView-page.page #thirdPartyMapView.active{
+    visibility: visible;
+    opacity: 1;
+    -webkit-transition: opacity .5s ease-in-out;
+}
+.REA-mapView-page.page .close{
+    height:45px;
+    width:45px;
+    display: block;
+    position: absolute;
+    right: 10px;
+    top:10px;
+    -webkit-transform: translate3d(0px, 0px, 0px);
+    font-weight: bold;
+    font-family: arial;
+    font-size:20px;
+    line-height: 60px;
+    text-align: center;
+    color: #fff;
+    z-index: 99999;
+}
+.REA-mapView-page.page .close:after{
+    content:"";
+    display: block;
+    position: absolute;
+    width:80px;
+    height: 80px;
+    margin:-10px 0 0 -27px;
+    background-color: transparent;
+}
+.REA-shareViaEmail-page{
+    background: #fff;
+}
+.REA-shareViaEmail-page .REA-form {
+    padding-bottom: 20px;
+}
+.REA-shareViaEmail-page .REA-form label.placeholder {
+    padding: 12px;
+    position: absolute;
+}
+.REA-shareViaEmail-page .result{
+    box-shadow: none;
+    border-bottom: solid 1px #ececec;
+}
+.REA-shareViaEmail-page .checkboxes {
+    margin-top: 10px;
+    margin-left: 1px;
+}
+.REA-shareViaEmail-page .checkboxes dl {
+    padding-bottom: 10px;
+}
+.REA-shareViaEmail-page .important {
+    color: #2352a4;
+    line-height: 30px;
+}
+.REA-shareViaEmail-page .important:before{
+    content:"";
+    display:inline-block;
+    width:15px;
+    height:15px;
+    position: relative;
+    top:3px;
+    margin-right:3px;
+    margin-left: 3px;
+}
+#shareEmail-subject {
+    padding-left: 65px;
+}
+.REA-shareViaEmail-page form.REA-form textarea{
+    margin-bottom: 8px;
+}
+.REA-shareViaEmail-page [rel=saveProperty]{
+    display: none;
+}
+.REA-shareViaEmail-page .result .price {
+    margin-right: 0;
+}
+.REA-shareViaEmail-page .required {
+  margin: 10px auto;
+}
+section.gallery{
+    overflow: hidden;
+    overflow-y:hidden;
+    position: relative;
+}
+section.gallery .wrapper{
+    line-height: 0px;
+}
+section.gallery{
+    background-color: #A4A4A4;
+}
+.REA-details-page section.gallery .wrapper {
+    overflow: hidden;
+    position: relative;
+}
+section.gallery .item{
+    float:left;
+    line-height: 0px;
+    font-size: 0;
+    width:100%;
+}
+section.gallery .background{
+    height: 240px;
+}
+section.gallery .item > div > .background{
+    display: block;
+    background-position: center center;
+    background-size:cover;
+    width: 100%;
+}
+section.gallery .item > div > .background.resize{
+	background-size:contain;
+	background-repeat: no-repeat;
+}
+section.gallery .item{
+    display: table-cell;
+    vertical-align: top;
+}
+section.gallery .item > div{
+    background:url(https://m.realestate.com.au/2-132/resources/img/loading_scroll.gif);
+    background-size:30px 30px;
+    background-repeat: no-repeat;
+    background-position: 50% 50%;
+    background-color: #A4A4A4;
+   
+}
+section.gallery .item.rendered > div{
+    background: transparent;
+}
+section.gallery[data-rendered=true] .item > div{
+    height: auto;
+    width:auto;
+}
+section.gallery .item .background{
+    background: transparent;
+    background-size: cover;
+    visibility: visible;
+    opacity: 0;
+}
+.REA-details-page section.gallery .item .background{
+    -webkit-perspective: 500;
+    -webkit-backface-visibility: hidden;
+}
+section.gallery .item.rendered .background{
+    opacity: 1;
+    
+    -webkit-transition: opacity .2s ease-in-out; -moz-transition: opacity .2s ease-in-out; -o-transition: opacity .2s ease-in-out; transition: opacity .2s ease-in-out;
+}
+.REA-details-page section.gallery .item.rendered .background{
+    -webkit-transition: opacity .2s ease-in-out; -moz-transition: opacity .2s ease-in-out; -o-transition: opacity .2s ease-in-out; transition: opacity .2s ease-in-out;
+}
+.REA-details-page section.gallery .item.rendered:first-child .background{
+    -webkit-transition: opacity 0s ease-in-out; -moz-transition: opacity 0s ease-in-out; -o-transition: opacity 0s ease-in-out; transition: opacity 0s ease-in-out;
+}
+.videoSlideActive .gallery > span,
+.videoSlideActive section.gallery .counter,
+.adSlideActive section.gallery .counter,
+.apple section.gallery .item.video .swipeArea
+{
+    display: none;
+}
+.adSlideActive .badges {
+    display: none;
+}
+section.gallery .item.video {
+    position: relative;
+    background: #000;
+}
+section.gallery .item.video iframe{
+    margin:auto;
+}
+section.gallery .item.video .swipeArea.vertical:before,section.gallery .item.video .swipeArea.vertical:after{
+    height:35%;
+    width: 100%;
+    
+}
+section.gallery .item.video .swipeArea.horizontal:before,section.gallery .item.video .swipeArea.horizontal:after{
+    width:42%;
+    height: 90%;
+    
+    top:-10px;
+}
+section.gallery .item.video .swipeArea:before,section.gallery .item.video .swipeArea:after{
+    content:"";
+    position: absolute;
+    z-index: 9999;
+    opacity:.5;
+    
+}
+section.gallery .item.video .swipeArea:before{
+    left:0;
+}
+section.gallery .item.video .swipeArea:after{
+    right:0;
+}
+section.gallery .item.video .swipeArea.vertical:after{
+    bottom:30px
+}
+section.gallery .item span{
+    display: none;
+}
+section.gallery .counter,
+.gallery > span {
+    position: absolute;
+    z-index: 999;
+}
+section.gallery .item.threeDTour {
+    position: relative;
+}
+section.gallery .item.threeDTour .threeDTourLayer {
+    position: absolute;
+    top: 0;
+    height: 100%;
+    width: 100%;
+    background: rgba(0,0,0,0.6);
+}
+section.gallery .item.threeDTour .threeDTourLayer .threeDTourContainer {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    text-align: center;
+    margin-top: -36px;
+    margin-left: -43px;
+}
+section.gallery .item.threeDTour .threeDTourLayer .threeDTourIcon {
+    width: 55px;
+    height: 48px;
+    margin: 0 auto;
+    background: url(https://m.realestate.com.au/2-132/resources/img/3d-tour-icon@2x.png) no-repeat;
+    background-size: 100%;
+}
+section.gallery .item.threeDTour .threeDTourLayer .threeDTourTitle {
+    height: 16px;
+    line-height: 16px;
+    font-family: 'Museo-Sans-300', Helvetica, Arial, sans-serif;
+    font-size: 16px;
+    color: white;
+    margin-top: 14px;
+}
+section.gallery .item.ad .adSlot {
+    height: 100%;
+    display: block;
+}
+section.gallery .counter{
+    background: rgba(0,0,0,0.7);
+    border-radius: 10px;
+    display: inline-block;
+    font-size: 10px;
+    line-height: 21px;
+    padding: 0 7px;
+    color: #fff;
+    right:12px;
+    bottom:12px;
+    left: auto;
+    border-radius: 10px;
+    font-weight: normal;
+    text-transform: lowercase;
+    -webkit-perspective: 500;
+    -webkit-backface-visibility: hidden;
+}
+section.gallery .counter > span{
+    font-weight: bold;
+}
+.gallery > .badges {
+    color: #fff;
+    left: 0;
+    bottom: 0;
+    border-radius: 0;
+}
+.gallery > .badges .badge {
+    display: inline-block;
+    background-color: #333f48;
+    padding: 0 10px;
+    font-size: 14px;
+    line-height: 25px;
+    font-weight: normal;
+    text-transform: none;
+    margin-right: -4px; 
+}
+.gallery > .badges .new_listing {
+   background-color: #00beb3;
+}
+.gallery > .badges .sold {
+    background-color: #EDB200;
+}
+.galleryAlert{
+    position: absolute;
+    z-index: 9999;
+    color:#fff;
+    background-color: rgba(0,0,0,.70);
+    border-radius:10px;
+    padding:5px 10px 10px 5px;
+    top:50%;
+    left:50%;
+    margin-left: -50px;
+    margin-top: -70px;
+    width:100px;
+    height:100px;
+    text-align: center;
+    line-height: 14px;
+    font-size:12px;
+    font-weight:bold;
+    -webkit-perspective: 500;
+    -webkit-backface-visibility: hidden;
+    transform: translate3d(0px, 0px, 0px);
+}
+section.gallery .galleryAlert.videoMessage{
+    display:none;
+}
+.apple section.gallery .galleryAlert.videoMessage{
+    display:block;
+}
+section.gallery .galleryAlert.videoMessage > span {
+    border-top: 15px solid transparent;
+   	border-right: 15px solid transparent;
+   	border-left: 26px solid #fff;
+    border-bottom: 15px solid transparent;
+    width: 10px;
+   	height: 0;
+    display: block;
+    position: relative;
+}
+.galleryAlert.landscapeMessage > span {
+    margin: 17px 0 14px 0;
+}
+.galleryAlert.landscapeMessage{
+    -webkit-transition: opacity .2s ease-in-out;
+    opacity: 0;
+}
+.galleryAlert.landscapeMessage > span{
+    -webkit-transition: all .5s ease-in-out;
+}
+.galleryAlert.landscapeMessage.animate{
+    opacity: 1;
+}
+.galleryAlert > span{
+    display: block;
+    width:23px;
+    height: 38px;
+    margin: auto;
+    position: relative;
+    top:5px;
+    left:40px;
+    -webkit-transform: rotate(0);
+    transform: rotate(0);
+    background-repeat: no-repeat;
+    margin: 21px 0 21px 0;
+}
+.galleryAlert.landscapeMessage.animate > span{
+    -webkit-transform: rotate(90deg);
+    transform: rotate(90deg);
+}
+body.landscapeGallery{
+    background: #000;
+    height: 100%;
+    width:100%;
+    -webkit-user-select: none;
+}
+body.landscapeGallery .active.page {
+    height: 100%;
+    width:100%;
+    background:url(https://m.realestate.com.au/2-132/resources/img/loading-spinner-dark.gif);
+    background-color: #000;
+    background-size:40px 40px;
+    background-repeat: no-repeat;
+    background-position: 50% 50%;
+}
+body.landscapeGallery .active.page .banner,
+body.landscapeGallery .active.page .mainContent,
+body.landscapeGallery .active.page header { display: none}
+body.landscapeGallery section.gallery {
+    position: fixed;
+    width:100%;
+    background:#000;
+    top:0px;
+    left:0px;
+    opacity: 0;
+}
+body.landscapeGallery section.gallery{
+    height:100%;
+    width:100%;
+    position: absolute;
+    top:0px;
+    left:0px;
+}
+body.landscapeGallery section.gallery .defaultScale{
+    font-weight: bold;
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(30,30,30,.7)), color-stop(100%,rgba(0,0,0,.7))); 
+    background: linear-gradient(to bottom, rgba(30,30,30.7) 0%, rgba(0,0,0.7) 100%); 
+    border-top:solid 1px rgba(255,255,255,.1);
+    border-bottom:solid 1px rgba(255,255,255,0);
+    box-shadow: 0px 3px 3px rgba(0,0,0.3);
+    border-radius:4px;
+    color: #fff;
+    padding:5px 0px;
+    left:50%;
+    width:120px;
+    bottom:10px;
+    line-height: 35px;
+    z-index: 999;
+    text-align: center;
+    margin-left:-50px;
+    position: absolute;
+    opacity:0;
+    -webkit-transition: opacity .2s ease-in-out; -moz-transition: opacity .2s ease-in-out; -o-transition: opacity .2s ease-in-out; transition: opacity .2s ease-in-out;
+}
+body.landscapeGallery section.gallery .defaultScale:before{
+    content:"";
+    display: inline-block;
+    height:20px;
+    width:15px;
+    margin-right: 7px;
+    position: relative;
+    background-repeat: no-repeat;
+    top:8px
+}
+body.landscapeGallery section.gallery .defaultScale.show{
+    opacity: 1;
+}
+body.landscapeGallery section.gallery .item > div{
+    background-image:url(https://m.realestate.com.au/2-132/resources/img/loading-spinner-dark.gif);
+    background-repeat: no-repeat;
+    background-position: 50% 50%;
+    background-color: #000;
+}
+body.landscapeGallery section.gallery .item > div > .background{
+    background-size: auto 100%;
+    background-repeat: no-repeat;
+}
+body.landscapeGallery section.gallery .item{
+    background-color: #000;
+    overflow:hidden;
+}
+section.gallery .item.ad .background {
+    background-size: cover !important;
+}
+body.landscapeGallery section.gallery > span{
+    display: none;
+}
+body.landscapeGallery section.gallery[data-galleryType=landscape]{
+    opacity: 1;
+    -webkit-transition: opacity .2s ease-in-out; -moz-transition: opacity .2s ease-in-out; -o-transition: opacity .2s ease-in-out; transition: opacity .2s ease-in-out;
+}
+body.landscapeGallery section.gallery .counter{
+    bottom:8px;
+    right:45px;
+}
+section.gallery .builder-profile .background{
+    position: relative;
+}
+section.gallery .builder-profile-content{
+  position: absolute;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0,0,0,0.6);
+  line-height: 1em;
+  text-align: center;
+  color: white;
+}
+section.gallery .builder-profile-content h2{
+  color: white;
+  margin-top: 80px;
+  margin-bottom: 22px;
+  font-family: Museo-Sans-500,Helvetica,arial,sans-serif;
+  font-size: 18px;
+}
+section.gallery .builder-profile-content p{
+  margin-bottom: 3em;
+  height: 20px
+  font-family: Museo-Sans-300,Helvetica,arial,sans-serif;
+  font-size: 14px;
+  color: white;
+}
+section.gallery .builder-profile-content a{
+  color: white;
+  padding: 6px 40px 6px 40px;
+  border: 1px solid;
+  border-radius: 4px;
+  font-family: Museo-Sans-300,Helvetica,arial,sans-serif;
+  font-size: 14px;
+  text-decoration: none;
+}
+section.builderInfoContainer .builderImageLarge {
+    display: inline-block;
+    width: 100%;
+    height: 50%;
+    margin-top: 10px;
+    vertical-align: top;
+    position: relative;
+    background-size: 100% 100%;
+    background: no-repeat center 0;
+    background-position: center center;
+}
+section.builderInfoContainer .builderDescription {
+    display: inline-block;
+    width: 100%;
+    padding: 5px 10px 5px 0px;
+}
+section.builderInfoContainer .builderDetails{
+    font-family: Helvetica, arial, sans-serif;
+    height: 296px;
+}
+section.builderInfoContainer .builderExploreImage{
+    margin-left: 0px;
+    margin-right: 5px;
+    margin-top: 0px;
+    float: left
+}
+section.builderInfoContainer .builderP {
+    margin: 0px 0 10px;
+    font-size: 0.875rem;
+    line-height: 1.2rem;
+    color: #777;
+}
+section.builderInfoContainer .builderDescription a {
+    font-size: 0.875rem;
+    font-family: Museo-Sans-500, Helvetica, arial, sans-serif;
+    color: #3c89fb;
+}
+section.builderInfoContainer .builderH2 {
+    font-size: 0.875rem;
+    font-weight: bold;
+    margin: 20px 0 10px;
+    margin-left: 35px;
+}
+section.builderInfoContainer .separator {
+    background-color: #f7f7f7;
+    box-shadow: inset 0 1px 2px 0 #a6a6a6;
+    height: 10px;
+    margin-left: -16px;
+    margin-right: -16px;
+}
+section.builderInfoContainer .builderDetails {
+    margin-bottom: 9px;
+    width: 100%;
+}
+section.builderInfoContainer .builderImageLink {
+    text-decoration:none;
+}
+section.gallery .item.power-profile {
+    font-size: 14px;
+    font-family: "Museo-Sans-300", "Helvetica Neue", Helvetica, Arial, sans-serif;
+    -webkit-font-smoothing: antialiased;
+    position: relative;
+    padding: 0;
+}
+@media (min-width: 360px) {
+    section.gallery .item.power-profile {
+        font-size: 18px;
+    }
+}
+section.gallery .power-profile .power-profile__wrapper {
+    position: relative;
+    margin: 0 auto;
+    background: none;
+}
+body.landscapeGallery section.gallery .power-profile .power-profile__wrapper {
+    background: none;
+}
+section.gallery .power-profile .power-profile__backdrop {
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    overflow: hidden;
+    z-index: 0;
+    background-color: #1c1e21;
+}
+section.gallery .power-profile .power-profile__overlay {
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    overflow: hidden;
+    z-index: 1;
+    background-color: rgba(32, 40, 46, 0.6);
+}
+section.gallery .power-profile .power-profile__background {
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    overflow: hidden;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    filter: blur(8px);
+    -webkit-filter: blur(8px);
+}
+section.gallery .power-profile .power-profile__body {
+    width: 100%;
+    height: 100%;
+    position: relative;
+    z-index: 1;
+}
+section.gallery .power-profile .power-profile__content {
+    flex-grow: 1;
+    align-self: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 90%;
+}
+body.landscapeGallery section.gallery .item.power-profile .power-profile__content {
+    height: auto;
+}
+body.landscapeGallery section.gallery .item.power-profile .power-profile__content.scaled {
+    height: 80%;
+}
+section.gallery .power-profile .power-profile__agency-brand {
+    display: none;
+}
+section.gallery .power-profile .power-profile__greeting {
+    color: #FFF;
+    font-size: 0.85em;
+    margin: 2.5em 0 1.5em;
+    letter-spacing: 1.2px;
+    text-transform: uppercase;
+    text-align: center;
+}
+section.gallery .power-profile .power-profile__content.scaled .power-profile__greeting {
+    margin-top: 0;
+}
+section.gallery .power-profile .power-profile__cards {
+    width: 100%;
+    position: relative;
+}
+section.gallery .power-profile .power-profile__agents {
+    line-height: 1.6;
+}
+section.gallery .power-profile .power-profile__agent {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    text-align: left;
+    padding: 0.5em 0;
+    margin: 0 1em;
+    max-width: 100%;
+    border-bottom: 1px solid rgba(255,255,255,0.5);
+    border-top: 1px solid rgba(255,255,255,0.5);
+}
+section.gallery .power-profile a.power-profile__agent {
+    text-decoration: none;
+}
+section.gallery .power-profile--dual .power-profile__agent:last-child {
+    border-top: none;
+}
+section.gallery .power-profile .power-profile__agent-image {
+    border-width: 1px;
+    border-style: solid;
+    border-color: #FFF;
+    border-radius: 50%;
+    height: 3.5em;
+    width: 3.5em;
+    display: inline-block;
+    background-size: cover;
+    background-position: top;
+    background-repeat: no-repeat;
+    flex: 0 0 3.5em;
+    background-color: white;
+}
+section.gallery .power-profile .power-profile__agent-name {
+    color: #FFF;
+    font-size: 1em;
+    margin: 0;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    line-height: 1.2;
+    font-weight: bold;
+}
+section.gallery .power-profile .power-profile__agent-meta {
+    padding-bottom: 0.7em;
+    padding-top: 0.7em;
+    margin-left: 0.7em;
+    width: calc(100% - 3.5em - 50px);
+}
+section.gallery .power-profile .power-profile__agent-info {
+    color: #FFF;
+    font-size: 0.75em;
+    margin: 0;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    line-height: 1.5;
+}
+section.gallery .power-profile .power-profile__agent-cta-arrow {
+    color: #FFF;
+    font-size: 2em;
+    margin: 0;
+    align-self: center;
+    display: block;
+}
+section.gallery .power-profile .rui-icon-arrow-right {
+    display: block;
+}
+section.gallery .power-profile .rui-icon-arrow-right::before {
+    margin: 0;
+}
+body.landscapeGallery section.gallery .item.power-profile > div > .background {
+    background-size: cover;
+}
+body.landscapeGallery section.gallery .item.power-profile .power-profile__agency-brand {
+    display: block;
+    text-align: center;
+    padding: 5px 0;
+}
+.suggestField [type="search"]{
+    -webkit-appearance: none !important;
+    appearance: none;
+    background: transparent;
+    outline: none;
+    border: none;
+    box-shadow:none;
+    height:22px;
+    line-height: 22px;
+    resize:none;
+    position: absolute;
+    z-index: 0;
+    margin-top:8px;
+    overflow: hidden;
+    
+    -webkit-user-modify: read-write-plaintext-only;
+}
+.suggestField [type="search"]:focus{
+    -webkit-user-modify: read-write-plaintext-only;
+    background:transparent !important;
+    -webkit-appearance: none !important;
+    outline: none !important;
+}
+.suggestField{
+    background: #fff;
+    border-radius:5px;
+    border: solid 1px #ccc;
+    min-height: 20px;
+    max-height: 80px;
+    padding-left: 11px;
+    padding-top:11px;
+    padding-bottom: 8px;
+    overflow-x:hidden;
+    overflow-y:scroll;
+    position: relative;
+    z-index:0;
+    box-shadow: inset 1px 1px 3px rgba(0,0,0,.1);
+}
+.suggestField:active{
+    background: #e3f1f8;
+}
+.REA-search-page [type="search"]{
+    display: none;
+}
+.REA-location-page .header{
+    padding:6px;
+}
+.REA-location-page header a.clear{
+    position: relative;
+    top:11px;
+}
+.REA-location-page header button{
+    width:auto;
+    text-indent: 0;
+}
+.tokenArea {
+    height: 0px;
+    z-index: 1;
+    line-height: 0;
+    position: relative;
+}
+.tokenArea li{
+    list-style: none;
+    border-color: #5479ba;
+    background: linear-gradient(to bottom, #5479ba 0%,#3b5fa0 100%); 
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#5479ba), color-stop(100%,#3b5fa0)); 
+    color:#fff;
+    display: inline-block;
+    padding: 5px;
+    margin-right: 3px;
+    border-radius:5px;
+    position: relative;
+    margin-bottom: 3px;
+    line-height: 100%;
+}
+.tokenArea li .close{
+    display: none;
+}
+.REA-location-page .tokenArea li {
+    padding-right: 30px;
+}
+.REA-location-page .tokenArea .close{
+    position: absolute;
+    width:11px;
+    margin: 5px;
+    top:0;
+    bottom:0;
+    right:0;
+    display: block;
+    font-size: 0;
+}
+.REA-location-page .tokenArea .close:after{
+    width:40px;
+    height:40px;
+    content:"";
+    display: block;
+    position: absolute;
+    top:-16px;
+    right:-14px;
+    font-size: 0;
+    text-indent: -100em;
+}
+.tokenArea li.selected {
+    border-color: #5479ba;
+    background: linear-gradient(to bottom, #4c4c4c 0%,#666666 100%); 
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#4c4c4c), color-stop(100%,#666666)); 
+    color:#fff;
+}
+.tokenArea li .sub-info {
+    display: none;
+}
+.suggestions {
+    background-color: #fff;
+    color: #333;
+}
+.suggestions h2{
+    padding: 5px 10px;
+    background: #f0f0f0;
+    border-top:solid 1px #eaeaea;
+    border-bottom:solid 1px #eaeaea;
+    color: #343434;
+    font-weight: bold;
+}
+.suggestions ul > li {
+    padding: 13px 10px;
+    border-bottom: 1px solid #e9e9e9;
+    display: block;
+    font-weight: bold;
+}
+.suggestions ul > li.selected:active,
+.suggestions ul > li:active{
+    background:#555;
+    color:#fff;
+}
+.suggestions ul > li.selected {
+    color: #2352a4;
+}
+.suggestions ul > li:active:after,
+.suggestions ul > li.selected:after{
+    float:right;
+    width:29px;
+    height: 33px;
+    position: relative;
+    top:-10px;
+    text-indent: -10000px;
+    white-space: nowrap;
+    color: transparent;
+    list-style-type: none;
+    border:none;
+    background-color: transparent;
+    content:"";
+}
+#menu {
+    background: #fff;
+    position: absolute;
+    z-index: 6;
+    min-height: 100%;
+    width: 80%;
+    display: none;
+    color: white;
+    font-family: Museo-Sans-500;
+    border-right: 1px solid #eee;
+}
+#menu a {
+    display: block;
+    position: relative;
+    text-decoration: none;
+    padding: 16px 22px;
+    border-bottom: 1px solid #eee;
+}
+#menu a.active {
+    border-left: 4px solid #e4002b;
+    padding-left: 18px;
+}
+#menu a.active span {
+    color: #e4002b;
+}
+#menu a.signIn.active {
+    border-left: none;
+    padding-left: 22px;
+}
+#menu a.signIn.active span {
+    color: #333;
+}
+#menu a:active{
+    background: #f2f2f2;
+}
+#menu_content a.savedProperties:before{
+    display: inline-block;
+    width:20px;
+    top:14px;
+    height: 20px;
+    white-space: nowrap;
+    content:"";
+    position: absolute;
+}
+#menu a span {
+    color: #333;
+    font-size: 16px;
+}
+#menu a.savedProperties span {
+    padding-left: 26px;
+}
+#menu a.myProperty span {
+    background: url(https://m.realestate.com.au/2-132/resources/img/home.png) no-repeat;
+    background-position: 0 -114px;
+    padding-left: 26px;
+}
+#menu #signInNavButton {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+}
+#menu a.signIn {
+    border-top:solid 1px #eee;
+    text-align: center;
+    border-bottom: none;
+}
+#menu a.signIn.signedIn {
+    padding: 16px 55px 16px 20px;
+}
+#menu a.signIn.signedIn span {
+    display: block;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    font-size: 14px;
+    font-weight: normal;
+    text-align: left;
+    line-height: 16px;
+}
+#menu a.signIn.signedIn span:after{
+    display: block;
+    width:20px;
+    height:20px;
+    float:right;
+    content: '';
+    position: absolute;
+    right:13px;
+    top: 11px;
+}
+#menu_overlay {
+    width: 100%;
+    height: 100%;
+    top:0;
+    bottom: 0;
+    position: absolute;
+    background: none;
+    z-index: 5;
+    background: none;
+    display: none;
+}
+#menu a.searchResults{
+    display: none;
+}
+.onlyDetailsPageExists #menu a.searchResults,
+#menu.details a.searchResults,
+.resultsPageExists #menu a.searchResults{
+    display: block;
+}
+.page header {
+    
+    width: auto;
+    margin-bottom: 0;
+}
+.page {
+    padding-top: 0 !important;
+}
+.REA-signIn-page header {
+  margin-bottom: 40px;
+}
+html.menuActive #menu {
+    display: block;
+    overflow: hidden;
+}
+.menuActive #menu_content {
+    overflow: auto;
+}
+html.menuActive #menu_overlay {
+    display: block;
+}
+html.menuActive {
+    overflow: hidden;
+}
+html.menuActive body {
+    overflow: hidden;
+    position: relative;
+}
+html.menuActive .page.active {
+    overflow:hidden;
+    min-height: auto;
+}
+@media only screen and (-webkit-min-device-pixel-ratio: 2),
+only screen and (min-device-pixel-ratio: 2) {
+    #menu a.signIn.signedIn span:after{
+        background-image:url(https://m.realestate.com.au/2-132/resources/img/my-rea@2x.png);
+    }
+    #menu a.myProperty span {
+        background-image: url(https://m.realestate.com.au/2-132/resources/img/home@2x.png);
+        background-size: 45px 141px;
+    }
+}
+.menu .savedSearches .label {
+    margin-left: -8px;
+}
+.menu .savedSearches .rui-icon-search:before {
+    color: #666;
+}
+.menu .savedSearches .rui-icon-save:before {
+    font-size: 12px;
+    color: rgb(255, 174, 0);
+    left: -13px;
+    position: relative;
+    top: -6px;
+}
+#signIn {
+  background: #fff;
+}
+#signInForm {
+    margin-top: 13px;
+}
+#signInForm .notificationArea{
+    margin: 0 0 25px;
+    position: relative;
+    left: 0;
+    top:5px;
+    right: 0;
+}
+#signInForm div#sentResponse {
+    display: none;
+}
+#signInForm input[type=submit] {
+    margin: 13px auto;
+}
+#signInForm a.rea-register,
+#signInForm a.rea-lostPassword{
+    display: block;
+    text-align: right;
+    font-weight: bold;
+    margin-top: 10px;
+    text-decoration: none;
+    float:right;
+}
+#signInForm a.rea-register{
+    float:left
+}
+#signInForm a.rea-register:active,
+#signInForm a.rea-lostPassword:active {
+    padding-top: 2px;
+}
+#signInForm .myrea-links {
+    height:30px
+}
+#signInForm .myrea-links:after {
+    content:'';
+    display:block;
+    clear: both;
+}
+#signInForm #privacy-policy {
+    color: #3b3b3b;
+    margin-top: 6px;
+}
+#signInForm #privacy-policy a {
+    text-decoration: none;
+}
+#signInForm #privacy-policy .privacy {
+    color: #7b7b7b;
+    margin-top: 10px;
+    line-height: 16px
+}
+#signInForm .privacy-statement span {
+    color: #e4002b;
+    font-weight: bold;
+    cursor: pointer;
+}
+#signInForm input[type=email]:active::-webkit-input-placeholder,
+#signInForm input[type=password]:active::-webkit-input-placeholder {
+    color: #333;
+}
+#signInForm input[type=email]:active::-moz-placeholder,
+#signInForm input[type=password]:active::-moz-placeholder {
+    color: #333;
+}
+#signInForm input[type=email]:active:-moz-placeholder,
+#signInForm input[type=password]:active:-moz-placeholder {
+    color: #333;
+}
+#ctaBanner .bannerContent {
+  overflow: hidden;
+  overflow-y: hidden;
+  position: relative;
+  background: transparent;
+  margin: -10px auto 0 auto;
+  z-index: -1;
+  width: 320px;
+  height: 147px;
+}
+#ctaBanner .bannerBg {
+  height: 147px;
+  width: 320px;
+  position: absolute;
+  display: block;
+}
+#ctaBanner .agencyLogo,
+#ctaBanner .agencyFlaps {
+  width: 99px;
+  position: absolute;
+  right: 20px;
+}
+#ctaBanner .agencyLogo {
+  top: 81px;
+}
+#ctaBanner .agencyFlaps {
+  top: 74px;
+}
+.rui-disclaimer {
+    color: #7B7B7B;
+    display: block;
+    font-size: 0.875em;
+    margin-bottom: 20px;
+}
+/* RUI: REA User Interface Library - School Information - v1.0.1
+   Copyright 2015, REA Group */
+.rui-school-information .rui-school-content ul li.rui-school-item .rui-school-basic-info span.rui-school-type, .rui-school-information .rui-school-content ul li.rui-school-item .rui-school-basic-info span.rui-school-sector {
+    display: inline-block;
+    padding: 15px 12px;
+    color: #000;
+}
+.rui-school-information {
+    font-family: "Helvetica Neue", helvetica, arial, sans-serif;
+    min-width: 400px;
+    font-size: 12px;
+    box-sizing: border-box;
+    color: #000;
+    line-height: 1em;
+}
+.rui-school-information .rui-school-title {
+    font-weight: bold;
+    padding-bottom: 16px;
+    font-size: 14px;
+}
+.rui-school-information .rui-school-content ul {
+    list-style: none;
+    padding: 0;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+}
+.rui-school-information .rui-school-content ul li.rui-school-item:nth-last-child(2) {
+    border-bottom: none;
+}
+.rui-school-information .rui-school-content ul li.rui-school-item {
+    display: block;
+    position: relative;
+    width: 100%;
+    height: 45px;
+    border-bottom: 1px solid #ddd;
+}
+.rui-school-information .rui-school-content ul li.rui-school-item:first-child {
+    display: block;
+}
+.rui-school-information .rui-school-content ul li.rui-school-item span {
+    display: inline-block;
+    padding: 0px;
+    vertical-align: middle;
+    box-sizing: border-box;
+}
+.rui-school-information .rui-school-content ul li.rui-school-item span.rui-school-name {
+    display: inline-block;
+    padding: 15px 12px;
+    position: relative;
+    width: 48%;
+    height: 100%;
+    color: #000;
+}
+.rui-school-information .rui-school-content ul li.rui-school-item span.rui-school-name a {
+    display: inline;
+    height: auto;
+    padding: 0px 0px 2px 0px;
+    color: #000;
+    border-bottom: 1px solid #aaa;
+    text-decoration: none;
+}
+.rui-school-information .rui-school-content ul li.rui-school-item span.rui-school-name a span {
+    padding: 0px;
+    max-width: 80%;
+    height: 17px;
+    line-height: 17px;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
+}
+.rui-school-information .rui-school-content ul li.rui-school-item .rui-school-basic-info {
+    box-sizing: border-box;
+    display: inline-block;
+    width: 40%;
+    padding-top: 0px;
+}
+.rui-school-information .rui-school-content ul li.rui-school-item .rui-school-basic-info span.rui-school-type {
+    border-right: none;
+    width: 50%;
+}
+.rui-school-information .rui-school-content ul li.rui-school-item .rui-school-basic-info span.rui-school-type:after {
+    content: "";
+}
+.rui-school-information .rui-school-content ul li.rui-school-item .rui-school-basic-info span.rui-school-sector {
+    width: 50%;
+}
+.rui-school-information .rui-school-content ul li.rui-school-item span.rui-school-distance {
+    display: inline-block;
+    width: 12%;
+    position: static;
+    top: -9px;
+    color: #000;
+    padding: 15px 12px;
+    margin: 0;
+    text-align: center;
+}
+.rui-school-information .rui-school-content ul li.rui-school-item span.rui-school-arrow-icon {
+    display: none;
+}
+.rui-school-information .rui-school-content ul li.rui-school-item.no-link span.rui-school-name a {
+    border-bottom: none;
+    pointer-events: none;
+    cursor: default;
+}
+.rui-school-information .rui-school-content ul li.rui-school-show-more {
+    display: none;
+}
+.rui-school-information .rui-school-switcher-viewport {
+    height: 231px;
+}
+.rui-school-information .rui-school-switcher-buttons {
+    text-align: center;
+    margin-bottom: 14px;
+}
+.rui-school-information .rui-school-disclaimer {
+    text-align: center;
+    color: #626b71;
+    font-size: 12px;
+    line-height: 18px;
+}
+.rui-school-information .rui-school-disclaimer .rui-school-disclaimer-header {
+    padding: 20px 0;
+    line-height: 16px;
+    height: 16px;
+}
+.rui-school-information .rui-school-disclaimer .rui-school-disclaimer-header .rui-school-disclaimer-clickable {
+    display: inline-block;
+    cursor: pointer;
+    padding-right: 23px;
+    max-width: 80%;
+    box-sizing: border-box;
+}
+.rui-school-information .rui-school-disclaimer .rui-school-disclaimer-header .rui-school-disclaimer-clickable .rui-school-disclaimer-title {
+    display: inline-block;
+    max-width: 100%;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    padding: 0px;
+}
+.rui-school-information .rui-school-disclaimer .rui-school-disclaimer-header .rui-school-disclaimer-clickable .rui-school-disclaimer-arrow {
+    display: inline-block;
+    width: 14px;
+    height: 14px;
+    border: 1px solid #dddddd;
+    border-radius: 50%;
+    font-size: 8px;
+    margin-left: 8px;
+    position: absolute;
+    -webkit-transition: all 0.3s ease-in-out;
+    -moz-transition: all 0.3s ease-in-out;
+    -o-transition: all 0.3s ease-in-out;
+    transition: all 0.3s ease-in-out;
+}
+.rui-school-information .rui-school-disclaimer .rui-school-disclaimer-header .rui-school-disclaimer-clickable .rui-icon-arrow-down:before {
+    margin: 0;
+}
+.rui-school-information .rui-school-disclaimer .rui-school-disclaimer-header .rui-school-disclaimer-clickable .rui-school-disclaimer-arrow-up {
+    transform: rotate(-180deg);
+    -webkit-transform: rotate(-180deg);
+    -moz-transform: rotate(-180deg);
+    -ms-transform: rotate(-180deg);
+    -o-transform: rotate(-180deg);
+}
+.rui-school-information .rui-school-disclaimer .rui-school-disclaimer-hide {
+    overflow: hidden;
+    max-height: 0;
+    padding-top: 0;
+    padding-bottom: 0;
+    margin-top: 0;
+    margin-bottom: 0;
+    -moz-transition-duration: 0.3s;
+    -webkit-transition-duration: 0.3s;
+    -o-transition-duration: 0.3s;
+    transition-duration: 0.3s;
+    -moz-transition-timing-function: cubic-bezier(0, 1, 0.5, 1);
+    -webkit-transition-timing-function: cubic-bezier(0, 1, 0.5, 1);
+    -o-transition-timing-function: cubic-bezier(0, 1, 0.5, 1);
+    transition-timing-function: cubic-bezier(0, 1, 0.5, 1);
+}
+.rui-school-information .rui-school-disclaimer .rui-school-disclaimer-show {
+    -moz-transition-duration: 0.3s;
+    -webkit-transition-duration: 0.3s;
+    -o-transition-duration: 0.3s;
+    transition-duration: 0.3s;
+    -moz-transition-timing-function: ease-in;
+    -webkit-transition-timing-function: ease-in;
+    -o-transition-timing-function: ease-in;
+    transition-timing-function: ease-in;
+    overflow: hidden;
+    max-height: 500px;
+}
+@media (min-width: 481px) and (max-width: 800px) {
+    .rui-school-information .rui-school-content ul li.rui-school-item span.rui-school-name {
+        width: 42%;
+    }
+    .rui-school-information .rui-school-content ul li.rui-school-item span.rui-school-distance {
+        width: 18%;
+    }
+}
+@media (max-width: 480px) {
+    .rui-school-information {
+        min-width: 240px;
+        font-size: 14px;
+    }
+    .rui-school-information .rui-school-title {
+        font-size: 14px;
+        font-weight: bold;
+        padding-bottom: 16px;
+    }
+    .rui-school-information .rui-school-content ul li.rui-school-item {
+        display: none;
+        height: 60px;
+    }
+    .rui-school-information .rui-school-content ul li.rui-school-item span {
+        padding: 10px 0px 10px 10px;
+    }
+    .rui-school-information .rui-school-content ul li.rui-school-item span.rui-school-name {
+        display: block;
+        padding: 0;
+        width: 100%;
+        position: absolute;
+        z-index: 10;
+    }
+    .rui-school-information .rui-school-content ul li.rui-school-item span.rui-school-name a {
+        display: block;
+        padding: 13px 0 0 10px;
+        height: 47px;
+        color: #000;
+        border-bottom: none;
+    }
+    .rui-school-information .rui-school-content ul li.rui-school-item span.rui-school-name a span {
+        max-width: 65%;
+    }
+    .rui-school-information .rui-school-content ul li.rui-school-item .rui-school-basic-info {
+        box-sizing: border-box;
+        display: inline-block;
+        width: 68%;
+        padding-top: 32px;
+    }
+    .rui-school-information .rui-school-content ul li.rui-school-item .rui-school-basic-info span.rui-school-sector {
+        display: inline-block;
+        padding: 0 0 0 10px;
+        color: #777;
+        font-size: 12px;
+        width: auto;
+    }
+    .rui-school-information .rui-school-content ul li.rui-school-item .rui-school-basic-info span.rui-school-type {
+        display: inline-block;
+        padding: 0 0 0 10px;
+        color: #777;
+        font-size: 12px;
+        border-right: none;
+        width: auto;
+    }
+    .rui-school-information .rui-school-content ul li.rui-school-item .rui-school-basic-info span.rui-school-type:after {
+        content: "|";
+        padding-left: 10px;
+    }
+    .rui-school-information .rui-school-content ul li.rui-school-item span.rui-school-distance {
+        display: inline-block;
+        padding: 0;
+        margin: 0;
+        color: #000;
+        width: 22%;
+        position: relative;
+        top: -9px;
+        text-align: right;
+    }
+    .rui-school-information .rui-school-content ul li.rui-school-item span.rui-school-arrow-icon {
+        display: inline-block;
+        width: 10%;
+        position: relative;
+        top: -8px;
+        font-size: 12px;
+        margin: 0;
+        padding: 0;
+        text-align: center;
+    }
+    .rui-school-information .rui-school-content ul li.rui-school-item.no-link span.rui-school-arrow-icon {
+        display: none;
+    }
+    .rui-school-information .rui-school-content ul li.rui-school-show-more {
+        display: block;
+        text-align: center;
+        cursor: pointer;
+        height: 40px;
+        line-height: 40px;
+    }
+    .rui-school-information .rui-school-switcher-viewport {
+        height: 103px;
+    }
+    .rui-school-information .rui-school-switcher-viewport-show-all {
+        height: 306px;
+    }
+}
+/* RUI: REA User Interface Library - Slide Switcher - v0.1.9
+   Copyright 2015, REA Group */
+.rui-switcher-buttons {
+    position: relative;
+    line-height: 1em;
+    border: 1px solid #eae7e1;
+    background-color: #f6f4f0;
+    border-radius: 1.25em;
+    text-align: center;
+    display: inline-block;
+    padding: 0;
+    white-space: nowrap;
+    -webkit-tap-highlight-color: transparent;
+    font-family: Museo-Sans-500, helvetica, arial, sans-serif;
+}
+.rui-switcher-buttons > .rui-switcher-item, .rui-switcher-buttons .rui-switcher-button-slider {
+    min-width: 3em;
+    border-radius: 1.25em;
+    padding: 0.7em 0;
+}
+.rui-switcher-buttons > .rui-switcher-item {
+    position: relative;
+    cursor: pointer;
+    display: inline-block;
+    padding: 0.7em 1em;
+    color: #1A2024;
+    -webkit-tap-highlight-color: initial;
+    -moz-transition-property: color;
+    -o-transition-property: color;
+    -webkit-transition-property: color;
+    transition-property: color;
+    -moz-transition-duration: 0.2s;
+    -o-transition-duration: 0.2s;
+    -webkit-transition-duration: 0.2s;
+    transition-duration: 0.2s;
+}
+.rui-switcher-buttons > .rui-switcher-item.is-selected {
+    -moz-transition-delay: 0.2s;
+    -o-transition-delay: 0.2s;
+    -webkit-transition-delay: 0.2s;
+    transition-delay: 0.2s;
+    color: #fff;
+    cursor: default;
+}
+.rui-switcher-buttons .rui-switcher-button-slider {
+    display: block;
+    position: absolute;
+    background-color: #353f48;
+}
+.rui-switcher-buttons .rui-switcher-button-slider.is-hidden {
+    display: none;
+}
+.rui-switcher-buttons .rui-switcher-button-slider:after {
+    content: '.';
+    visibility: hidden;
+}
+.rui-switcher-panes {
+    position: relative;
+    overflow: hidden;
+}
+.rui-switcher-panes > .rui-switcher-item {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    display: none;
+}
+.rui-switcher-panes > .rui-switcher-item.is-selected {
+    display: block;
+    position: relative;
+}
+.rui-switcher-panes > .rui-switcher-item.ltr, .rui-switcher-panes > .rui-switcher-item.rtl {
+    -moz-animation-duration: 0.5s;
+    -webkit-animation-duration: 0.5s;
+    animation-duration: 0.5s;
+    -moz-animation-fill-mode: forwards;
+    -webkit-animation-fill-mode: forwards;
+    animation-fill-mode: forwards;
+}
+.rui-switcher-panes > .rui-switcher-item.is-in {
+    display: block;
+}
+.rui-switcher-panes > .rui-switcher-item.is-in.ltr {
+    -moz-animation-name: transitionInLTR;
+    -webkit-animation-name: transitionInLTR;
+    animation-name: transitionInLTR;
+}
+.rui-switcher-panes > .rui-switcher-item.is-in.rtl {
+    -moz-animation-name: transitionInRTL;
+    -webkit-animation-name: transitionInRTL;
+    animation-name: transitionInRTL;
+}
+.rui-switcher-panes > .rui-switcher-item.is-out {
+    display: block;
+}
+.rui-switcher-panes > .rui-switcher-item.is-out.ltr {
+    -moz-animation-name: transitionOutLTR;
+    -webkit-animation-name: transitionOutLTR;
+    animation-name: transitionOutLTR;
+}
+.rui-switcher-panes > .rui-switcher-item.is-out.rtl {
+    -moz-animation-name: transitionOutRTL;
+    -webkit-animation-name: transitionOutRTL;
+    animation-name: transitionOutRTL;
+}
+@-moz-keyframes transitionInLTR {
+    0% {
+        top: 0;
+        left: -100%;
+    }
+    100% {
+        top: 0;
+        left: 0;
+    }
+}
+@-webkit-keyframes transitionInLTR {
+    0% {
+        top: 0;
+        left: -100%;
+    }
+    100% {
+        top: 0;
+        left: 0;
+    }
+}
+@keyframes transitionInLTR {
+    0% {
+        top: 0;
+        left: -100%;
+    }
+    100% {
+        top: 0;
+        left: 0;
+    }
+}
+@-moz-keyframes transitionOutLTR {
+    0% {
+        top: 0;
+        left: 0;
+    }
+    100% {
+        top: 0;
+        left: 100%;
+    }
+}
+@-webkit-keyframes transitionOutLTR {
+    0% {
+        top: 0;
+        left: 0;
+    }
+    100% {
+        top: 0;
+        left: 100%;
+    }
+}
+@keyframes transitionOutLTR {
+    0% {
+        top: 0;
+        left: 0;
+    }
+    100% {
+        top: 0;
+        left: 100%;
+    }
+}
+@-moz-keyframes transitionInRTL {
+    0% {
+        top: 0;
+        left: 100%;
+    }
+    100% {
+        top: 0;
+        left: 0;
+    }
+}
+@-webkit-keyframes transitionInRTL {
+    0% {
+        top: 0;
+        left: 100%;
+    }
+    100% {
+        top: 0;
+        left: 0;
+    }
+}
+@keyframes transitionInRTL {
+    0% {
+        top: 0;
+        left: 100%;
+    }
+    100% {
+        top: 0;
+        left: 0;
+    }
+}
+@-moz-keyframes transitionOutRTL {
+    0% {
+        top: 0;
+        left: 0;
+    }
+    100% {
+        top: 0;
+        left: -100%;
+    }
+}
+@-webkit-keyframes transitionOutRTL {
+    0% {
+        top: 0;
+        left: 0;
+    }
+    100% {
+        top: 0;
+        left: -100%;
+    }
+}
+@keyframes transitionOutRTL {
+    0% {
+        top: 0;
+        left: 0;
+    }
+    100% {
+        top: 0;
+        left: -100%;
+    }
+}
+.smartbanner-show .smartbanner {
+	display: block;
+}
+.smartbanner {
+	display: none;
+	width: 100%;
+	height: 80px;
+	line-height: 80px;
+	font-family: 'Helvetica Neue', sans-serif;
+	background: #f4f4f4;
+	z-index: 9998;
+	-webkit-font-smoothing: antialiased;
+	overflow: hidden;
+	-webkit-text-size-adjust: none;
+}
+.smartbanner-container {
+	margin: 0 auto;
+	white-space: nowrap;
+}
+.smartbanner-close {
+	display: inline-block;
+	vertical-align: middle;
+	margin: 0 5px 0 5px;
+	font-family: 'ArialRoundedMTBold', Arial;
+	font-size: 20px;
+	text-align: center;
+	color: #888;
+	text-decoration: none;
+	border: 0;
+	border-radius: 14px;
+	-webkit-font-smoothing: subpixel-antialiased;
+}
+.smartbanner-close:active,
+.smartbanner-close:hover {
+	color: #aaa;
+}
+.smartbanner-icon {
+	display: inline-block;
+	vertical-align: middle;
+	width: 57px;
+	height: 57px;
+	margin-right: 12px;
+	background-size: cover;
+	border-radius: 10px;
+}
+.smartbanner-info {
+	display: inline-block;
+	vertical-align: middle;
+	width: 44%;
+	font-size: 11px;
+	line-height: 1.2em;
+	font-weight: bold;
+}
+.smartbanner-title {
+	font-size:13px;
+	line-height: 18px;
+}
+.smartbanner-button {
+	display: inline-block;
+	vertical-align: middle;
+	float: right;
+	margin: 28px 15px 28px 0px;
+	height: 24px;
+	font-size: 14px;
+	line-height: 24px;
+	text-align: center;
+	font-weight: bold;
+	color: #6a6a6a;
+	text-transform: uppercase;
+	text-decoration: none;
+	text-shadow: 0 1px 0 rgba(255, 255, 255, 0.8);
+}
+.smartbanner-button:active, .smartbanner-button:hover {
+	color: #aaa;
+}
+.smartbanner-button-text {
+}
+.smartbanner-button-text:active,
+.smartbanner-button-text:hover {
+}
+.smartbanner-ios {
+	background: #f4f4f4;
+	background: linear-gradient(to bottom, #f4f4f4, #cdcdcd);
+	box-shadow: 0 1px 2px rgba(0, 0, 0, 0.5);
+	line-height: 80px;
+}
+.smartbanner-ios .smartbanner-close {
+	border: 0;
+	width: 18px;
+	height: 18px;
+	line-height: 18px;
+	color: #888;
+	text-shadow: 0 1px 0 white;
+}
+.smartbanner-ios .smartbanner-close:active,
+.smartbanner-ios .smartbanner-close:hover {
+	color: #aaa;
+}
+.smartbanner-ios .smartbanner-icon {
+	background: rgba(0,0,0,0.6);
+	background-size: cover;
+	box-shadow: 0 1px 3px rgba(0,0,0,0.3);
+}
+.smartbanner-ios .smartbanner-info {
+	color: #6a6a6a;
+	text-shadow: 0 1px 0 rgba(255, 255, 255, 0.8);
+}
+.smartbanner-ios .smartbanner-title {
+	color:#4d4d4d;
+	font-weight: bold;
+}
+.smartbanner-ios .smartbanner-button {
+	padding: 0 10px;
+	min-width: 10%;
+	color: #6a6a6a;
+	background: #efefef;
+	background: linear-gradient(to bottom, #efefef, #dcdcdc);
+	border-radius: 3px;
+	box-shadow: inset 0 0 0 1px #bfbfbf, 0 1px 0 rgba(255, 255, 255, 0.6), 0 2px 0 rgba(255, 255, 255, 0.7) inset;
+}
+.smartbanner-ios .smartbanner-button:active,
+.smartbanner-ios .smartbanner-button:hover {
+	background: #dcdcdc;
+	background: linear-gradient(to bottom, #dcdcdc, #efefef);
+}
+.smartbanner-ios .smartbanner-button-text {
+}
+.smartbanner-ios .smartbanner-button-text:active,
+.smartbanner-ios .smartbanner-button-text:hover {
+}
+.smartbanner-android {
+	background-color: #333f48;
+	box-shadow: inset 0 4px 0 #88B131;
+	line-height: 82px;
+}
+.smartbanner-android .smartbanner-close {
+	border: 0;
+	width: 17px;
+	height: 17px;
+	line-height: 17px;
+	margin-right: 7px;
+	color: #b1b1b3;
+	background: #1c1e21;
+	text-shadow: 0 1px 1px #000;
+	box-shadow: 0 1px 2px rgba(0, 0, 0, 0.8) inset, 0 1px 1px rgba(255, 255, 255, 0.3);
+}
+.smartbanner-android .smartbanner-close:active,
+.smartbanner-android .smartbanner-close:hover {
+	color: #eee;
+}
+.smartbanner-android .smartbanner-icon {
+	background-color: transparent;
+	box-shadow: none;
+}
+.smartbanner-android .smartbanner-info {
+	color:#ccc;
+	text-shadow:0 1px 2px #000;
+}
+.smartbanner-android .smartbanner-title {
+	color:#fff;
+	font-weight: bold;
+}
+.smartbanner-android .smartbanner-button {
+	min-width: 12%;
+	color: #d1d1d1;
+	padding: 0;
+	background: none;
+	border-radius: 0;
+	box-shadow: 0 0 0 1px #333, 0 0 0 2px #DDDCDC;
+}
+.smartbanner-android .smartbanner-button:active,
+.smartbanner-android .smartbanner-button:hover {
+	background: none;
+}
+.smartbanner-android .smartbanner-button-text {
+	text-align: center;
+	display: block;
+	padding: 0 10px;
+	background: #42B6C9;
+	background: linear-gradient(to bottom, #42B6C9, #39A9BB);
+	text-transform: none;
+	text-shadow: none;
+	box-shadow: none;
+}
+.smartbanner-android .smartbanner-button-text:active,
+.smartbanner-android .smartbanner-button-text:hover {
+	background: #2AC7E1;
+}
+.smartbanner-windows {
+	background: #f4f4f4;
+	background: linear-gradient(to bottom, #f4f4f4, #cdcdcd);
+	box-shadow: 0 1px 2px rgba(0, 0, 0, 0.5);
+	line-height: 80px;
+}
+.smartbanner-windows .smartbanner-close {
+	border: 0;
+	width: 18px;
+	height: 18px;
+	line-height: 18px;
+	color: #888;
+	text-shadow: 0 1px 0 white;
+}
+.smartbanner-windows .smartbanner-close:active,
+.smartbanner-windows .smartbanner-close:hover {
+	color: #aaa;
+}
+.smartbanner-windows .smartbanner-icon {
+	background: rgba(0,0,0,0.6);
+	background-size: cover;
+	box-shadow: 0 1px 3px rgba(0,0,0,0.3);
+}
+.smartbanner-windows .smartbanner-info {
+	color: #6a6a6a;
+	text-shadow: 0 1px 0 rgba(255, 255, 255, 0.8);
+}
+.smartbanner-windows .smartbanner-title {
+	color:#4d4d4d;
+	font-weight: bold;
+}
+.smartbanner-windows .smartbanner-button {
+	padding: 0 10px;
+	min-width: 10%;
+	color: #6a6a6a;
+	background: #efefef;
+	background: linear-gradient(to bottom, #efefef, #dcdcdc);
+	border-radius: 3px;
+	box-shadow: inset 0 0 0 1px #bfbfbf, 0 1px 0 rgba(255, 255, 255, 0.6), 0 2px 0 rgba(255, 255, 255, 0.7) inset;
+}
+.smartbanner-windows .smartbanner-button:active,
+.smartbanner-windows .smartbanner-button:hover {
+	background: #dcdcdc;
+	background: linear-gradient(to bottom, #dcdcdc, #efefef);
+}
+.smartbanner-windows .smartbanner-button-text {
+}
+.smartbanner-windows .smartbanner-button-text:active,
+.smartbanner-windows .smartbanner-button-text:hover {
+}
+.promotion-page {
+    font-family: 'Museo-Sans-500', Helvetica, Arial, sans-serif;
+    position: fixed;
+    min-height: 640px;
+    height: 100%;
+    width: 100%;
+    top: 0;
+    background-color: white;
+    overflow: hidden;
+    z-index:1000
+}
+.promotion-page .promotion-header {
+    background: url(//s1.rui.au.reastatic.net/rui-static/img/rea-logo-v3.png) 50% 25px no-repeat #fff;
+    background-size: 200px auto;
+    height: 60px;
+}
+.promotion-page .promotion-acquire-title {
+    font-size: 26px;
+    text-align: center;
+    line-height: 30px;
+    padding: 30px 0;
+    color: #333f48
+}
+.promotion-page .promotion-acquire-content {
+    text-align: center;
+}
+.promotion-page .promotion-ios {
+    background: url(https://m.realestate.com.au/2-132/resources/img/download-appstore.png) no-repeat center;
+    display: inline-block;
+    width: 162px;
+    height: 48px;
+}
+.promotion-page .promotion-android {
+    background: url(https://m.realestate.com.au/2-132/resources/img/download-googleplay.png) no-repeat center;
+    display: inline-block;
+    width: 160px;
+    height: 48px;
+}
+.promotion-page .promotion-continue-link {
+    color: #da0021;
+    height: 30px;
+    line-height: 30px;
+    text-align: center;
+    margin: 30px 0;
+    font-size: 18px;
+    cursor: pointer;
+}
+.promotion-page .promotion-footer {
+    background: url(https://m.realestate.com.au/2-132/resources/img/devices.png) no-repeat center bottom;
+    background-size: 300px 222px;
+    padding-top: 8px;
+    bottom: 0;
+    width: 100%;
+    height: 222px;
+}
+@media screen and (orientation:landscape) {
+    .promotion-page .promotion-acquire-title {
+        padding: 10px 0;
+    }
+    .promotion-page .promotion-continue-link {
+        margin: 10px 0;
+    }
+}
+@media only screen and (-webkit-min-device-pixel-ratio: 2),
+only screen and (min-device-pixel-ratio: 2) {
+    .promotion-page .promotion-ios {
+        background: url(https://m.realestate.com.au/2-132/resources/img/download-appstore@2x.png) no-repeat center;
+        background-size: 162px 48px;
+    }
+    .promotion-page .promotion-android {
+        background: url(https://m.realestate.com.au/2-132/resources/img/download-googleplay@2x.png) no-repeat center;
+        background-size: 160px 48px;
+    }
+    .promotion-page .promotion-footer {
+        background: url(https://m.realestate.com.au/2-132/resources/img/devices@2x.png) no-repeat center bottom;
+        background-size: 300px 222px;
+    }
+}
+@media (min-width: 360px) {
+    .promotion-page .promotion-footer {
+        background-size: 331px 245px;
+        padding-top: 30px;
+        height: 245px;
+    }
+}
+@media screen and (orientation:landscape) {
+    .promotion-page .promotion-acquire-title {
+        padding: 10px 0;
+    }
+    .promotion-page .promotion-continue-link {
+        margin: 10px 0;
+    }
+    .promotion-page .promotion-footer {
+        padding-top: 8px;
+    }
+}
+/* RUI: REA User Interface library - version 1.7.2-788 - 30-01-2015 10:55
+   Copyright 2015, REA Group */
+/* RUI: REA User Interface library - Core - v2.8.1
+   Copyright 2015, REA Group */
+.rui-main-logo {
+  margin-bottom: 24px;
+  height: 55px;
+  width: 310px;
+  
+}
+@media only screen and (max-width: 719px) {
+  
+  .rui-main-logo {
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+    float: none;
+  }
+}
+.rui-rea-logo.rui-main-logo {
+  background-size: 310px 55px;
+}
+.rui-rca .rui-main-logo {
+  height: 50px;
+  width: 350px;
+}
+.rui-rca .rui-rca-logo.rui-main-logo {
+  background-size: 350px 50px;
+}
+.rui-secondary-logo {
+  float: left;
+  margin: 30px 0 24px;
+  width: 232px;
+  height: 42px;
+  background-size: 232px 42px;
+}
+.rui-main-logo img,
+.rui-secondary-logo img {
+  width: 100%;
+}
+@font-face {
+  font-family: 'rui-icon';
+  src: url("//s1.rui.au.reastatic.net/rui-static/font/icons/2.6/rui-icon.eot");
+  src: url("//s1.rui.au.reastatic.net/rui-static/font/icons/2.6/rui-icon.eot?#iefix") format("embedded-opentype"), url("//s1.rui.au.reastatic.net/rui-static/font/icons/2.6/rui-icon.woff") format("woff"), url("//s1.rui.au.reastatic.net/rui-static/font/icons/1.2/rui-icon.ttf") format("truetype"), url("//s1.rui.au.reastatic.net/rui-static/font/icons/1.2/rui-icon.svg#rui-icon") format("svg");
+  font-weight: normal;
+  font-style: normal;
+}
+.rui-icon:before {
+  font-family: 'rui-icon';
+  content: attr(data-icon);
+  speak: none;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  -webkit-font-smoothing: antialiased;
+  display: inline-block;
+}
+.rui-icon-left:before {
+  margin-right: 0.25em;
+}
+.rui-icon-play:before {
+  content: "\e011";
+}
+.rui-icon-home:before {
+  content: "\e012";
+}
+.rui-icon-github:before {
+  content: "\e013";
+}
+.rui-icon-multi-user:before {
+  content: "\e014";
+}
+.rui-icon-tags:before {
+  content: "\e005";
+}
+.rui-icon-quotes:before {
+  content: "\e016";
+}
+.rui-icon-back:before {
+  content: "\e017";
+}
+.rui-icon-forward:before {
+  content: "\e018";
+}
+.rui-icon-add:before {
+  content: "\e029";
+}
+.rui-icon-arrow-down:before {
+  content: "\e02a";
+}
+.rui-icon-arrow-right:before {
+  content: "\e02b";
+}
+.rui-icon-arrow-up:before {
+  content: "\e01e";
+}
+.rui-icon-arrow-left:before {
+  content: "\e01f";
+}
+.rui-icon-call:before {
+  content: "\e02c";
+}
+.rui-icon-floorplan:before {
+  content: "\e02d";
+}
+.rui-icon-facebook:before {
+  content: "\e02e";
+}
+.rui-icon-twitter:before {
+  content: "\e02f";
+}
+.rui-icon-pinterest:before {
+  content: "\e030";
+}
+.rui-icon-warning:before {
+  content: "\e008";
+}
+.rui-icon-cog:before {
+  content: "\e009";
+}
+.rui-icon-link:before {
+  content: "\e00a";
+}
+.rui-icon-navdeck:before {
+  content: "\e00b";
+}
+.rui-icon-video-camera:before {
+  content: "\e00c";
+}
+.rui-icon-linkedin:before {
+  content: "\e00d";
+}
+.rui-icon-googleplus:before {
+  content: "\e019";
+}
+.rui-icon-save-contact:before,
+.rui-icon-avatar:before {
+  content: "\e01a";
+}
+.rui-icon-listview:before {
+  content: "\e01b";
+}
+.rui-icon-bed:before {
+  content: "\e021";
+}
+.rui-icon-bath:before {
+  content: "\e022";
+}
+.rui-icon-car:before {
+  content: "\e023";
+}
+.rui-icon-save:before {
+  content: "\e024";
+}
+.rui-icon-mappin:before {
+  content: "\e025";
+}
+.rui-icon-search:before {
+  content: "\e026";
+}
+.rui-icon-office:before {
+  content: "\e003";
+}
+.rui-icon-image:before {
+  content: "\e004";
+}
+.rui-icon-iphone:before {
+  content: "\e006";
+}
+.rui-icon-ipad:before {
+  content: "\e007";
+}
+.rui-icon-camera:before {
+  content: "\e00e";
+}
+.rui-icon-rss:before {
+  content: "\e00f";
+}
+.rui-icon-comments:before {
+  content: "\e010";
+}
+.rui-icon-calculator:before {
+  content: "\e032";
+}
+.rui-icon-calendar:before {
+  content: "\e035";
+}
+.rui-icon-tick:before {
+  content: "\e039";
+}
+.rui-icon-lock:before {
+  content: "\e044";
+}
+.rui-icon-youtube:before {
+  content: "\e046";
+}
+.rui-icon-email:before {
+  content: "\e020";
+}
+.rui-icon-arrow-solid-right:before {
+  content: "\e027";
+}
+.rui-icon-arrow-solid-down:before {
+  content: "\e028";
+}
+.rui-icon-arrow-solid-up:before {
+  content: "\e01c";
+}
+.rui-icon-arrow-solid-left:before {
+  content: "\e01d";
+}
+.rui-icon-share:before {
+  content: "\e031";
+}
+.rui-icon-cross:before {
+  content: "\e600";
+}
+.rui-icon-dollar:before {
+  content: "\e033";
+}
+.rui-icon-wordpress:before {
+  content: "\e034";
+}
+.rui-icon-save-hollow:before {
+  content: "\e000";
+}
+.rui-icon-user-on:before {
+  content: "\e001";
+}
+.rui-icon-user-off:before {
+  content: "\e002";
+}
+.rui-icon-save-search:before {
+  content: "\e923";
+}
+.ad {
+    overflow: hidden;
+}
+.rui-ad-hidden {
+    display: none;
+}
+.rui-ad-layout-wrapper {
+    display: table;
+    margin: auto;
+}
+.rui-ad-heading {
+    font-family: Museo-Sans-300,Helvetica Neue,Helvetica,Arial,sans-serif;
+    font-weight: 400;
+    font-size: 10px;
+    color: #333f48;
+    margin: 0 auto 7px;
+}
+.rui-ad-heading-center {
+    text-align: center;
+}
+.rui-ad-heading-left {
+    text-align: left;
+}
+.rui-ad-heading-right {
+    text-align: right;
+}
+.REA-homepage-page .spotlight .home-header {
+    position: relative;
+    height: 382px;
+    padding-bottom: 0;
+    box-sizing: border-box;
+    font-family: 'Museo-Sans-300', Helvetica, Arial, sans-serif;
+    overflow: hidden;
+}
+.REA-homepage-page .spotlight .home-header .homepage-logo {
+    background-image: url(https://m.realestate.com.au/2-132/resources/img/rea-logo@2x.png);
+    position: absolute;
+    top: 118px;
+    width: 100%;
+    margin-bottom: 16px;
+    transition: top .8s, height .8s;
+    -webkit-transition: top .8s, height .8s;
+    -moz-transition: top .8s, height .8s;
+    -o-transition: top .8s, height .8s;
+    -webkit-transform: translateZ(0);
+    -moz-transform: translateZ(0);
+    -ms-transform: translateZ(0);
+    -o-transform: translateZ(0);
+    transform: translateZ(0);
+}
+.REA-homepage-page .spotlight.after-load .home-header .homepage-logo {
+    top: 20px;
+}
+.REA-homepage-page .spotlight #channelHeader ul {
+    background-color: rgba(0, 0, 0, 0.3);
+}
+.REA-homepage-page .spotlight #channelHeader {
+    position: absolute;
+    top: 174px;
+    width: 100%;
+    transition: top .8s;
+    -webkit-transition: top .8s;
+    -moz-transition: top .8s;
+    -o-transition: top .8s;
+    -webkit-transform: translateZ(0);
+    -moz-transform: translateZ(0);
+    -ms-transform: translateZ(0);
+    -o-transform: translateZ(0);
+    transform: translateZ(0);
+}
+.REA-homepage-page .spotlight.after-load #channelHeader {
+    top: 76px;
+}
+.REA-homepage-page .spotlight .spotlight-container {
+    position: absolute;
+    bottom: -120px;
+    width: 100%;
+    text-align: right;
+    color: #ffffff;
+    max-height: 120px;
+    transition: bottom .8s;
+    -webkit-transition: bottom .8s;
+    -moz-transition: bottom .8s;
+    -o-transition: bottom .8s;
+    -webkit-transform: translateZ(0);
+    -moz-transform: translateZ(0);
+    -ms-transform: translateZ(0);
+    -o-transform: translateZ(0);
+    transform: translateZ(0);
+}
+.REA-homepage-page .spotlight.after-load .spotlight-container {
+    bottom: 0;
+}
+.REA-homepage-page .spotlight .spotlight-container .spotlight-listing {
+    position: relative;
+    margin-bottom: 15px;
+    padding-right: 15px;
+}
+.REA-homepage-page .spotlight .spotlight-container .listing-label-under-contract {
+    position: absolute;
+    left: 0;
+    bottom: 20px;
+    font-size: 11px;
+    font-family: 'Museo-Sans-500', Helvetica, Arial, sans-serif;
+    background-color: #333f48;
+    height: 20px;
+    line-height: 20px;
+    text-align: left;
+    padding-left: 16px;
+    padding-right: 10px;
+}
+.REA-homepage-page .spotlight .spotlight-container .listing-label-sold {
+    width: 45px;
+    height: 20px;
+    border-radius: 100px;
+    background-color: #ffb200;
+    padding: 5px 6px;
+    font-size: 11px;
+    vertical-align: middle;
+}
+.REA-homepage-page .spotlight .spotlight-container .listing-suburb {
+    font-size: 12px;
+    margin-bottom: 6px;
+}
+.REA-homepage-page .spotlight .spotlight-container .listing-suburb-name {
+    font-family: 'Museo-Sans-500', Helvetica, Arial, sans-serif;
+}
+.REA-homepage-page .spotlight .spotlight-container .listing-title {
+    font-size: 18px;
+    vertical-align: middle;
+    display: inline-block;
+    max-width: 85%;
+    line-height: 1.22;
+}
+.REA-homepage-page .spotlight .spotlight-agent-container {
+    position: relative;
+    text-align: left;
+    height: 40px;
+    padding-left: 5%;
+    font-size: 0;
+}
+.REA-homepage-page .spotlight .spotlight-agent-container .agent-avatar {
+    position: absolute;
+    bottom: 10px;
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    border: solid 1px #bcbcbc;
+    vertical-align: top;
+    overflow: hidden;
+    display: inline-block;
+}
+.REA-homepage-page .spotlight .spotlight-agent-container .agent-avatar img {
+    width: 50px;
+    height: auto;
+}
+.REA-homepage-page .spotlight .spotlight-agent-container .agent-name {
+    font-size: 12px;
+    display: inline-block;
+    width: 55%;
+    height: 100%;
+    box-sizing: border-box;
+    vertical-align: middle;
+    padding-left: 60px;
+    padding-right: 5px;
+    line-height: 40px;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
+}
+.REA-homepage-page .spotlight .spotlight-agent-container .agency-logo {
+    display: inline-block;
+    width: 45%;
+    text-align: right;
+}
+.REA-homepage-page .spotlight .spotlight-agent-container .agency-img {
+    vertical-align: middle;
+    max-width: 170px;
+    height: 20px;
+    margin-right: 20px;
+}
+.REA-homepage-page .spotlight .spotlight-project-container {
+    font-size: 0;
+    height: 40px;
+}
+.REA-homepage-page .spotlight .spotlight-project-container .project-logo:before,
+.REA-homepage-page .spotlight .spotlight-project-container .agency-logo:before {
+    content: "";
+    display: inline-block;
+    height: 100%;
+    vertical-align: middle;
+}
+.REA-homepage-page .spotlight .spotlight-project-container .project-logo,
+.REA-homepage-page .spotlight .spotlight-project-container .agency-logo {
+    display: inline-block;
+    width: 50%;
+    height: 100%;
+}
+.REA-homepage-page .spotlight .spotlight-project-container .project-logo {
+    text-align: left;
+}
+.REA-homepage-page .spotlight .spotlight-project-container .agency-logo {
+    text-align: right;
+}
+.REA-homepage-page .spotlight .spotlight-project-container .project-img,
+.REA-homepage-page .spotlight .spotlight-project-container .agency-img {
+    vertical-align: middle;
+    height: 20px;
+}
+.REA-homepage-page .spotlight .spotlight-project-container .project-img {
+    padding-left: 16px;
+}
+.REA-homepage-page .spotlight .spotlight-project-container .agency-img {
+    padding-right: 16px;
+}
+.REA-homepage-page .spotlight .spotlight-link {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    display: block;
+    height: 215px;
+    width: 100%;
+}
+.REA-homepage-page .spotlight .signin-container {
+    display: none;
+    height: 150px;
+    background-color: #fff;
+    padding-left: 28px;
+    padding-right: 28px;
+    padding-top: 36px;
+    box-sizing: border-box;
+}
+.REA-homepage-page .spotlight .signin-container.loggedOut {
+    display: block;
+}
+.REA-homepage-page .spotlight .signin-container .join-btn {
+    display: block;
+    font-family: 'Museo-Sans-500', Helvetica, Arial, sans-serif;
+    font-size: 16px;
+    color: #e4002b;
+    background-color: #fff;
+    border-radius: 3px;
+    border: solid 1px #e4002b;
+    margin: 0 auto;
+    width: 100%;
+    max-width: 320px;
+}
+.REA-homepage-page .spotlight .signin-container .signin-desc {
+    font-family: 'Museo-Sans-300', Helvetica, Arial, sans-serif;
+    font-size: 16px;
+    color: #565f73;
+    text-align: center;
+    margin-top: 18px;
+}
+.REA-homepage-page .spotlight .signin-container .signin-link {
+    color: #e4002b;
+    padding-left: 5px;
+    text-decoration: none;
+}
+.REA-homepage-page .spotlight .homepage-personalise .rui-icon {
+    font-size: 36px;
+    margin-bottom: 12px;
+    display: inline-block;
+}
+.REA-homepage-page .spotlight .homepage-personalise .rui-icon:before {
+    margin-right: 0;
+}
+.REA-homepage-page .spotlight .logout-container {
+    display: none;
+    cursor: pointer;
+}
+.REA-homepage-page .spotlight .logout-container.loggedIn {
+    display: block;
+    padding: 25px 30px;
+    color: #697684;
+    font-family: 'Museo-Sans-300', Helvetica, Arial, sans-serif;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+.REA-homepage-page .spotlight .logout-container span {
+    vertical-align: middle;
+}
+.REA-homepage-page .spotlight .logout-container .logout-icon {
+    font-size: 16px;
+    color: #333f48;
+}
+.REA-homepage-page .spotlight .logout-container .logout-icon:before {
+    margin-right: 0;
+    font-weight: bold;
+}
+.REA-homepage-page .spotlight .logout-container .logout-title {
+    font-family: 'Museo-Sans-300', Helvetica, Arial, sans-serif;
+    font-size: 16px;
+    color: #333f48;
+}
+.REA-homepage-page .spotlight .logout-container .user-email {
+    font-family: 'Museo-Sans-300', Helvetica, Arial, sans-serif;
+    font-size: 16px;
+    color: #697684;
+    margin-left: 12px;
+}
+@media only screen and (max-width: 374px) {
+    .REA-homepage-page .spotlight .spotlight-agent-container {
+        padding-left: 10px;
+    }
+}
