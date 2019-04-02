@@ -797,7 +797,7 @@ button.swiper-pagination-bullet {
 <div id="ONE_Extension_Marker" data-one-extension-version="28.1.0" data-one-extension-type="chrome" style="display: none;"></div><div data-page="homepage" data-page-type="homepage" class="REA-homepage-page page  active" id="homepage">
     <div class="content"><div>
     <div id="main-content" class="menu spotlight search-box-uplift">
-        <div class="home-header home-header-default">
+        <div class="home-header home-header-default" style="height: 290px;">
             <div class="media-hero-ad"><div class=""></div></div>
             <div class="hero-image-blur"></div>
             <section class="homepage-logo">
@@ -959,5 +959,8 @@ button.swiper-pagination-bullet {
         }
       );
     });
+    function closeOlInterstitial(){
+      document.getElementsByClassName("ol-interstitial")[0].style.display = 'none';
+    }
     </script>
 </html>
